@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  DOMINIC HALDI — Digital Transformation Command Center
+  Process Engineering · Digital Transformation · Business Architecture
+  ----------------------------------------------------------------------------
+  Single-page personal brand site for GitHub Pages.
+  No frameworks, no libraries, no external assets — every icon is inline SVG.
+  Files: index.html · style.css · script.js
+  ============================================================================
+-->
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Dominic Haldi" />
+  <meta name="description" content="Dominic Haldi — Process Engineering, Digital Transformation and Business Architecture. A digital transformation command center built on systems thinking, process excellence and strategic leadership." />
+  <meta name="theme-color" content="#0a0c12" />
+  <title>Dominic Haldi — Digital Transformation Command Center</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Inline SVG favicon so no external image file is required -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%236366f1'/><text x='50' y='70' font-size='54' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>DH</text></svg>" />
+</head>
+<body>
+
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a href="#hero" class="skip-link">Skip to content</a>
+
+  <!-- ========================================================================
+       NAVIGATION
+  ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#hero" class="brand" aria-label="Home">
+        <span class="brand__mark">DH</span>
+        <span class="brand__text">Dominic&nbsp;Haldi</span>
+      </a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#systems" data-nav>Systems</a></li>
+        <li><a href="#dashboard" data-nav>Dashboard</a></li>
+        <li><a href="#work" data-nav>Case Studies</a></li>
+        <li><a href="#process" data-nav>Process</a></li>
+        <li><a href="#architecture" data-nav>Architecture</a></li>
+        <li><a href="#timeline" data-nav>Journey</a></li>
+        <li><a href="#skills" data-nav>Capabilities</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <!-- Light / dark theme switch -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme" title="Toggle light / dark">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+
+        <!-- Mobile burger -->
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <!-- Scroll progress indicator -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  </header>
+
+  <main>
+
+    <!-- ====================================================================
+         1) HERO — immersive landing / command center entry
+    ===================================================================== -->
+    <section class="hero" id="hero">
+      <!-- Animated layered background (pure CSS, parallax via JS) -->
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__grid"></span>
+        <span class="hero__glow hero__glow--1" data-parallax="0.04"></span>
+        <span class="hero__glow hero__glow--2" data-parallax="0.07"></span>
+        <span class="hero__beam"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          Process Engineering · Digital Transformation · Business Architecture
+        </p>
+
+        <h1 class="hero__title reveal">
+          Designing systems.<br />
+          Optimizing processes.<br />
+          <span class="accent" id="heroRotator">Building scalable organizations.</span>
+        </h1>
+
+        <p class="hero__lead reveal">
+          I translate operational complexity into clear, scalable systems — connecting
+          people, process, technology and strategy into organizations that are efficient,
+          data-driven and built to grow.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#work" class="btn btn--primary">Explore case studies</a>
+          <a href="#contact" class="btn btn--ghost">Start a conversation</a>
+        </div>
+
+        <!-- Hero KPI counters -->
+        <div class="hero__kpis reveal" aria-label="Headline metrics">
+          <div class="hero-kpi">
+            <span class="hero-kpi__value" data-target="40" data-suffix="+">0</span>
+            <span class="hero-kpi__label">Processes Optimized</span>
+          </div>
+          <div class="hero-kpi">
+            <span class="hero-kpi__value" data-target="18" data-suffix="+">0</span>
+            <span class="hero-kpi__label">Digital Initiatives</span>
+          </div>
+          <div class="hero-kpi">
+            <span class="hero-kpi__value" data-target="7" data-suffix="">0</span>
+            <span class="hero-kpi__label">Business Models Designed</span>
+          </div>
+          <div class="hero-kpi">
+            <span class="hero-kpi__value" data-target="120" data-suffix="+">0</span>
+            <span class="hero-kpi__label">Automation Opportunities Identified</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#systems" class="hero__scroll" aria-label="Scroll to next section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ====================================================================
+         2) SYSTEMS THINKING — interactive system map
+    ===================================================================== -->
+    <section class="section" id="systems">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Systems Thinking</span>
+          <h2 class="section__title">Everything connects to everything</h2>
+          <p class="section__intro">
+            Organizations don't fail at the parts — they fail at the connections. I design
+            across the whole system: people, process, technology, organization and data.
+            Hover a node to trace how value flows.
+          </p>
+        </header>
+
+        <div class="systemmap reveal">
+          <!-- Interactive node diagram -->
+          <div class="systemmap__stage" id="systemStage">
+            <svg class="systemmap__svg" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <!-- Connecting lines (drawn first, beneath nodes) -->
+              <g class="sm-links" id="smLinks" stroke="currentColor" fill="none">
+                <!-- hub spokes -->
+                <line data-link="people"       x1="300" y1="240" x2="150" y2="110"/>
+                <line data-link="processes"    x1="300" y1="240" x2="450" y2="110"/>
+                <line data-link="technology"   x1="300" y1="240" x2="500" y2="290"/>
+                <line data-link="organization" x1="300" y1="240" x2="300" y2="430"/>
+                <line data-link="data"         x1="300" y1="240" x2="100" y2="290"/>
+                <!-- outer ring (shows holistic interdependence) -->
+                <line data-ring x1="150" y1="110" x2="450" y2="110"/>
+                <line data-ring x1="450" y1="110" x2="500" y2="290"/>
+                <line data-ring x1="500" y1="290" x2="300" y2="430"/>
+                <line data-ring x1="300" y1="430" x2="100" y2="290"/>
+                <line data-ring x1="100" y1="290" x2="150" y2="110"/>
+              </g>
+            </svg>
+
+            <!-- Central hub -->
+            <button class="sm-node sm-node--hub" style="--x:50%; --y:50%;" data-node="hub" aria-label="Systems thinking core">
+              <span class="sm-node__icon">◎</span>
+              <span class="sm-node__label">Holistic<br>System</span>
+            </button>
+
+            <!-- Orbiting nodes -->
+            <button class="sm-node" style="--x:25%; --y:23%;" data-node="people">
+              <span class="sm-node__icon">👤</span>
+              <span class="sm-node__label">People</span>
+            </button>
+            <button class="sm-node" style="--x:75%; --y:23%;" data-node="processes">
+              <span class="sm-node__icon">⚙</span>
+              <span class="sm-node__label">Processes</span>
+            </button>
+            <button class="sm-node" style="--x:83%; --y:60%;" data-node="technology">
+              <span class="sm-node__icon">▢</span>
+              <span class="sm-node__label">Technology</span>
+            </button>
+            <button class="sm-node" style="--x:50%; --y:90%;" data-node="organization">
+              <span class="sm-node__icon">⬡</span>
+              <span class="sm-node__label">Organization</span>
+            </button>
+            <button class="sm-node" style="--x:17%; --y:60%;" data-node="data">
+              <span class="sm-node__icon">⛁</span>
+              <span class="sm-node__label">Data</span>
+            </button>
+          </div>
+
+          <!-- Detail panel updated on hover / focus -->
+          <aside class="systemmap__panel" id="systemPanel" aria-live="polite">
+            <span class="systemmap__panel-tag" id="smTag">The core</span>
+            <h3 class="systemmap__panel-title" id="smTitle">Holistic System Design</h3>
+            <p class="systemmap__panel-text" id="smText">
+              Real transformation happens when every dimension reinforces the others.
+              Hover or tap a node to see how each layer feeds the whole.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3) DIGITAL TRANSFORMATION DASHBOARD — executive cockpit
+    ===================================================================== -->
+    <section class="section section--alt" id="dashboard">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Transformation Dashboard</span>
+          <h2 class="section__title">An executive cockpit, not a slide</h2>
+          <p class="section__intro">
+            How I think about transformation — quantified. Live-style widgets tracking
+            maturity, efficiency and automation across an organization.
+          </p>
+        </header>
+
+        <div class="dashboard reveal" id="dashboard-grid">
+
+          <!-- Radial gauge: process maturity -->
+          <article class="widget widget--gauge">
+            <div class="widget__head">
+              <span class="widget__title">Process Maturity</span>
+              <span class="widget__pill widget__pill--up">Level 4 / 5</span>
+            </div>
+            <div class="gauge" data-value="82">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="gauge__track" cx="60" cy="60" r="52"/>
+                <circle class="gauge__fill" cx="60" cy="60" r="52"/>
+              </svg>
+              <div class="gauge__center">
+                <span class="gauge__num" data-target="82" data-suffix="%">0</span>
+                <span class="gauge__cap">Optimized</span>
+              </div>
+            </div>
+            <p class="widget__foot">Defined → Managed → Optimized maturity index.</p>
+          </article>
+
+          <!-- Stat tiles -->
+          <article class="widget widget--stats">
+            <div class="widget__head">
+              <span class="widget__title">Live Indicators</span>
+              <span class="widget__pill">Rolling 12&nbsp;mo</span>
+            </div>
+            <ul class="statgrid">
+              <li>
+                <span class="statgrid__val" data-target="63" data-suffix="%">0</span>
+                <span class="statgrid__lab">Avg. cycle-time cut</span>
+              </li>
+              <li>
+                <span class="statgrid__val" data-target="9" data-suffix="">0</span>
+                <span class="statgrid__lab">Systems integrated</span>
+              </li>
+              <li>
+                <span class="statgrid__val" data-target="47" data-suffix="%">0</span>
+                <span class="statgrid__lab">Manual work removed</span>
+              </li>
+              <li>
+                <span class="statgrid__val" data-target="3.4" data-suffix="x" data-decimals="1">0</span>
+                <span class="statgrid__lab">ROI on initiatives</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Bar meters: efficiency by domain -->
+          <article class="widget widget--bars">
+            <div class="widget__head">
+              <span class="widget__title">Efficiency by Domain</span>
+              <span class="widget__pill widget__pill--up">▲ Trending</span>
+            </div>
+            <ul class="barmeter">
+              <li><span class="barmeter__lab">Operations</span><span class="barmeter__track"><span style="--p:88%"></span></span></li>
+              <li><span class="barmeter__lab">Sales &amp; CRM</span><span class="barmeter__track"><span style="--p:74%"></span></span></li>
+              <li><span class="barmeter__lab">Finance</span><span class="barmeter__track"><span style="--p:69%"></span></span></li>
+              <li><span class="barmeter__lab">Supply chain</span><span class="barmeter__track"><span style="--p:81%"></span></span></li>
+            </ul>
+          </article>
+
+          <!-- Automation indicator + sparkline -->
+          <article class="widget widget--spark">
+            <div class="widget__head">
+              <span class="widget__title">Automation Coverage</span>
+              <span class="widget__pill widget__pill--up">+14% QoQ</span>
+            </div>
+            <div class="spark">
+              <span class="spark__big" data-target="58" data-suffix="%">0</span>
+              <svg class="spark__chart" viewBox="0 0 240 80" preserveAspectRatio="none" aria-hidden="true">
+                <polyline class="spark__line" points="0,64 30,58 60,60 90,46 120,48 150,34 180,30 210,20 240,14"/>
+                <polygon  class="spark__area" points="0,80 0,64 30,58 60,60 90,46 120,48 150,34 180,30 210,20 240,14 240,80"/>
+              </svg>
+            </div>
+            <p class="widget__foot">Share of high-volume tasks running without manual touch.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4) CASE STUDIES — the core. Expandable project cards.
+    ===================================================================== -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Case Studies</span>
+          <h2 class="section__title">Where strategy meets execution</h2>
+          <p class="section__intro">
+            Selected engagements across digitalization, structure, process, AI and business
+            development. Open any card for the full case study.
+          </p>
+        </header>
+
+        <!-- Filter bar -->
+        <div class="filters reveal" id="projectFilters" role="group" aria-label="Filter case studies">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="digital">Digitalization</button>
+          <button class="filter" data-filter="structure">Structure</button>
+          <button class="filter" data-filter="process">Process</button>
+          <button class="filter" data-filter="ai">AI &amp; Automation</button>
+          <button class="filter" data-filter="business">Business Dev</button>
+        </div>
+
+        <div class="cases" id="caseGrid">
+          <!-- Cards are generated from data in script.js for maintainability -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Case study modal (populated by JS) -->
+    <div class="case-modal" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="cmTitle" hidden>
+      <div class="case-modal__backdrop" data-close></div>
+      <div class="case-modal__panel" role="document">
+        <button class="case-modal__close" data-close aria-label="Close case study">✕</button>
+        <div class="case-modal__body" id="caseModalBody"><!-- injected --></div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         5) PROCESS ENGINEERING — transformation journey flow
+    ===================================================================== -->
+    <section class="section section--alt" id="process">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Process Engineering</span>
+          <h2 class="section__title">From current state to future state</h2>
+          <p class="section__intro">
+            A repeatable path from messy reality to a digitalized, scalable target operating
+            model. Click a stage to see what happens inside it.
+          </p>
+        </header>
+
+        <div class="flow reveal" id="processFlow">
+          <ol class="flow__track" id="flowTrack">
+            <li class="flow__step is-active" data-step="0">
+              <span class="flow__num">01</span>
+              <span class="flow__dot"></span>
+              <span class="flow__name">Current State</span>
+            </li>
+            <li class="flow__step" data-step="1">
+              <span class="flow__num">02</span>
+              <span class="flow__dot"></span>
+              <span class="flow__name">Analysis</span>
+            </li>
+            <li class="flow__step" data-step="2">
+              <span class="flow__num">03</span>
+              <span class="flow__dot"></span>
+              <span class="flow__name">Optimization</span>
+            </li>
+            <li class="flow__step" data-step="3">
+              <span class="flow__num">04</span>
+              <span class="flow__dot"></span>
+              <span class="flow__name">Digitalization</span>
+            </li>
+            <li class="flow__step" data-step="4">
+              <span class="flow__num">05</span>
+              <span class="flow__dot"></span>
+              <span class="flow__name">Future State</span>
+            </li>
+            <span class="flow__progress" id="flowProgress" aria-hidden="true"></span>
+          </ol>
+
+          <div class="flow__detail" id="flowDetail" aria-live="polite">
+            <!-- injected by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6) BUSINESS ARCHITECTURE — layered, interactive framework
+    ===================================================================== -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Business Architecture</span>
+          <h2 class="section__title">Strategy made operational</h2>
+          <p class="section__intro">
+            A scalable organization is a stack of aligned layers. Each layer below serves the
+            one above it. Hover or tap a layer to expand its building blocks.
+          </p>
+        </header>
+
+        <div class="archi reveal" id="archi">
+          <div class="archi__layer" data-layer="strategy" style="--i:0">
+            <div class="archi__bar">
+              <span class="archi__name">Strategy</span>
+              <span class="archi__role">Direction &amp; ambition</span>
+              <span class="archi__plus" aria-hidden="true">+</span>
+            </div>
+            <div class="archi__blocks">
+              <span>Vision &amp; OKRs</span><span>Operating model</span><span>Portfolio</span><span>Value proposition</span>
+            </div>
+          </div>
+          <div class="archi__layer" data-layer="organization" style="--i:1">
+            <div class="archi__bar">
+              <span class="archi__name">Organization</span>
+              <span class="archi__role">People &amp; capability</span>
+              <span class="archi__plus" aria-hidden="true">+</span>
+            </div>
+            <div class="archi__blocks">
+              <span>Org design</span><span>Roles &amp; RACI</span><span>Capabilities</span><span>Culture &amp; change</span>
+            </div>
+          </div>
+          <div class="archi__layer" data-layer="processes" style="--i:2">
+            <div class="archi__bar">
+              <span class="archi__name">Processes</span>
+              <span class="archi__role">How value is created</span>
+              <span class="archi__plus" aria-hidden="true">+</span>
+            </div>
+            <div class="archi__blocks">
+              <span>Value streams</span><span>Core &amp; support flows</span><span>Standards</span><span>KPIs</span>
+            </div>
+          </div>
+          <div class="archi__layer" data-layer="technology" style="--i:3">
+            <div class="archi__bar">
+              <span class="archi__name">Technology</span>
+              <span class="archi__role">Systems &amp; data</span>
+              <span class="archi__plus" aria-hidden="true">+</span>
+            </div>
+            <div class="archi__blocks">
+              <span>Application map</span><span>Integration</span><span>Data &amp; analytics</span><span>Automation &amp; AI</span>
+            </div>
+          </div>
+          <div class="archi__layer" data-layer="governance" style="--i:4">
+            <div class="archi__bar">
+              <span class="archi__name">Governance</span>
+              <span class="archi__role">Control &amp; assurance</span>
+              <span class="archi__plus" aria-hidden="true">+</span>
+            </div>
+            <div class="archi__blocks">
+              <span>Decision rights</span><span>Risk &amp; compliance</span><span>Standards board</span><span>Performance mgmt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7) TIMELINE — interactive career journey
+    ===================================================================== -->
+    <section class="section section--alt" id="timeline">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">The Journey</span>
+          <h2 class="section__title">Milestones &amp; momentum</h2>
+          <p class="section__intro">
+            A path from engineering fundamentals to digital leadership and entrepreneurship.
+            Select a milestone to read more.
+          </p>
+        </header>
+
+        <ol class="journey reveal" id="journey">
+          <li class="journey__item" data-cat="leadership">
+            <span class="journey__dot"></span>
+            <div class="journey__card">
+              <span class="journey__date">Since 2021</span>
+              <span class="journey__tag">Leadership</span>
+              <h3 class="journey__role">Head of Digitalization &amp; Business Architect</h3>
+              <p class="journey__desc">Owning digital transformation, process architecture and the build-out of scalable, governed structures across the group.</p>
+            </div>
+          </li>
+          <li class="journey__item" data-cat="venture">
+            <span class="journey__dot"></span>
+            <div class="journey__card">
+              <span class="journey__date">Since 2020</span>
+              <span class="journey__tag">Venture</span>
+              <h3 class="journey__role">Founder &amp; Business Developer</h3>
+              <p class="journey__desc">Designing new business models, validating digital offerings and building scalable, multi-entity structures from the ground up.</p>
+            </div>
+          </li>
+          <li class="journey__item" data-cat="project">
+            <span class="journey__dot"></span>
+            <div class="journey__card">
+              <span class="journey__date">2017 – 2021</span>
+              <span class="journey__tag">Project</span>
+              <h3 class="journey__role">Process Engineer</h3>
+              <p class="journey__desc">Analyzing and optimizing operational processes, introducing Lean methods and KPI-driven steering across the value chain.</p>
+            </div>
+          </li>
+          <li class="journey__item" data-cat="project">
+            <span class="journey__dot"></span>
+            <div class="journey__card">
+              <span class="journey__date">2013 – 2017</span>
+              <span class="journey__tag">Project</span>
+              <h3 class="journey__role">Project &amp; Process Management</h3>
+              <p class="journey__desc">Leading interdisciplinary projects at the intersection of engineering, organization and IT.</p>
+            </div>
+          </li>
+          <li class="journey__item" data-cat="education">
+            <span class="journey__dot"></span>
+            <div class="journey__card">
+              <span class="journey__date">Education</span>
+              <span class="journey__tag">Education</span>
+              <h3 class="journey__role">Engineering &amp; Business</h3>
+              <p class="journey__desc">Grounded education combining technical engineering with business administration — the dual lens behind every engagement.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8) SKILLS — interactive capability landscape (no progress bars)
+    ===================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Capability Landscape</span>
+          <h2 class="section__title">Five clusters, one operating system</h2>
+          <p class="section__intro">
+            Not a checklist of tools — a landscape of capabilities. Bigger nodes carry more
+            weight. Hover a cluster to bring it forward.
+          </p>
+        </header>
+
+        <div class="clusters reveal" id="clusters">
+          <article class="cluster" data-cluster="strategy" style="--c:#6366f1">
+            <h3 class="cluster__title"><span class="cluster__dot"></span>Strategy</h3>
+            <ul class="cluster__cloud">
+              <li class="t-xl">Operating Models</li>
+              <li class="t-lg">Digital Strategy</li>
+              <li class="t-md">Business Architecture</li>
+              <li class="t-sm">Portfolio Design</li>
+              <li class="t-md">OKRs</li>
+              <li class="t-sm">Value Proposition</li>
+            </ul>
+          </article>
+
+          <article class="cluster" data-cluster="process" style="--c:#22d3ee">
+            <h3 class="cluster__title"><span class="cluster__dot"></span>Process</h3>
+            <ul class="cluster__cloud">
+              <li class="t-xl">Lean</li>
+              <li class="t-lg">BPMN</li>
+              <li class="t-md">Six Sigma</li>
+              <li class="t-md">Value-Stream Mapping</li>
+              <li class="t-sm">KPI Steering</li>
+              <li class="t-sm">Continuous Improvement</li>
+            </ul>
+          </article>
+
+          <article class="cluster" data-cluster="technology" style="--c:#a78bfa">
+            <h3 class="cluster__title"><span class="cluster__dot"></span>Technology</h3>
+            <ul class="cluster__cloud">
+              <li class="t-xl">Automation</li>
+              <li class="t-lg">AI &amp; LLMs</li>
+              <li class="t-md">Data &amp; Analytics</li>
+              <li class="t-md">Systems Integration</li>
+              <li class="t-sm">Cloud</li>
+              <li class="t-sm">RPA</li>
+            </ul>
+          </article>
+
+          <article class="cluster" data-cluster="leadership" style="--c:#34d399">
+            <h3 class="cluster__title"><span class="cluster__dot"></span>Leadership</h3>
+            <ul class="cluster__cloud">
+              <li class="t-xl">Change Management</li>
+              <li class="t-lg">Team Enablement</li>
+              <li class="t-md">Stakeholder Mgmt</li>
+              <li class="t-sm">Coaching</li>
+              <li class="t-md">Communication</li>
+              <li class="t-sm">Facilitation</li>
+            </ul>
+          </article>
+
+          <article class="cluster" data-cluster="innovation" style="--c:#f59e0b">
+            <h3 class="cluster__title"><span class="cluster__dot"></span>Innovation</h3>
+            <ul class="cluster__cloud">
+              <li class="t-xl">Business Development</li>
+              <li class="t-lg">Design Thinking</li>
+              <li class="t-md">MVP &amp; Validation</li>
+              <li class="t-md">Business Modeling</li>
+              <li class="t-sm">Pricing</li>
+              <li class="t-sm">Go-to-Market</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9) DOCUMENTS — downloadable assets
+    ===================================================================== -->
+    <section class="section section--alt" id="documents">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Documents</span>
+          <h2 class="section__title">Go deeper</h2>
+          <p class="section__intro">
+            Curriculum vitae, certifications and selected documentation — ready to download.
+          </p>
+        </header>
+
+        <div class="docs reveal">
+          <a class="doc" href="#" download aria-label="Download CV">
+            <span class="doc__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg>
+            </span>
+            <span class="doc__meta">
+              <span class="doc__title">Curriculum Vitae</span>
+              <span class="doc__type">PDF · Full profile</span>
+            </span>
+            <span class="doc__arrow" aria-hidden="true">↓</span>
+          </a>
+
+          <a class="doc" href="#" aria-label="View certificates">
+            <span class="doc__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.9 7 22l5-3 5 3-1.2-8.1"/></svg>
+            </span>
+            <span class="doc__meta">
+              <span class="doc__title">Certificates</span>
+              <span class="doc__type">Lean · BPMN · Digital</span>
+            </span>
+            <span class="doc__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="doc" href="#" aria-label="View project documentation">
+            <span class="doc__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h11l5 5v11a0 0 0 0 1 0 0H4z"/><path d="M9 13h6M9 17h6M9 9h2"/></svg>
+            </span>
+            <span class="doc__meta">
+              <span class="doc__title">Project Documentation</span>
+              <span class="doc__type">Method &amp; results</span>
+            </span>
+            <span class="doc__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="doc" href="#" aria-label="View presentations">
+            <span class="doc__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M12 16v4M8 20h8"/></svg>
+            </span>
+            <span class="doc__meta">
+              <span class="doc__title">Presentations</span>
+              <span class="doc__type">Strategy decks</span>
+            </span>
+            <span class="doc__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         10) CONTACT — executive call to action
+    ===================================================================== -->
+    <section class="section section--cta" id="contact">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__lead">
+            <span class="section__kicker">Contact</span>
+            <h2 class="cta__title">Let's design what's next.</h2>
+            <p class="cta__text">
+              Open to leadership roles in process engineering, digital transformation and
+              business architecture — and to ambitious transformation projects.
+            </p>
+            <a href="mailto:dominichaldi5@gmail.com" class="btn btn--primary btn--lg">Start a conversation</a>
+          </div>
+
+          <div class="cta__channels">
+            <a class="channel" href="mailto:dominichaldi5@gmail.com">
+              <span class="channel__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
+              </span>
+              <span class="channel__label">Email</span>
+              <span class="channel__value">dominichaldi5@gmail.com</span>
+            </a>
+            <a class="channel" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <span class="channel__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
+              <span class="channel__label">LinkedIn</span>
+              <span class="channel__value">View profile</span>
+            </a>
+            <a class="channel" href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <span class="channel__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8a4.9 4.9 0 0 0-.1-3.6s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C7.2.9 6.1 1.2 6.1 1.2A4.9 4.9 0 0 0 6 4.8a5.2 5.2 0 0 0-1.4 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+              </span>
+              <span class="channel__label">GitHub</span>
+              <span class="channel__value">View work</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+  ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand"><span class="brand__mark brand__mark--sm">DH</span> Dominic&nbsp;Haldi</span>
+      <span class="footer__tag">Designing systems · Optimizing processes · Building scalable organizations</span>
+      <span class="footer__meta">© <span id="year"></span> · Built for GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
