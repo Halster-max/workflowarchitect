@@ -1,0 +1,278 @@
+You are maintaining the existing Digital Transformation Knowledge Base.
+
+You already know the current architecture.
+
+Your task is to transform the provided project documentation and uploaded artefacts into a fully integrated project package.
+
+Folder name: hermes
+
+Inputs provided:
+
+* Project Steckbrief
+* Original project artefacts (PDFs, diagrams, presentations, models)
+
+Your goal is to generate everything required so that I can directly add the project to the portfolio repository.
+
+IMPORTANT:
+
+Do not redesign the website.
+
+Do not redesign the architecture.
+
+Do not propose alternatives.
+
+Generate the final implementation files.
+
+---
+
+## OUTPUT STRUCTURE
+
+Create the following deliverables:
+
+Hermes/
+├── hermes.json
+├── dossier.md
+└── artifacts/
+├── motivationsmodell.pdf
+├── engagementmodell.pdf
+├── verbesserungsprozess.pdf
+└── additional-artifacts-if-applicable
+
+---
+
+PART 1
+HERMES.JSON
+-----------
+
+Generate a complete hermes.json file.
+
+Use the exact project schema already used by the portfolio system.
+
+Populate every field that can be supported by:
+
+* the project steckbrief
+* the uploaded artefacts
+
+Leave unsupported fields empty.
+
+Do not invent data.
+
+If information is uncertain:
+
+mark it explicitly.
+
+---
+
+PART 2
+ARTEFACT REGISTRY
+-----------------
+
+Create all artifact entries.
+
+For every uploaded artefact provide:
+
+* title
+* type
+* description
+* relevance
+* evidence strength
+* portfolio value
+* project phase supported
+
+Classify evidence strength as:
+
+Strong
+Medium
+Weak
+
+Provide reasoning.
+
+---
+
+PART 3
+FACTS & FIGURES
+---------------
+
+Extract all objectively defensible project facts.
+
+Examples:
+
+Stakeholders involved
+
+Departments involved
+
+Workshops
+
+Processes analysed
+
+Diagrams created
+
+Models developed
+
+Documents produced
+
+Only use defensible values.
+
+Do not estimate.
+
+Do not invent.
+
+---
+
+PART 4
+MEASUREMENT MODEL
+-----------------
+
+Assess:
+
+Verified Results
+
+Estimated Impact
+
+Hypotheses
+
+Provide justification.
+
+Do not overstate certainty.
+
+---
+
+PART 5
+PROCESS MATURITY MODEL
+----------------------
+
+Assess:
+
+Standardization
+
+Documentation
+
+Transparency
+
+Digitalization
+
+Automation
+
+Governance
+
+For each dimension provide:
+
+Current State
+
+Target State
+
+Justification
+
+Only use evidence available from the project documentation.
+
+---
+
+PART 6
+TRANSFORMATION MODEL
+--------------------
+
+Create:
+
+Before State
+
+Analysis
+
+Optimization
+
+Digitalization
+
+Future State
+
+For each phase provide:
+
+Inputs
+
+Outputs
+
+Artefacts
+
+Evidence
+
+---
+
+PART 7
+DOSSIER.MD
+----------
+
+Create a professional project dossier.
+
+Structure:
+
+1 Executive Summary
+
+2 Business Context
+
+3 Initial Situation
+
+4 Problem Statement
+
+5 Analysis
+
+6 Root Causes
+
+7 Solution Design
+
+8 Implementation
+
+9 Artefacts
+
+10 Facts & Figures
+
+11 Impact
+
+12 Learnings
+
+13 Evidence Assessment
+
+14 Limitations
+
+15 Recommendations
+
+The dossier should read like a professional consulting case study.
+
+---
+
+PART 8
+FINAL ASSESSMENT
+----------------
+
+Assess:
+
+Project Complexity
+Leadership Complexity
+Stakeholder Complexity
+Documentation Maturity
+Evidence Maturity
+Portfolio Strength
+
+Rate each from:
+
+1 to 5
+
+Provide justification.
+
+---
+
+## RULES
+
+Never invent KPIs.
+
+Never fabricate metrics.
+
+Never fabricate business impact.
+
+Use only information supported by:
+
+* project steckbrief
+* uploaded artefacts
+
+When uncertain:
+
+state uncertainty explicitly.
+
+Output the complete deliverables.
