@@ -1,0 +1,117 @@
+{
+  "slug": "holding-struktur",
+  "name": "Skalierbare Holding- und Organisationsstruktur",
+  "status": "concept",
+  "category": "Struktur",
+  "summary": "Organisch gewachsene Einzelgesellschaften als governte Struktur mit Shared-Services-Ebene durchdacht.",
+
+  "meta": {
+    "role": "Business Architecture & Operating-Model-Design",
+    "industry": "Unternehmensgruppe / Holding",
+    "period": "Konzeptstudie",
+    "type": "Organisations- & Governance-Design",
+    "implementationStatus": "Konzeptstudie · Validierung offen",
+    "tracked": ["Skalierbarkeit", "manuelle Schritte", "Transparenz"]
+  },
+
+  "figures": {
+    "stakeholders": 0,
+    "systems": 0,
+    "processSteps": 0,
+    "workshops": 0,
+    "documents": 3,
+    "screenshots": 0,
+    "diagrams": 2,
+    "departments": 0,
+    "trainings": 0,
+    "businessUnits": 4
+  },
+
+  "measurement": {
+    "verified": 0,
+    "estimated": 1,
+    "hypotheses": 3,
+    "note": "Konzeptstudie ohne reale Messwerte. Bewertung beruht auf strukturellen Annahmen, nicht auf erhobenen Daten."
+  },
+
+  "maturity": {
+    "standardization": { "current": 1, "target": 4 },
+    "documentation":   { "current": 2, "target": 4 },
+    "transparency":    { "current": 1, "target": 4 },
+    "digitalization":  { "current": 1, "target": 3 },
+    "automation":      { "current": 1, "target": 2 },
+    "governance":      { "current": 1, "target": 5 }
+  },
+
+  "context": "Mehrere Gesellschaften waren ohne gemeinsame Governance gewachsen: doppelte Funktionen, unklare Entscheidungsrechte und Reibung zwischen den Einheiten.",
+
+  "problem": "Die sichtbare Doppelarbeit war nur das Symptom. Die eigentliche Ursache war ein fehlendes Operating Model, das festlegt, was zentral und was dezentral entschieden wird.",
+
+  "analysis": "Überlappende Rollen, Kosten und Entscheidungsrechte kartiert. Die Duplizierung war Symptom — die Ursache war ein fehlendes Operating Model. Daraus ein Holding-Modell mit zentralen Shared Services abgeleitet.",
+
+  "approach": {
+    "methodology": ["Business Architecture", "Operating Model", "RACI", "Governance-Design"],
+    "implementation": "Holding-Modell mit zentraler Shared-Services-Ebene entworfen, Entscheidungsrechte je Funktion zwischen Holding und Gesellschaften aufgeteilt und über RACI verankert."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "Organisch gewachsene Einzelgesellschaften ohne gemeinsame Governance.",
+      "inputs": ["Eigenständige Gesellschaften", "Doppelte Funktionen"],
+      "outputs": ["Reibung zwischen Einheiten", "Unklare Entscheidungsrechte"],
+      "artifacts": [],
+      "evidence": "Überlappungen als Ausgangslage beschrieben."
+    },
+    "analysis": {
+      "summary": "Rollen, Kosten und Entscheidungsrechte kartiert.",
+      "inputs": ["Funktionsübersicht je Gesellschaft"],
+      "outputs": ["Karte überlappender Funktionen", "Ursache: fehlendes Operating Model"],
+      "artifacts": ["Schnittstellenübersicht"],
+      "evidence": "Doppelarbeit als Governance-Symptom identifiziert."
+    },
+    "optimization": {
+      "summary": "Operating Model mit zentral/dezentral-Schnitt und RACI entworfen.",
+      "inputs": ["Funktionskarte", "Entscheidungsrechte"],
+      "outputs": ["Holding-Modell mit Shared Services", "RACI je Funktion"],
+      "artifacts": ["Strukturmodell (Konzept)", "Rollen- und RACI-Entwurf"],
+      "evidence": "Konzept entworfen — noch nicht mit Mandant validiert."
+    },
+    "digitalization": {
+      "summary": "Noch nicht Teil dieser Konzeptstudie.",
+      "inputs": [],
+      "outputs": [],
+      "artifacts": [],
+      "evidence": "Out of Scope dieser Studie."
+    },
+    "future": {
+      "summary": "Governte Gruppe mit skalierbarer Shared-Services-Ebene.",
+      "inputs": ["Validierte Annahmen"],
+      "outputs": ["Reduzierte Doppelarbeit", "Skalierbare Aufnahme neuer Einheiten"],
+      "artifacts": [],
+      "evidence": "Belegbar erst nach Validierung mit realem Mandanten."
+    }
+  },
+
+  "artifacts": [
+    { "type": "orgchart", "title": "Strukturmodell (Konzept)", "caption": "Holding mit Shared-Services-Ebene und Einzelgesellschaften.", "pending": true },
+    { "type": "document", "title": "Rollen- und RACI-Entwurf", "caption": "Entscheidungsrechte je Funktion.", "pending": true },
+    { "type": "diagram", "title": "Schnittstellenübersicht", "caption": "Übergaben zwischen Holding und Gesellschaften.", "pending": true }
+  ],
+
+  "deliverables": [
+    "Strukturmodell der Holding (Konzept)",
+    "RACI-Entwurf für zentrale Funktionen",
+    "Schnittstellenübersicht"
+  ],
+
+  "impact": "Als Konzeptstudie noch ohne reale Messwerte. Bewertet würde die Wirkung über Skalierbarkeit (Grenzaufwand je zusätzlicher Einheit) und über reduzierte Doppelarbeit zwischen den Gesellschaften.",
+
+  "lessons": [
+    "Doppelarbeit ist fast immer ein Governance-Symptom, kein Effizienz-Symptom.",
+    "Ein Operating Model entscheidet vor jedem Organigramm, was zentral und was dezentral gehört."
+  ],
+
+  "evidence": "Konzeptstudie ohne reale Messwerte. Nächster Dokumentationsschritt: Konzept mit einem realen Mandanten validieren und Annahmen prüfen.",
+
+  "related": ["neue-erloesfelder", "datenbasierte-steuerung"]
+}

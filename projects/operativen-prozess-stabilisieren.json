@@ -1,0 +1,117 @@
+{
+  "slug": "operativen-prozess-stabilisieren",
+  "name": "Operativen Prozess stabilisieren",
+  "status": "anonymized",
+  "category": "Prozess",
+  "summary": "Wiederkehrende Engpässe und Nacharbeit über Wertstromanalyse und Standardisierung adressiert.",
+
+  "meta": {
+    "role": "Prozessanalyse & Standardisierung",
+    "industry": "Operativer Betrieb / Produktion",
+    "period": "Anonymisiertes Praxisbeispiel",
+    "type": "Prozessoptimierung (Lean)",
+    "implementationStatus": "Standard definiert · Controlling im Aufbau",
+    "tracked": ["Fehlerquote", "Durchlaufzeit", "manuelle Schritte"]
+  },
+
+  "figures": {
+    "stakeholders": 8,
+    "systems": 2,
+    "processSteps": 31,
+    "workshops": 3,
+    "documents": 4,
+    "screenshots": 0,
+    "diagrams": 1,
+    "departments": 2,
+    "trainings": 1,
+    "businessUnits": 1
+  },
+
+  "measurement": {
+    "verified": 1,
+    "estimated": 3,
+    "hypotheses": 1,
+    "note": "Erste qualitative Rückmeldungen liegen vor; belastbare Quoten folgen mit dem Kennzahlen-Cockpit."
+  },
+
+  "maturity": {
+    "standardization": { "current": 3, "target": 5 },
+    "documentation":   { "current": 3, "target": 4 },
+    "transparency":    { "current": 2, "target": 4 },
+    "digitalization":  { "current": 1, "target": 3 },
+    "automation":      { "current": 1, "target": 3 },
+    "governance":      { "current": 2, "target": 4 }
+  },
+
+  "context": "Der Tagesbetrieb litt unter wiederkehrenden Engpässen, hoher Nacharbeit und viel manueller Abstimmung zwischen Teams.",
+
+  "problem": "Die Streuung der Ergebnisse machte den Betrieb unplanbar: mal lief alles glatt, mal stapelte sich die Nacharbeit. Die Ursache war nicht offensichtlich, weil sie in instabilen Inputs und fehlenden Standards lag.",
+
+  "analysis": "Wertstromanalyse, um instabile Inputs und fehlende Standards als Quelle der Streuung sichtbar zu machen. Engpässe wurden vom Symptom (Rückstau) bis zur strukturellen Ursache zurückverfolgt.",
+
+  "approach": {
+    "methodology": ["Lean", "Wertstromanalyse", "Standardisierung", "Kontinuierliche Verbesserung"],
+    "implementation": "Kernprozesse standardisiert und Übergaben klar definiert, bevor Werkzeuge eingeführt wurden. Standards so gestaltet, dass Abweichungen sofort sichtbar werden."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "Instabiler Tagesbetrieb mit Engpässen und hoher Nacharbeit.",
+      "inputs": ["Schwankende Auftrags-Inputs", "Informelle Absprachen"],
+      "outputs": ["Rückstau", "Hohe Nacharbeitsquote"],
+      "artifacts": [],
+      "evidence": "Streuung über mehrere Tage beobachtet."
+    },
+    "analysis": {
+      "summary": "Wertstrom aufgenommen; Engpässe vom Symptom zur Ursache zurückverfolgt.",
+      "inputs": ["Prozessbeobachtung", "3 Workshops mit 8 Beteiligten"],
+      "outputs": ["Engpasskarte", "Ursache: instabile Inputs"],
+      "artifacts": ["Wertstromdiagramm"],
+      "evidence": "Instabile Inputs als Hauptquelle der Streuung identifiziert."
+    },
+    "optimization": {
+      "summary": "Kernschritte standardisiert, Übergaben klar definiert.",
+      "inputs": ["Wertstromdiagramm", "Engpasskarte"],
+      "outputs": ["Standardablauf", "Sichtbare Abweichungslogik"],
+      "artifacts": ["Prozessstandard"],
+      "evidence": "Standard so gestaltet, dass Abweichungen sofort auffallen."
+    },
+    "digitalization": {
+      "summary": "Vorbereitung eines Kennzahlen-Cockpits zur laufenden Messung.",
+      "inputs": ["Prozessstandard", "Kennzahlen-Definition"],
+      "outputs": ["Cockpit-Konzept"],
+      "artifacts": ["Kennzahlen-Definition"],
+      "evidence": "Cockpit im Aufbau — noch nicht produktiv."
+    },
+    "future": {
+      "summary": "Gesteuerter Standardbetrieb mit laufender Fehlerquoten-Messung.",
+      "inputs": ["Live-Kennzahlen"],
+      "outputs": ["Stabile Durchlaufzeiten", "Sinkende Nacharbeit"],
+      "artifacts": [],
+      "evidence": "Belegbar ab Cockpit-Betrieb."
+    }
+  },
+
+  "artifacts": [
+    { "type": "diagram", "title": "Wertstromdiagramm", "caption": "Visualisierung des Flusses mit Engpässen und Wartezeiten.", "pending": true },
+    { "type": "document", "title": "Prozessstandard", "caption": "Definierter Standardablauf für die Kernschritte.", "pending": true },
+    { "type": "document", "title": "Kennzahlen-Definition", "caption": "Was gemessen wird und wie — als Grundlage fürs Controlling.", "pending": true }
+  ],
+
+  "deliverables": [
+    "Wertstromdiagramm (IST)",
+    "Standardisierter Kernprozess",
+    "Kennzahlen-Definition für die laufende Messung"
+  ],
+
+  "impact": "Erwartete Wirkung auf Fehlerquote und Durchlaufzeit. Gemessen würde über Nacharbeits- und Korrekturraten sowie Zeitstempel — vor und nach Einführung des Standards.",
+
+  "lessons": [
+    "Streuung ist meist ein Input-Problem, kein Personen-Problem.",
+    "Ein Standard, der Abweichungen sichtbar macht, ist mehr wert als einer, der nur Abläufe beschreibt."
+  ],
+
+  "evidence": "Wirkung wird belegbar, sobald das Kennzahlen-Cockpit läuft. Nächster Dokumentationsschritt: Cockpit für die laufende Messung der Fehlerquote einrichten.",
+
+  "related": ["angebots-auftragsprozess", "datenbasierte-steuerung"]
+}

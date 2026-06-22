@@ -1,0 +1,117 @@
+{
+  "slug": "neue-erloesfelder",
+  "name": "Neue Erlösfelder strukturiert prüfen",
+  "status": "concept",
+  "category": "Business Development",
+  "summary": "Adjazente Geschäftsmodelle entlang vorhandener Stärken bewertet und früh testbar gemacht.",
+
+  "meta": {
+    "role": "Business Development & Modellanalyse",
+    "industry": "Branchenübergreifend",
+    "period": "Konzeptstudie",
+    "type": "Geschäftsmodell-Entwicklung",
+    "implementationStatus": "Konzeptstudie · Hypothesen-Test offen",
+    "tracked": ["Skalierbarkeit", "Transparenz"]
+  },
+
+  "figures": {
+    "stakeholders": 0,
+    "systems": 0,
+    "processSteps": 0,
+    "workshops": 0,
+    "documents": 3,
+    "screenshots": 0,
+    "diagrams": 0,
+    "departments": 0,
+    "trainings": 0,
+    "businessUnits": 0
+  },
+
+  "measurement": {
+    "verified": 0,
+    "estimated": 1,
+    "hypotheses": 4,
+    "note": "Konzeptstudie ohne reale Erlöszahlen. Bewertung basiert vollständig auf zu testenden Hypothesen."
+  },
+
+  "maturity": {
+    "standardization": { "current": 1, "target": 3 },
+    "documentation":   { "current": 2, "target": 4 },
+    "transparency":    { "current": 2, "target": 4 },
+    "digitalization":  { "current": 1, "target": 2 },
+    "automation":      { "current": 1, "target": 2 },
+    "governance":      { "current": 1, "target": 3 }
+  },
+
+  "context": "Das Kerngeschäft nähert sich der Sättigung und braucht zusätzliche, tragfähige Erlösfelder, um weiter zu wachsen.",
+
+  "problem": "Wachstumsideen gibt es viele — aber ohne strukturierte Bewertung droht entweder Aktionismus oder Stillstand. Es fehlt ein Filter, der echte Adjazenzen von Wunschdenken trennt.",
+
+  "analysis": "Markt- und Fähigkeitsanalyse, um Adjazenzen zu finden, in denen vorhandene Stärken einen echten Vorteil schaffen. Jede Idee wurde gegen vorhandene Fähigkeiten und Marktbedarf geprüft.",
+
+  "approach": {
+    "methodology": ["Business Model Canvas", "Marktanalyse", "MVP-Logik", "Annahmen-Tests"],
+    "implementation": "Geschäftsmodelle über das Business Model Canvas strukturiert, kritische Annahmen je Feld benannt und früh testbare Angebote skizziert — statt direkt zu investieren."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "Kerngeschäft nahe Sättigung; viele ungeprüfte Wachstumsideen.",
+      "inputs": ["Ideenliste", "Vorhandene Fähigkeiten"],
+      "outputs": ["Risiko von Aktionismus oder Stillstand"],
+      "artifacts": [],
+      "evidence": "Fehlender Bewertungsfilter beschrieben."
+    },
+    "analysis": {
+      "summary": "Markt- und Fähigkeitsanalyse zur Identifikation echter Adjazenzen.",
+      "inputs": ["Marktdaten", "Fähigkeitsprofil"],
+      "outputs": ["Adjazenz-Bewertung je Idee", "Priorisierung"],
+      "artifacts": ["Annahmen- und Hypothesenliste"],
+      "evidence": "Jede Idee gegen Fähigkeiten und Marktbedarf geprüft."
+    },
+    "optimization": {
+      "summary": "Geschäftsmodelle über Canvas strukturiert und früh testbar gemacht.",
+      "inputs": ["Adjazenz-Bewertung", "Kritische Annahmen"],
+      "outputs": ["Canvas je Erlösfeld", "Früh testbare Angebote"],
+      "artifacts": ["Canvas je Erlösfeld", "Test-Plan"],
+      "evidence": "Testbare Hypothesen statt vollständiger Businesspläne."
+    },
+    "digitalization": {
+      "summary": "Noch nicht Teil dieser Konzeptstudie.",
+      "inputs": [],
+      "outputs": [],
+      "artifacts": [],
+      "evidence": "Out of Scope dieser Studie."
+    },
+    "future": {
+      "summary": "Validierte, tragfähige Erlösfelder mit nachgewiesener Zahlungsbereitschaft.",
+      "inputs": ["Testergebnisse"],
+      "outputs": ["Bestätigte Adjazenzen", "Skalierbare Angebote"],
+      "artifacts": [],
+      "evidence": "Belegbar erst nach Hypothesen-Tests mit Pilotkunden."
+    }
+  },
+
+  "artifacts": [
+    { "type": "document", "title": "Canvas je Erlösfeld", "caption": "Business Model Canvas pro geprüftem Feld.", "pending": true },
+    { "type": "document", "title": "Annahmen- und Hypothesenliste", "caption": "Kritische Annahmen, nach Risiko priorisiert.", "pending": true },
+    { "type": "document", "title": "Test-Plan", "caption": "Kleine, kontrollierte Tests zur Validierung der Zahlungsbereitschaft.", "pending": true }
+  ],
+
+  "deliverables": [
+    "Business Model Canvas je Erlösfeld",
+    "Priorisierte Annahmen- und Hypothesenliste",
+    "Test-Plan für kontrollierte Validierung"
+  ],
+
+  "impact": "Konzeptstudie ohne reale Erlöszahlen. Validiert würde zuerst die Zahlungsbereitschaft über kleine, kontrollierte Tests — nicht über Umsatzversprechen.",
+
+  "lessons": [
+    "Die stärkste Adjazenz nutzt vorhandene Fähigkeiten — nicht nur einen attraktiven Markt.",
+    "Eine Annahme früh und billig zu testen ist wertvoller als ein vollständiger Businessplan."
+  ],
+
+  "evidence": "Konzeptstudie ohne reale Erlöszahlen. Nächster Dokumentationsschritt: eine zentrale Hypothese mit potenziellen Pilotkunden testen.",
+
+  "related": ["holding-struktur", "datenbasierte-steuerung"]
+}

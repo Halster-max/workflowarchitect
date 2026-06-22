@@ -1,0 +1,84 @@
+{
+  "slug": "mein-neues-projekt",
+  "name": "Titel des Projekts",
+  "status": "concept",
+  "category": "Kategorie (z. B. Digitalisierung)",
+  "summary": "Ein bis zwei Sätze für die Übersichtskarte.",
+
+  "meta": {
+    "role": "Deine Rolle",
+    "industry": "Branche",
+    "period": "Zeitraum oder Status-Hinweis",
+    "type": "Projekttyp",
+    "implementationStatus": "z. B. Konzept · Pilot geplant · In Umsetzung · Produktiv",
+    "tracked": ["Durchlaufzeit", "manuelle Schritte"]
+  },
+
+  "figures": {
+    "stakeholders": 0,
+    "systems": 0,
+    "processSteps": 0,
+    "workshops": 0,
+    "documents": 0,
+    "screenshots": 0,
+    "diagrams": 0,
+    "departments": 0,
+    "trainings": 0,
+    "businessUnits": 0
+  },
+
+  "measurement": {
+    "verified": 0,
+    "estimated": 0,
+    "hypotheses": 0,
+    "note": "Optionaler Hinweis, warum die Bewertung so ausfällt (z. B. Messung noch offen)."
+  },
+
+  "maturity": {
+    "standardization": { "current": 0, "target": 0 },
+    "documentation":   { "current": 0, "target": 0 },
+    "transparency":    { "current": 0, "target": 0 },
+    "digitalization":  { "current": 0, "target": 0 },
+    "automation":      { "current": 0, "target": 0 },
+    "governance":      { "current": 0, "target": 0 }
+  },
+
+  "context": "Ausgangslage: Wie war die Situation zu Beginn?",
+  "problem": "Problemstellung: Was war das eigentliche Problem (nicht nur das Symptom)?",
+  "analysis": "Analyse: Wie wurde das Problem untersucht und worauf zurückgeführt?",
+
+  "approach": {
+    "methodology": ["Methode 1", "Methode 2"],
+    "implementation": "Umsetzung: Was wurde konkret getan?"
+  },
+
+  "transformation": {
+    "before":         { "summary": "Ausgangszustand in einem Satz.", "inputs": ["Input"], "outputs": ["Output"], "artifacts": ["Artefakt-Titel"], "evidence": "Belegstand." },
+    "analysis":       { "summary": "", "inputs": [], "outputs": [], "artifacts": [], "evidence": "" },
+    "optimization":   { "summary": "", "inputs": [], "outputs": [], "artifacts": [], "evidence": "" },
+    "digitalization": { "summary": "", "inputs": [], "outputs": [], "artifacts": [], "evidence": "" },
+    "future":         { "summary": "", "inputs": [], "outputs": [], "artifacts": [], "evidence": "" }
+  },
+
+  "artifacts": [
+    {
+      "type": "bpmn",
+      "title": "Beispiel-Diagramm",
+      "caption": "Optionale Bildunterschrift.",
+      "src": "projects/artifacts/mein-neues-projekt/diagramm.png",
+      "pending": false
+    },
+    {
+      "type": "pdf",
+      "title": "Beispiel-Dokument",
+      "pending": true
+    }
+  ],
+
+  "deliverables": ["Ergebnis 1", "Ergebnis 2"],
+  "impact": "Wirkung: als Messlogik beschrieben, nicht als unbelegte Zahl.",
+  "lessons": ["Erkenntnis 1", "Erkenntnis 2"],
+  "evidence": "Belegstatus oder nächster Dokumentationsschritt.",
+
+  "related": ["slug-eines-verwandten-projekts"]
+}

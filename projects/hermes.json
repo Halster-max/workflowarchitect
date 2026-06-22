@@ -1,0 +1,146 @@
+{
+  "slug": "hermes",
+  "name": "Hermes",
+  "status": "real",
+  "category": "Organisationsentwicklung",
+  "summary": "Personalbindung und Dienstabdeckung in einer psychiatrischen Einrichtung über einen mitarbeiterorientierten Beteiligungs- und Verbesserungsprozess stabilisiert.",
+
+  "meta": {
+    "role": "Projektleiter",
+    "industry": "Gesundheitswesen / Psychiatrische Einrichtung",
+    "period": "Projektabschluss vor 12.07.2024 · Dauer unklar (Steckbrief nennt sowohl 3 Monate als auch 6 Monate Einführung)",
+    "type": "Organisationsentwicklung / Prozessengineering / Personalmanagement",
+    "implementationStatus": "Eingeführt · iterativ optimiert",
+    "tracked": ["Dienstabdeckung", "Mitarbeiterbindung / Fluktuation", "Mitarbeiterzufriedenheit"]
+  },
+
+  "figures": {
+    "stakeholders": 6,
+    "systems": 0,
+    "processSteps": 0,
+    "workshops": 0,
+    "documents": 1,
+    "screenshots": 0,
+    "diagrams": 3,
+    "departments": 4,
+    "trainings": 0,
+    "businessUnits": 1
+  },
+
+  "measurement": {
+    "verified": 0,
+    "estimated": 3,
+    "hypotheses": 2,
+    "note": "Keine formale Vorher-Nachher-Messung dokumentiert — der Steckbrief nennt fehlende Kennzahlen explizit als offenen Punkt. Berichtete Ergebnisse (volle Dienstabdeckung, höhere Bindung, Übergang auf 24/7-Modell) sind qualitativ plausibel, aber nicht quantitativ belegt."
+  },
+
+  "maturity": {
+    "standardization": { "current": 3, "target": 4 },
+    "documentation":   { "current": 2, "target": 4 },
+    "transparency":    { "current": 3, "target": 4 },
+    "digitalization":  { "current": 1, "target": 2 },
+    "automation":      { "current": 1, "target": 1 },
+    "governance":      { "current": 2, "target": 4 }
+  },
+
+  "context": "In einer psychiatrischen Einrichtung bestanden erhebliche Herausforderungen in Personalerhaltung und Dienstqualität: Mehrere Dienste blieben wegen Personalmangels unbesetzt und bestehende Dienstvorschriften wurden nur unzureichend umgesetzt. Die durchschnittliche Anstellungsdauer lag bei lediglich drei bis zwölf Monaten, woraus permanenter Wissensverlust und hoher Schulungsaufwand entstanden.",
+
+  "problem": "Das eigentliche Problem war nicht der Personalmangel als Symptom, sondern eine fehlende Beteiligungs- und Feedback-Kultur: Mitarbeiteranliegen und Verbesserungsvorschläge wurden kaum wahrgenommen oder umgesetzt, die interne Kommunikation war schwach, und es gab keinen Prozess für kontinuierliche Verbesserung. Folgen waren hohe Fluktuation, ungedeckte Dienste, unzureichende Arbeitsqualität und Sicherheitsrisiken für Pflegepersonal und Patienten.",
+
+  "analysis": "Erhoben wurden Einzelgespräche mit Pflege- und Sicherheitspersonal sowie Analysen von Dienstabdeckung, Mitarbeiterzufriedenheit und Fluktuationsursachen. Als Ursachen identifiziert: schwache interne Kommunikation, fehlende Feedback- und Beteiligungskultur, geringe Wahrnehmung von Mitarbeiteranliegen, unattraktive Arbeitsbedingungen und fehlende Verbesserungsprozesse. Die Befunde wurden in einem Motivationsmodell (Treiber/Hindernisse) und einem Engagementmodell (Bedürfnis- zu Engagement-Stufen) verdichtet — fachlich begleitet durch einen Spezialisten für Personalpsychologie.",
+
+  "approach": {
+    "methodology": ["Stakeholder-Interviews", "Ursachenanalyse", "Prozessanalyse", "Beratung Personalpsychologie", "Iterative Pilotierung", "Retrospektiven / Fokusgruppen"],
+    "implementation": "Strukturierte Mitarbeitergespräche mit Pflege und Sicherheit, gemeinsame Ursachenanalyse mit einem Personalpsychologie-Experten, Entwicklung eines neuen Beteiligungs- und Verbesserungsprozesses, Abstimmung mit der Geschäftsleitung und Einführung über mehrere Monate mit laufender Iteration. Ergänzend wurden mit HR und Marketing alternative Rekrutierungsansätze entwickelt."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "Instabile Personalsituation mit unbesetzten Diensten, hoher Fluktuation und schwacher Kommunikation.",
+      "inputs": ["Personalmangel", "Unzureichend umgesetzte Dienstvorschriften", "Anstellungsdauer 3–12 Monate"],
+      "outputs": ["Ungedeckte Dienste", "Wissensverlust", "Hoher Schulungsaufwand", "Sicherheitsrisiken"],
+      "artifacts": [],
+      "evidence": "Im Steckbrief (Ausgangslage) beschrieben, nicht quantitativ belegt."
+    },
+    "analysis": {
+      "summary": "Ursachen über Einzelgespräche und Zufriedenheits-/Fluktuationsanalyse erhoben und in zwei Modellen verdichtet.",
+      "inputs": ["Einzelgespräche Pflege & Sicherheit", "Analyse Dienstabdeckung", "Analyse Mitarbeiterzufriedenheit", "Beratung Personalpsychologie"],
+      "outputs": ["Ursachenbild (Kommunikation, Beteiligung, Arbeitsbedingungen)", "Motivationsmodell", "Engagementmodell"],
+      "artifacts": ["Motivationsmodell", "Engagementmodell"],
+      "evidence": "Beide Modelle liegen als PDF vor."
+    },
+    "optimization": {
+      "summary": "Entwicklung eines neuen Beteiligungs- und Verbesserungsprozesses und Abstimmung mit der Geschäftsleitung.",
+      "inputs": ["Analyseergebnisse", "Motivations- und Engagementmodell"],
+      "outputs": ["Neuer Verbesserungsprozess", "Management-Freigabe", "Feedback-Kultur"],
+      "artifacts": ["Verbesserungsprozess (Prozessdiagramm)", "Management-Präsentation"],
+      "evidence": "Prozessdiagramm liegt als PDF vor; Management-Präsentation im Steckbrief genannt, nicht hochgeladen."
+    },
+    "digitalization": {
+      "summary": "Kein Schwerpunkt — Digitalisierung war laut Steckbrief nicht Projektziel.",
+      "inputs": [],
+      "outputs": [],
+      "artifacts": [],
+      "evidence": "Digitale Werkzeuge (Miro, Lucidspark) wurden ausschliesslich zur kollaborativen Modellierung der Artefakte genutzt; keine Prozessdigitalisierung im Betrieb."
+    },
+    "future": {
+      "summary": "Mitarbeiterorientierte Organisation mit Feedback-Kultur, stabiler Dienstabdeckung und nachhaltiger Bindung.",
+      "inputs": ["Laufende Retrospektiven / Fokusgruppen", "Zusammenarbeit Operative · HR · Marketing"],
+      "outputs": ["Volle Dienstabdeckung (berichtet)", "Höhere Mitarbeiterbindung (berichtet)", "Übergang auf 24/7-Betriebsmodell", "Stabileres Team"],
+      "artifacts": [],
+      "evidence": "Qualitativ berichtet; nicht quantitativ gemessen (offener Punkt)."
+    }
+  },
+
+  "artifacts": [
+    {
+      "type": "pdf",
+      "title": "Verbesserungsprozess (Prozess-/Flussdiagramm)",
+      "caption": "Iterativer Beteiligungs- und Verbesserungsprozess: von Vision/Input über Vorbereitung, Sprint, Retrospektive und Team-Tests bis zur Umsetzung beim Kunden — inkl. Prozess-Parkplatz für offene Punkte.",
+      "src": "projects/artifacts/hermes/verbesserungsprozess.pdf",
+      "pending": false
+    },
+    {
+      "type": "pdf",
+      "title": "Motivationsmodell",
+      "caption": "Treiber und Hindernisse der Mitarbeitermotivation im Arbeitsumfeld: Mitarbeiterentwicklung, passende Ressourcen, geeignete Ziele/konfliktfreie Rollen, Arbeitsplatzsicherheit und soziale Aspekte.",
+      "src": "projects/artifacts/hermes/motivationsmodell.pdf",
+      "pending": false
+    },
+    {
+      "type": "pdf",
+      "title": "Engagementmodell",
+      "caption": "Bedürfnis-Pyramide (Überleben bis Verwirklichung) gekoppelt an Engagement-Stufen (Dienst nach Vorschrift bis sehr engagiert) und an Retrospektive/Feedback-Mechanik mit Resultatbezug.",
+      "src": "projects/artifacts/hermes/engagementmodell.pdf",
+      "pending": false
+    },
+    {
+      "type": "presentation",
+      "title": "Management-Präsentation (Geschäftsleitung)",
+      "caption": "Präsentation der Lösung zur Abstimmung und Freigabe durch die Geschäftsleitung.",
+      "pending": true
+    }
+  ],
+
+  "deliverables": [
+    "Neuer Beteiligungs- und Verbesserungsprozess (Prozessdiagramm)",
+    "Motivationsmodell (Treiber/Hindernisse)",
+    "Engagementmodell (Bedürfnis- zu Engagement-Stufen)",
+    "Management-Präsentation zur Geschäftsleitungs-Abstimmung",
+    "Alternative Rekrutierungsansätze (gemeinsam mit HR & Marketing)"
+  ],
+
+  "impact": "Wirkung wirkt auf Dienstabdeckung, Mitarbeiterbindung/Fluktuation und Mitarbeiterzufriedenheit. Messlogik: Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer und Fluktuationsrate sowie Zufriedenheitswerte — jeweils vor und nach Einführung des Verbesserungsprozesses. Diese Vorher-Nachher-Werte wurden im Projekt nicht formal erhoben; berichtete Ergebnisse (volle Besetzung, höhere Bindung, 24/7-Modell) sind qualitativ und noch nicht quantitativ belegt.",
+
+  "lessons": [
+    "Mitarbeiterbindung entsteht primär durch Beteiligung und Wertschätzung, nicht durch Einzelmassnahmen.",
+    "Kommunikation ist ein zentraler Hebel für Leistungsfähigkeit und Sicherheit.",
+    "Kleine organisatorische Probleme haben oft grosse Wirkung auf Motivation.",
+    "Nachhaltige Verbesserung braucht mehrere Iterationen — nicht einen einzelnen Wurf.",
+    "Rückblickend: frühere Einbindung aller Stakeholder und eine systematische Vorher-Nachher-Messung über Kennzahlen."
+  ],
+
+  "evidence": "Drei Kern-Artefakte (Verbesserungsprozess, Motivationsmodell, Engagementmodell) liegen als PDF vor; die Management-Präsentation ist genannt, aber nicht hochgeladen. Wirkung ist qualitativ berichtet, nicht quantitativ belegt. Nächster Dokumentationsschritt: Vorher-Nachher-Kennzahlen (ungedeckte Dienste, Anstellungsdauer/Fluktuation, Zufriedenheit) nacherheben und die Management-Präsentation ergänzen.",
+
+  "related": ["operativen-prozess-stabilisieren"]
+}

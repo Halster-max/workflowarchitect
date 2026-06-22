@@ -1,0 +1,117 @@
+{
+  "slug": "datenbasierte-steuerung",
+  "name": "Datenbasierte Steuerung & Reporting-Layer",
+  "status": "in-progress",
+  "category": "Daten & Steuerung",
+  "summary": "Fragmentierte Tabellen zu einer abgestimmten Steuerungssicht zusammenführen — mit klaren Definitionen zuerst.",
+
+  "meta": {
+    "role": "Konzeption Daten- & Kennzahlenmodell",
+    "industry": "Unternehmenssteuerung / Controlling",
+    "period": "In Ausarbeitung",
+    "type": "Daten- & Reporting-Architektur",
+    "implementationStatus": "Definitionen in Abstimmung",
+    "tracked": ["Transparenz", "manuelle Schritte", "Automatisierungsgrad"]
+  },
+
+  "figures": {
+    "stakeholders": 5,
+    "systems": 5,
+    "processSteps": 12,
+    "workshops": 2,
+    "documents": 3,
+    "screenshots": 0,
+    "diagrams": 1,
+    "departments": 3,
+    "trainings": 0,
+    "businessUnits": 2
+  },
+
+  "measurement": {
+    "verified": 0,
+    "estimated": 2,
+    "hypotheses": 3,
+    "note": "Wirkung wird belegbar ab der ersten produktiven Datenstrecke; bis dahin Definitionsarbeit statt Zahlen."
+  },
+
+  "maturity": {
+    "standardization": { "current": 2, "target": 5 },
+    "documentation":   { "current": 3, "target": 5 },
+    "transparency":    { "current": 2, "target": 5 },
+    "digitalization":  { "current": 2, "target": 4 },
+    "automation":      { "current": 1, "target": 4 },
+    "governance":      { "current": 2, "target": 4 }
+  },
+
+  "context": "Entscheidungen stützen sich auf verstreute, manuell zusammengeführte Tabellen — langsam, uneinheitlich und schwer überprüfbar.",
+
+  "problem": "Dieselbe Kennzahl bedeutete in verschiedenen Tabellen Verschiedenes. Ein gemeinsames Dashboard wäre wertlos, solange die Definitionen widersprüchlich sind.",
+
+  "analysis": "Jede zentrale Kennzahl auf ihre Quelle zurückgeführt; dabei zeigten sich widersprüchliche Definitionen. Erst die Definitionsfrage, dann die Technik.",
+
+  "approach": {
+    "methodology": ["Kennzahlen-Definition", "Daten & Analytics", "Automatisierung", "Governance"],
+    "implementation": "Zuerst ein gemeinsames Kennzahlen-Verzeichnis, dann eine automatisierte Datenstrecke in eine Steuerungssicht. Definitionen werden mit den Verantwortlichen verbindlich festgeschrieben."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "Steuerung auf Basis verstreuter, manuell zusammengeführter Tabellen.",
+      "inputs": ["Mehrere Quelltabellen", "Manuelle Konsolidierung"],
+      "outputs": ["Langsame, uneinheitliche Reports", "Widersprüchliche Zahlen"],
+      "artifacts": [],
+      "evidence": "Widersprüche zwischen Tabellen dokumentiert."
+    },
+    "analysis": {
+      "summary": "Jede zentrale Kennzahl auf ihre Quelle und Definition zurückgeführt.",
+      "inputs": ["Kennzahlenliste", "Quellsysteme"],
+      "outputs": ["Definitions-Konflikte sichtbar", "Quellen-Mapping"],
+      "artifacts": ["Kennzahlen-Verzeichnis (Entwurf)"],
+      "evidence": "Dieselbe Kennzahl bedeutete je Tabelle Verschiedenes."
+    },
+    "optimization": {
+      "summary": "Verbindliches Kennzahlen-Verzeichnis mit den Verantwortlichen festschreiben.",
+      "inputs": ["Definitions-Konflikte", "Verantwortliche je Kennzahl"],
+      "outputs": ["Einheitliche Definitionen", "Governance je Kennzahl"],
+      "artifacts": ["Datenfluss-Skizze"],
+      "evidence": "Definitionen in Abstimmung — Festschreibung läuft."
+    },
+    "digitalization": {
+      "summary": "Automatisierte Datenstrecke in eine gemeinsame Steuerungssicht.",
+      "inputs": ["Einheitliche Definitionen", "Datenquellen"],
+      "outputs": ["Automatisierte Aufbereitung", "Dashboard-Layout"],
+      "artifacts": ["Dashboard-Konzept"],
+      "evidence": "Konzept steht — produktive Strecke noch offen."
+    },
+    "future": {
+      "summary": "Aktuelle, konsistente Kennzahlen ohne manuelle Zusammenführung.",
+      "inputs": ["Produktive Datenstrecke"],
+      "outputs": ["Live-Steuerungssicht", "Geringerer Reporting-Aufwand"],
+      "artifacts": [],
+      "evidence": "Belegbar ab erster produktiver Strecke."
+    }
+  },
+
+  "artifacts": [
+    { "type": "document", "title": "Kennzahlen-Verzeichnis (Entwurf)", "caption": "Verbindliche Definition jeder zentralen Kennzahl mit Quelle.", "pending": true },
+    { "type": "diagram", "title": "Datenfluss-Skizze", "caption": "Von der Quelle bis zur Steuerungssicht.", "pending": true },
+    { "type": "dashboard", "title": "Dashboard-Konzept", "caption": "Layout der geplanten Steuerungssicht.", "pending": true }
+  ],
+
+  "deliverables": [
+    "Kennzahlen-Verzeichnis mit Quellen",
+    "Datenfluss-Architektur",
+    "Dashboard-Konzept"
+  ],
+
+  "impact": "Bewertet wird über Reporting-Aufwand (manuelle Schritte) und Verfügbarkeit aktueller Kennzahlen — dokumentiert, sobald die erste automatisierte Strecke produktiv ist.",
+
+  "lessons": [
+    "Ein Dashboard ist nur so gut wie die Definition dahinter.",
+    "Die teuerste Arbeit im Reporting ist das stille Zusammenführen widersprüchlicher Tabellen."
+  ],
+
+  "evidence": "Noch in Ausarbeitung — Wirkung belegbar ab der ersten produktiven Datenstrecke. Nächster Dokumentationsschritt: Definitionen mit den Kennzahlen-Verantwortlichen abstimmen und festschreiben.",
+
+  "related": ["operativen-prozess-stabilisieren", "ki-administrative-arbeit"]
+}

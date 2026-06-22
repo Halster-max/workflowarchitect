@@ -1,0 +1,118 @@
+{
+  "slug": "angebots-auftragsprozess",
+  "name": "Angebots- und Auftragsprozess digitalisieren",
+  "status": "anonymized",
+  "category": "Digitalisierung",
+  "summary": "Ein manueller, medienbruchlastiger Angebots-zu-Auftrag-Fluss als durchgängige, nachvollziehbare Pipeline gedacht.",
+
+  "meta": {
+    "role": "Prozessverantwortung & Konzeption",
+    "industry": "B2B-Dienstleistung",
+    "period": "Anonymisiertes Praxisbeispiel",
+    "type": "Prozessdigitalisierung",
+    "implementationStatus": "Konzept abgeschlossen · Pilot geplant",
+    "tracked": ["Durchlaufzeit", "manuelle Schritte", "Transparenz"]
+  },
+
+  "figures": {
+    "stakeholders": 6,
+    "systems": 4,
+    "processSteps": 24,
+    "workshops": 2,
+    "documents": 5,
+    "screenshots": 0,
+    "diagrams": 2,
+    "departments": 3,
+    "trainings": 0,
+    "businessUnits": 1
+  },
+
+  "measurement": {
+    "verified": 0,
+    "estimated": 3,
+    "hypotheses": 2,
+    "note": "Vorher-/Nachher-Werte liegen erst nach der Pilotmessung vor. Bis dahin: dokumentierte Messlogik statt behaupteter Zahlen."
+  },
+
+  "maturity": {
+    "standardization": { "current": 2, "target": 4 },
+    "documentation":   { "current": 3, "target": 5 },
+    "transparency":    { "current": 1, "target": 4 },
+    "digitalization":  { "current": 1, "target": 4 },
+    "automation":      { "current": 1, "target": 3 },
+    "governance":      { "current": 2, "target": 3 }
+  },
+
+  "context": "Angebote und Aufträge wurden über E-Mail, Tabellen und mehrere getrennte Tools manuell bearbeitet. Status war nicht sichtbar, Laufzeiten schwankten, nichts war systematisch messbar.",
+
+  "problem": "Ohne durchgängige Sicht auf den Vorgang entstanden Wartezeiten, Doppelerfassung und Rückfragen. Niemand konnte verlässlich sagen, wo ein Auftrag gerade steht oder warum er liegen bleibt.",
+
+  "analysis": "End-to-end-Prozessaufnahme, um Hand-offs und Medienbrüche zu identifizieren. Jeder Übergang zwischen Tool und Person wurde als potenzielle Fehler- und Wartequelle markiert und mit Zeitbedarf hinterlegt.",
+
+  "approach": {
+    "methodology": ["BPMN", "Prozessaufnahme", "CRM-/Workflow-Design", "Stage-Gates"],
+    "implementation": "Ein einziger Workflow mit klaren Stage-Gates entworfen, bevor über Automatisierung gesprochen wurde. Erst der saubere SOLL-Prozess auf Papier, dann die schrittweise technische Umsetzung."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "Manueller Angebots-zu-Auftrag-Fluss über E-Mail, Tabellen und getrennte Tools.",
+      "inputs": ["Kundenanfragen per E-Mail", "Preislisten in Tabellen", "Verstreute Tool-Stände"],
+      "outputs": ["Angebote ohne einheitlichen Status", "Schwankende Durchlaufzeiten"],
+      "artifacts": ["IST-Prozessdiagramm"],
+      "evidence": "IST-Aufnahme inkl. Medienbrüche dokumentiert."
+    },
+    "analysis": {
+      "summary": "Hand-offs und Medienbrüche end-to-end aufgenommen und bewertet.",
+      "inputs": ["IST-Prozessdiagramm", "Interviews mit 6 Stakeholdern"],
+      "outputs": ["Liste der Medienbrüche mit Zeit- und Fehlerrisiko", "Engpass-Hypothesen"],
+      "artifacts": ["Liste der Medienbrüche"],
+      "evidence": "Jeder Tool-/Medienwechsel als Wartequelle markiert."
+    },
+    "optimization": {
+      "summary": "SOLL-Prozess auf Papier: entfernen, vereinfachen, standardisieren.",
+      "inputs": ["Liste der Medienbrüche", "Stage-Gate-Logik"],
+      "outputs": ["Durchgängiger SOLL-Prozess", "Definierte Übergaben"],
+      "artifacts": ["SOLL-Prozessdiagramm"],
+      "evidence": "Zielprozess mit Stage-Gates abgestimmt."
+    },
+    "digitalization": {
+      "summary": "Schrittweise technische Umsetzung als ein Workflow mit Guardrails.",
+      "inputs": ["SOLL-Prozessdiagramm", "CRM-/Workflow-Plattform"],
+      "outputs": ["Workflow-Konzept", "Automatisierungs-Roadmap"],
+      "artifacts": ["Workflow-Skizze"],
+      "evidence": "Umsetzung als Pilot geplant — noch nicht produktiv."
+    },
+    "future": {
+      "summary": "Gesteuerter, gemessener Auftragsfluss mit Live-Status.",
+      "inputs": ["Pilotdaten", "Kennzahlen-Definition"],
+      "outputs": ["Live-Statussicht", "Vorher-/Nachher-Messung"],
+      "artifacts": [],
+      "evidence": "Messbar erst nach Pilotbetrieb."
+    }
+  },
+
+  "artifacts": [
+    { "type": "bpmn", "title": "IST-Prozessdiagramm", "caption": "Aufnahme des realen Angebots-zu-Auftrag-Flusses inkl. Medienbrüche.", "pending": true },
+    { "type": "bpmn", "title": "SOLL-Prozessdiagramm", "caption": "Durchgängiger Zielprozess mit definierten Stage-Gates.", "pending": true },
+    { "type": "document", "title": "Liste der Medienbrüche", "caption": "Inventar aller Tool- und Medienwechsel mit Zeit- und Fehlerrisiko.", "pending": true },
+    { "type": "diagram", "title": "Workflow-Skizze", "caption": "Vereinfachte Sicht auf die geplante Pipeline.", "pending": true }
+  ],
+
+  "deliverables": [
+    "IST-/SOLL-Prozessmodell (BPMN)",
+    "Liste der Medienbrüche mit Bewertung",
+    "Workflow-Konzept mit Stage-Gates"
+  ],
+
+  "impact": "Erwartete Wirkung auf Durchlaufzeit, Anzahl manueller Schritte und Status-Transparenz. Die konkreten Werte werden über Zeitstempel und Hand-off-Zählung vor und nach der Umstellung dokumentiert.",
+
+  "lessons": [
+    "Medienbrüche sind teurer, als sie aussehen — jeder Toolwechsel kostet Zeit und Datenqualität.",
+    "Erst den Prozess auf Papier richtig machen, dann automatisieren — sonst zementiert die Technik den alten Murks."
+  ],
+
+  "evidence": "Belastbare Zahlen liegen erst nach der Pilotmessung vor. Nächster Dokumentationsschritt: Vorher-/Nachher-Messung der Durchlaufzeit an einer Pilotgruppe aufsetzen.",
+
+  "related": ["operativen-prozess-stabilisieren", "datenbasierte-steuerung"]
+}
