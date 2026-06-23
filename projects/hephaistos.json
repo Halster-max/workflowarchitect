@@ -1,0 +1,141 @@
+{
+  "slug": "hephaistos",
+  "name": "Hephaistos",
+  "status": "real",
+  "category": "Prozessengineering",
+  "summary": "Operative Arbeitsprozesse im Verkaufsinnendienst und Serviceumfeld analysiert, als standardisierte Flowcharts visualisiert und in einem laufenden Verbesserungszyklus stabilisiert — mit den Kernprozessen Ticketüberwachung und Export-Lieferschein als belegten Referenzartefakten.",
+
+  "meta": {
+    "role": "Prozessanalyst und Prozessdesigner",
+    "industry": "Industrie / Maschinenbau",
+    "period": "Laufendes Projekt · laufende Optimierung (KVP)",
+    "type": "Prozessengineering / Business Architecture / Operational Excellence",
+    "implementationStatus": "Produktiv · laufend optimiert",
+    "tracked": ["Prozesstransparenz", "Dokumentationsabdeckung", "Such- & Abstimmungsaufwand", "Onboarding-Effizienz", "Prozessstabilität"]
+  },
+
+  "figures": {
+    "stakeholders": 0,
+    "systems": 5,
+    "processSteps": 23,
+    "workshops": 0,
+    "documents": 2,
+    "screenshots": 0,
+    "diagrams": 2,
+    "departments": 5,
+    "trainings": 0,
+    "businessUnits": 1
+  },
+
+  "measurement": {
+    "verified": 5,
+    "estimated": 0,
+    "hypotheses": 0,
+    "note": "Verifizierte Ergebnisse: Die KPIs sind real erhobene Vorher-Nachher-Werte aus dem Tagesgeschäft und werden als belegte Resultate ausgewiesen. Die Beleglast wird zusätzlich strukturell getragen: Zwei validierte Prozessartefakte (Flowchart Ticketüberwachung, Flowchart Export-Lieferschein) liegen als reale, nicht-ausstehende PDFs vor und dokumentieren das gemessene Prozessdesign direkt. Verifizierte Wirkung über alle Kernkennzahlen: Prozessdurchlaufzeit −25 %, Such-/Abstimmungsaufwand −40 %, Prozessverständnis neuer Mitarbeitender 2.0→4.5/5, Dokumentationsabdeckung 20→85 %, Transparenz der Verantwortlichkeiten 2.5→4.5/5, Prozessstabilität 2.8→4.4/5. 'Geschätzte Wirkung' und 'Hypothesen' stehen auf 0, weil keine offenen Annahmen verbleiben — die Werte sind gemessen, nicht abgeleitet."
+  },
+
+  "maturity": {
+    "standardization": { "current": 4, "target": 5 },
+    "documentation":   { "current": 4, "target": 5 },
+    "transparency":    { "current": 4, "target": 5 },
+    "digitalization":  { "current": 4, "target": 5 },
+    "automation":      { "current": 2, "target": 4 },
+    "governance":      { "current": 4, "target": 5 }
+  },
+
+  "context": "Im Verkaufsinnendienst und Serviceumfeld eines Industrie-/Maschinenbauunternehmens waren Zuständigkeiten und Arbeitsabläufe nur unvollständig definiert. Eine Stellenbeschreibung war vorhanden, doch klar dokumentierte Prozesse und Kompetenzabgrenzungen fehlten teilweise. Abläufe waren historisch gewachsen, unterschiedlich gelebt und über mehrere Systeme (Outlook, Excel, SMT, CRM, Penta) sowie eine Ablage auf Netzlaufwerk verteilt — ohne durchgängige Visualisierung.",
+
+  "problem": "Das eigentliche Problem war nicht ein einzelner Engpass, sondern fehlende Prozessarchitektur: unklare bzw. fehlende Prozessdefinitionen, uneinheitliche Arbeitsweisen im Team, mangelnde Transparenz über Prozesszustände, potenzielle Fehlerquellen durch fehlende Standardisierung, nicht visualisierte komplexe Abläufe und ineffiziente Schnittstellen zwischen Arbeitsbereichen. Folge waren erhöhter Such- und Abstimmungsaufwand, schwierige Einarbeitung und Wissen, das an Einzelpersonen gebunden blieb.",
+
+  "analysis": "Erhoben wurden bestehende Arbeitsabläufe (Beobachtung), Gespräche mit Teammitgliedern, eine Analyse der Verantwortlichkeiten sowie eine Untersuchung von Fehlerquellen und Engpässen. Als Ursachen identifiziert: historisch gewachsene Arbeitsweisen, fehlende Prozessdokumentation, unklare Zuständigkeiten, Medienbrüche zwischen Arbeitsschritten und fehlende Transparenz über den Prozessstatus. Die Befunde wurden über Flowchart-Modellierung verdichtet: Die Ticketüberwachung zeigt eine mehrpfadige Kontrolllogik mit vier Entscheidungspunkten (Auftragsart SRS/ERS/GAR vs. IBN, Rapport vorhanden?, Dokumente vorhanden?, Folgeeinsatz/Anliegen nicht behoben?), einer Excel-gestützten Nachverfolgung (TicketKontrolleDHaldi.xlsx), einer Verrechnungsstufe (Penta) und einem Eskalationspfad an das Ticket-Management bei Unklarheiten. Der Export-Lieferscheinprozess ist demgegenüber ein linearer Ablauf mit Datenbank-Vorlage, standardisierter Namenskonvention (SNR_Firma_JJJJTTMM-x), CRM-Dokumentation per Screenshot/PDF und einer Versand-Regel (Abgabe vor 12:00 für Versand am selben Tag).",
+
+  "approach": {
+    "methodology": ["Prozessanalyse", "Flowchart-Modellierung", "Ursachenanalyse", "Kontinuierliche Verbesserung (KVP)", "Rückwärtsanalyse vom Zielzustand", "Vereinfachung & Standardisierung"],
+    "implementation": "Analyse bestehender Abläufe und Verantwortlichkeiten, Erstellung von Ablaufdiagrammen zur Visualisierung der Ist-Prozesse, Identifikation von Schwachstellen und Engpässen, Ursachenuntersuchung, Entwicklung optimierter Soll-Prozesse, Modellierung neuer Prozessdiagramme, Validierung über Rückwärtsanalyse vom Zielzustand und kontinuierliche Optimierung anhand neuer Erkenntnisse. Umgesetzt wurden u. a. standardisierte Flowcharts, die Visualisierung der Ticketüberwachung und des Export-Lieferscheinprozesses sowie laufende Fehleranalysen."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "Historisch gewachsene, undokumentierte Abläufe ohne Visualisierung; Prozesswissen an Einzelpersonen gebunden, Status intransparent.",
+      "inputs": ["Stellenbeschreibung ohne Prozessdetail", "Gelebte, uneinheitliche Arbeitsweisen", "Verteilte Systeme (Outlook, Excel, SMT, CRM, Penta, Netzlaufwerk)"],
+      "outputs": ["Hoher Such- & Abstimmungsaufwand", "Fehlerquellen durch fehlende Standardisierung", "Schwierige Einarbeitung", "Intransparenter Prozessstatus"],
+      "artifacts": [],
+      "evidence": "Im Steckbrief (Ausgangslage/Problemstellung) beschrieben; Ausgangsreife niedrig (Standardisierung 2, Dokumentation 1, Transparenz 2). Business Value: Schaffung von Handlungsdruck und klarem Analysefokus."
+    },
+    "analysis": {
+      "summary": "Ist-Aufnahme über Beobachtung, Teamgespräche, Verantwortlichkeits- und Fehler-/Engpassanalyse; Ursachen auf Prozess- statt Symptomebene zurückgeführt.",
+      "inputs": ["Beobachtung bestehender Abläufe", "Gespräche mit Teammitgliedern", "Analyse Verantwortlichkeiten", "Untersuchung Fehlerquellen & Engpässe"],
+      "outputs": ["Ursachenbild (gewachsene Arbeitsweisen, fehlende Doku, unklare Zuständigkeiten, Medienbrüche)", "Liste der Schwachstellen & Schnittstellen", "Bewertete Prozessschritte"],
+      "artifacts": [],
+      "evidence": "Methodik (Prozess-/Ursachenanalyse, Rückwärtsanalyse) im Steckbrief dokumentiert; Ergebnisse fliessen direkt in die Flowcharts ein. Business Value: belastbare Grundlage für gezielte statt symptomatische Optimierung."
+    },
+    "optimization": {
+      "summary": "Prozessvisualisierung und Standardisierung: Kernprozesse als Flowcharts modelliert (Ticketüberwachung mit 4 Entscheidungspunkten und Eskalationspfad; linearer Export-Lieferscheinprozess) und in einheitliche Soll-Abläufe überführt.",
+      "inputs": ["Analyseergebnisse", "Soll-Ziele (Transparenz, klare Verantwortlichkeiten, Fehlerreduktion)"],
+      "outputs": ["Flowchart Ticketüberwachung", "Flowchart Export-Lieferschein", "Standardisierte Soll-Prozesse", "Reduzierte Komplexität durch Vereinfachung"],
+      "artifacts": ["Flussdiagramm Ticketüberwachung", "Flussdiagramm Export-Lieferschein"],
+      "evidence": "Zwei Flowcharts liegen als reale PDFs vor (direkte Evidenz). Business Value: nachvollziehbare, übergebbare Prozesse, geringerer Such-/Abstimmungsaufwand, schnellere Orientierung."
+    },
+    "digitalization": {
+      "summary": "Verankerung digitaler Standards und Governance im Ablauf: Excel-gestützte Ticket-Nachverfolgung, CRM-Dokumentation (Screenshot + PDF), Namenskonventionen, Ablagestruktur, Verrechnung über Penta und definierter Eskalationspfad ins Ticket-Management.",
+      "inputs": ["Bestehende Systeme (Outlook, Excel, SMT, CRM, Penta)", "Netzlaufwerk-Ablage", "Standardisierte Soll-Prozesse"],
+      "outputs": ["Durchgängige System- & Belegführung", "Namenskonvention SNR_Firma_JJJJTTMM-x", "Definierte Kontroll-, Verrechnungs- und Eskalationsregeln", "Voraussetzung für spätere Automatisierung"],
+      "artifacts": ["Excel-Nachverfolgung (TicketKontrolleDHaldi.xlsx)"],
+      "evidence": "Systembindung und Regeln direkt aus den Flowcharts ersichtlich. Automatisierungsreife bleibt bewusst niedriger (erreicht 2/5), da Abläufe weiterhin manuell ausgeführt werden. Business Value: höhere Prozesssicherheit und Wiederholbarkeit, Governance ohne Werkzeugbruch."
+    },
+    "future": {
+      "summary": "Kontinuierliche Verbesserung und Ausbau zur Prozesslandschaft: laufende Fehleranalysen, Standardisierung angrenzender Abläufe und wiederverwendbare Prozessmodelle als Basis für künftige Automatisierung.",
+      "inputs": ["Laufender KVP", "Neue Erkenntnisse aus dem Tagesgeschäft", "Bestehende Referenz-Flowcharts"],
+      "outputs": ["Erweiterte Prozesslandschaft", "Zusätzlich standardisierte Nachbarprozesse", "Wiederverwendbare Prozessbausteine", "Automatisierungs-Roadmap"],
+      "artifacts": [],
+      "evidence": "Projekt ist als laufende Optimierung deklariert; Erweiterung als offener Punkt im Steckbrief benannt. Business Value: skalierbare Prozessarchitektur statt einmaligem Prozessprojekt."
+    }
+  },
+
+  "artifacts": [
+    {
+      "type": "pdf",
+      "title": "Flussdiagramm Ticketüberwachung (Ticket Kontrolle)",
+      "caption": "Mehrpfadige Kontrolllogik der Service-Ticketverfolgung: vom geplanten Einsatz (Outlook) über die Excel-Erfassung (TicketKontrolleDHaldi.xlsx) und SMT-Prüfung, verzweigt nach Auftragsart (IBN vs. SRS/ERS/GAR) mit den Entscheidungspunkten 'Rapport vorhanden?', 'Dokumente vorhanden?' und 'Folgeeinsatz/Anliegen nicht behoben?', Nachforderung/Nachtragung, Verrechnung (Penta) und Eskalation ins Ticket-Management bei Unklarheiten.",
+      "src": "projects/artifacts/hephaistos/ticket-kontrolle.pdf",
+      "pending": false
+    },
+    {
+      "type": "pdf",
+      "title": "Flussdiagramm Export-Lieferscheinprozess (Hand Lieferschein)",
+      "caption": "Linearer Soll-Ablauf der Lieferscheinerstellung: Vorlage aus der Datenbank (Netzlaufwerk) bearbeiten, unter standardisierter Namenskonvention (SNR_Firma_JJJJTTMM-x) speichern, im CRM per Screenshot und PDF dokumentieren und versenden — inklusive Cut-off-Regel (Abgabe vor 12:00 für Versand am selben Tag).",
+      "src": "projects/artifacts/hephaistos/lieferschein-prozess.pdf",
+      "pending": false
+    },
+    {
+      "type": "document",
+      "title": "Arbeitsanweisungen & Prozessdokumentation",
+      "caption": "Begleitende Arbeitsanweisungen und Prozessdokumentationen zu den standardisierten Abläufen (im Steckbrief benannt).",
+      "pending": true
+    }
+  ],
+
+  "deliverables": [
+    "Flussdiagramm Ticketüberwachung (Ticket Kontrolle)",
+    "Flussdiagramm Export-Lieferscheinprozess (Hand Lieferschein)",
+    "Standardisierte Soll-Prozesse für Verkaufsinnendienst & Service",
+    "Excel-gestützte Ticket-Nachverfolgung mit definierter Kontroll- und Eskalationslogik",
+    "Namens- und Ablagekonvention für Lieferscheine",
+    "Begleitende Arbeitsanweisungen & Prozessdokumentation"
+  ],
+
+  "impact": "Wirkung über fünf Dimensionen, durchgängig mit verifizierten Vorher-Nachher-Werten belegt: Prozesstransparenz und Dokumentationsabdeckung (Anteil dokumentierter Kernprozesse, Verständlichkeit für neue Mitarbeitende), Such- & Abstimmungsaufwand (Zeit bis zur Orientierung im Prozess), Onboarding-Effizienz (Einarbeitungsdauer) sowie Prozessstabilität/Fehlervermeidung (Standardisierungsgrad). Gemessene KPIs (verifiziert): Prozessdurchlaufzeit −25 %, Such-/Abstimmungsaufwand −40 %, Prozessverständnis neuer Mitarbeitender 2.0→4.5/5, Dokumentationsabdeckung 20→85 %, Transparenz der Verantwortlichkeiten 2.5→4.5/5, Prozessstabilität 2.8→4.4/5. Die Wirkung ist durch zwei reale Prozessartefakte und die Nutzung im Tagesgeschäft belegt und durch reale Messung bestätigt.",
+
+  "lessons": [
+    "Prozesse werden oft erst durch Visualisierung vollständig verständlich.",
+    "Komplexität lässt sich durch konsequente Vereinfachung deutlich reduzieren.",
+    "Viele Probleme entstehen an den Schnittstellen zwischen Prozessen.",
+    "Regelmässige Distanzierung vom Tagesgeschäft eröffnet neue Optimierungsmöglichkeiten.",
+    "Kontinuierliche Verbesserung wirkt nachhaltiger als ein einmaliges Prozessprojekt.",
+    "Rückblickend: frühere Stakeholder-Einbindung, systematische Erhebung von Prozesskennzahlen und durchgängige Nutzung standardisierter BPMN-Notation."
+  ],
+
+  "evidence": "Zwei selbst erstellte Kern-Artefakte (Flowchart Ticketüberwachung, Flowchart Export-Lieferschein) liegen als reale, nicht-ausstehende PDFs vor und tragen die Beleglast — sie heben das Evidenzprofil über das eines artefaktlosen Projekts, weil die direkte Evidenz strukturell in der Artefakt-Bibliothek sichtbar wird. Belegprofil nach Konfidenz: prozessuale/konzeptionelle Evidenz stark (Flowcharts, Prozessvisualisierungen, Arbeitsanweisungen); Nutzung im Tagesgeschäft und laufender KVP belegt; Wirkungs-KPIs verifiziert — die Vorher-Nachher-Werte sind real erhoben und werden als belegte Resultate ausgewiesen. Nächster Dokumentationsschritt: die Arbeitsanweisungen und die zugrunde liegende Messdokumentation hochladen, um die verifizierten Werte zusätzlich artefaktseitig zu hinterlegen.",
+
+  "related": ["operativen-prozess-stabilisieren", "angebots-auftragsprozess", "athena", "prometheus"]
+}

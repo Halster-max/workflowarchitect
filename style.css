@@ -869,3 +869,55 @@ h1, h2, h3, h4 { line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; }
   .stats { grid-template-columns: 1fr; }
   .alibs { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ----------------------------------------------------------------------------
+   18  MANDATES — second content type (additive; reuses existing components)
+---------------------------------------------------------------------------- */
+/* Mandate badge + card differentiation (heavier than a project card) */
+.mandate-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2); background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.32); padding: 0.28rem 0.7rem; border-radius: 999px; }
+.case--mandate { border-left: 3px solid var(--accent); }
+.case--mandate .case__title { font-size: 1.35rem; }
+.case__sub { font-size: 0.82rem; color: var(--text-dim); font-weight: 600; margin-top: -0.3rem; }
+
+.pv__inner--mandate { max-width: 1000px; }
+.pv__subtitle { font-size: clamp(1rem, 2.4vw, 1.25rem); color: var(--accent-2); font-weight: 600; margin-bottom: 0.7rem; }
+.mat--mandate { margin-top: 1.5rem; }
+
+/* In-dossier table of contents (JS-scrolled — not hash anchors, to keep the router intact) */
+.toc { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--border); }
+.toc__link { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.4rem 0.85rem; cursor: pointer; transition: transform var(--t), border-color var(--t), color var(--t); }
+.toc__link:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--text); }
+.mblock { scroll-margin-top: 90px; }
+
+/* Workstream accordion */
+.ws-list { display: grid; gap: 0.7rem; margin-top: 0.4rem; }
+.ws { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; transition: border-color var(--t); }
+.ws:hover, .ws.is-open { border-color: var(--border-strong); }
+.ws__bar { width: 100%; display: flex; align-items: center; gap: 0.9rem; padding: 1rem 1.2rem; background: none; border: 0; cursor: pointer; text-align: left; color: var(--text); }
+.ws__id { flex: none; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 9px; background: var(--accent-soft); color: var(--accent); font-family: var(--mono); font-weight: 800; }
+.ws__name { font-weight: 700; font-size: 1rem; flex-grow: 1; }
+.ws__state { flex: none; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.22rem 0.6rem; border-radius: 999px; border: 1px solid currentColor; }
+.ws__state--completed { color: var(--st-praxis); background: color-mix(in srgb, var(--st-praxis) 14%, transparent); }
+.ws__state--in-progress { color: var(--st-aufbau); background: color-mix(in srgb, var(--st-aufbau) 16%, transparent); }
+.ws__state--planned { color: var(--st-konzept); background: color-mix(in srgb, var(--st-konzept) 16%, transparent); }
+.ws__plus { flex: none; font-size: 1.4rem; color: var(--accent); line-height: 1; transition: transform var(--t); }
+.ws.is-open .ws__plus { transform: rotate(45deg); }
+.ws__panel { max-height: 0; overflow: hidden; transition: max-height 0.5s var(--ease); }
+.ws.is-open .ws__panel { max-height: 1600px; }
+.ws__panel-inner { padding: 0 1.2rem 1.3rem; display: grid; gap: 0.9rem; }
+.ws__obj { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; }
+.ws__sub { display: grid; gap: 0.35rem; }
+.ws__sub-l { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-dim); }
+.ws__ev { font-size: 0.88rem; color: var(--text-muted); border-left: 3px solid var(--accent-line); padding-left: 0.85rem; }
+.ws__ev span { font-weight: 700; color: var(--accent); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.06em; margin-right: 0.4rem; }
+.ws__arts { margin-top: 0.2rem; }
+
+/* Systems landscape */
+.sys-land { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.1rem; }
+.sys-col { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem 1.1rem; }
+.sys-col__l { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+
+@media (max-width: 480px) {
+  .ws__bar { flex-wrap: wrap; gap: 0.6rem; }
+  .ws__name { flex-basis: 100%; order: 3; }
+}

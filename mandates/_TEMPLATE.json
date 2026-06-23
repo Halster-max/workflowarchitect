@@ -1,0 +1,75 @@
+{
+  "slug": "slug-hier",
+  "name": "Mandatsname",
+  "type": "mandate",
+  "status": "in-progress",
+  "category": "Transformationsmandat",
+  "summary": "Ein bis zwei Sätze für die Mandatskarte.",
+  "executiveSummary": "",
+
+  "meta": {
+    "subtitle": "",
+    "role": "",
+    "form": "",
+    "industry": "",
+    "period": "",
+    "type": "Transformationsmandat",
+    "companySize": "",
+    "reportingLine": "",
+    "mandateStatus": "",
+    "tracked": []
+  },
+
+  "context": "",
+  "scope": { "summary": "", "objectives": [], "outOfScope": [], "domains": [] },
+  "analysis": "",
+  "coreProblems": [],
+
+  "workstreams": [
+    {
+      "id": "A",
+      "name": "",
+      "state": "planned",
+      "objective": "",
+      "activities": [],
+      "outcomes": [],
+      "evidence": "",
+      "artifacts": []
+    }
+  ],
+
+  "systems": { "introduced": [], "integrated": [], "decommissioned": [], "apis": [] },
+  "organisationalImpact": { "summary": "", "changes": [], "rolesChanged": [] },
+  "processImpact": { "summary": "", "processes": [] },
+  "dataAnalytics": { "summary": "", "items": [] },
+  "automation": { "summary": "", "implemented": [] },
+  "governance": { "summary": "", "model": "", "decisionRights": [], "stakeholders": [] },
+
+  "figures": {
+    "systemsIntroduced": 0, "apisIntegrated": 0, "automations": 0,
+    "processesBuilt": 0, "employeesAffected": 0, "newLeadershipRoles": 0,
+    "trainings": 0, "dataSources": 0, "workstreams": 0
+  },
+
+  "measurement": { "verified": 0, "estimated": 0, "hypotheses": 0, "note": "" },
+
+  "maturity": {
+    "standardization": { "current": 0, "target": 0 },
+    "documentation":   { "current": 0, "target": 0 },
+    "transparency":    { "current": 0, "target": 0 },
+    "digitalization":  { "current": 0, "target": 0 },
+    "automation":      { "current": 0, "target": 0 },
+    "governance":      { "current": 0, "target": 0 }
+  },
+
+  "impact": "",
+  "outcomes": [],
+  "lessons": [],
+  "closing": "",
+  "evidence": "",
+  "relatedProjects": [],
+
+  "artifacts": [
+    { "type": "pdf", "title": "", "caption": "", "src": "", "pending": true }
+  ]
+}

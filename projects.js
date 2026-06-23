@@ -152,6 +152,10 @@
   let PROJECTS = [];
   const BY_SLUG = new Map();
 
+  /* ---- Mandate state (separate tier — never mixed into PROJECTS) ---------- */
+  let MANDATES = [];
+  const BY_MANDATE = new Map();
+
   const grid = $("#caseGrid");
   const homeView = $("#homeView");
   const projectView = $("#projectView");
@@ -719,7 +723,402 @@
   }
 
   /* ==========================================================================
-     ROUTER — #/ = home · #/projekt/<slug> = detail
+     ████  MANDATES — second content type (broad, cross-functional engagements
+           that contain multiple workstreams). Separate registry, separate
+           array, separate route. Reuses every helper above; the project tier
+           is untouched. Degrades silently if mandates/index.json is absent.
+  ========================================================================== */
+
+  /* ---- Mandate status: reuse project status, relabel for the mandate tier - */
+  const MANDATE_STATUS_LABEL = {
+    real: "Praxismandat", anonymized: "Anonymisiert",
+    concept: "Konzeptstudie", "in-progress": "In Umsetzung",
+  };
+  const mStatusOf = (m) => {
+    const base = statusOf(m);
+    return { ...base, label: MANDATE_STATUS_LABEL[m.status] || base.label };
+  };
+
+  /* ---- Workstream state → badge label ------------------------------------- */
+  const WS_STATE_LABEL = { completed: "Abgeschlossen", "in-progress": "In Umsetzung", planned: "Geplant" };
+
+  /* ---- Mandate Facts & Figures: key → label (display order) --------------- */
+  const MANDATE_FIGURES = [
+    ["systemsIntroduced", "Systeme eingeführt"],
+    ["apisIntegrated",    "API-Integrationen"],
+    ["automations",       "Automatisierungen"],
+    ["processesBuilt",    "Geschäftsprozesse aufgebaut"],
+    ["employeesAffected", "Mitarbeitende betroffen"],
+    ["newLeadershipRoles","Neue Führungsrollen"],
+    ["trainings",         "Schulungen durchgeführt"],
+    ["dataSources",       "Datenquellen analysiert"],
+    ["workstreams",       "Workstreams"],
+  ];
+
+  /* ---- Aggregate mandate-portfolio widgets (computed over MANDATES) ------- */
+  const sumMFig = (ms, key) => ms.reduce((n, m) => n + (m.figures && typeof m.figures[key] === "number" ? m.figures[key] : 0), 0);
+  const MANDATE_AGG = [
+    { icon: "building", label: "Mandate dokumentiert",  compute: (ms) => ms.length },
+    { icon: "folder",   label: "Workstreams",           compute: (ms) => ms.reduce((n, m) => n + ((m.workstreams || []).length), 0) },
+    { icon: "layers",   label: "Systeme eingeführt",    compute: (ms) => sumMFig(ms, "systemsIntroduced") },
+    { icon: "chip",     label: "API-Integrationen",     compute: (ms) => sumMFig(ms, "apisIntegrated") },
+    { icon: "users",    label: "Mitarbeitende betroffen",compute: (ms) => sumMFig(ms, "employeesAffected") },
+    { icon: "diagram",  label: "Verknüpfte Projekte",   compute: (ms) => distinct(ms.flatMap((m) => m.relatedProjects || [])).length },
+  ];
+
+  /* ---- Helpers ------------------------------------------------------------ */
+  const allMandateArtifacts = (m) =>
+    [...(m.artifacts || []), ...((m.workstreams || []).flatMap((w) => w.artifacts || []))];
+  const wsCompleted = (m) => (m.workstreams || []).filter((w) => w.state === "completed").length;
+
+  /* ==========================================================================
+     LOAD — mandates registry → all mandate files (guarded: missing = no-op)
+  ========================================================================== */
+  async function loadMandates() {
+    try {
+      const idx = await fetch("mandates/index.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null));
+      if (!idx) return;
+      const order = Array.isArray(idx.order) ? idx.order : [];
+      const loaded = await Promise.all(
+        order.map((slug) =>
+          fetch(`mandates/${slug}.json`, { cache: "no-cache" })
+            .then((r) => (r.ok ? r.json() : null))
+            .catch(() => null)
+        )
+      );
+      MANDATES = loaded.filter(Boolean);
+      BY_MANDATE.clear();
+      MANDATES.forEach((m) => BY_MANDATE.set(m.slug, m));
+    } catch (e) {
+      /* No mandate registry yet → mandate surfaces simply don't render. */
+    }
+  }
+
+  /* ==========================================================================
+     HOME — Mandate section: aggregate stat row + mandate card grid
+  ========================================================================== */
+  function renderMandatesSection() {
+    const sec = $("#mandates");
+    const navItem = document.querySelector('[data-navkey="mandate"]');
+    if (!sec) return;
+    if (!MANDATES.length) {
+      sec.hidden = true;
+      if (navItem && navItem.parentElement) navItem.parentElement.hidden = true;
+      return;
+    }
+    sec.hidden = false;
+    if (navItem && navItem.parentElement) navItem.parentElement.hidden = false;
+
+    const agg = $("#mandateAggregate");
+    if (agg) {
+      agg.innerHTML = MANDATE_AGG
+        .map((w) => ({ w, value: w.compute(MANDATES) }))
+        .filter((x) => x.value > 0)
+        .map(({ w, value }) => `
+          <article class="stat">
+            <span class="stat__icon">${svg(w.icon)}</span>
+            <span class="stat__value" data-count="${value}">${num(value)}</span>
+            <span class="stat__label">${esc(w.label)}</span>
+          </article>`).join("");
+      countUp($$(".stat__value", agg));
+    }
+
+    const host = $("#mandateGrid");
+    if (host) host.innerHTML = MANDATES.map((m, i) => renderMandateCard(m, i)).join("");
+  }
+
+  function renderMandateCard(m, i) {
+    const s = mStatusOf(m);
+    const ws = m.workstreams || [];
+    const done = wsCompleted(m);
+    const pct = ws.length ? Math.round((done / ws.length) * 100) : 0;
+    const systems = ((m.systems && m.systems.introduced) || []).length || (m.figures && m.figures.systemsIntroduced) || 0;
+    return `
+      <a class="case case--mandate" href="#/mandat/${esc(m.slug)}" data-status="${s.filter}" aria-label="${esc(m.name)} – Mandat öffnen">
+        <div class="case__top">
+          <span class="case__status ${s.cls}">${esc(s.label)}</span>
+          <span class="case__index">${String(i + 1).padStart(2, "0")}</span>
+        </div>
+        <span class="case__domain">${esc(m.category || "Mandat")}</span>
+        <h3 class="case__title">${esc(m.name)}</h3>
+        ${has(m.meta && m.meta.subtitle) ? `<p class="case__sub">${esc(m.meta.subtitle)}</p>` : ""}
+        <p class="case__summary">${esc(m.summary || "")}</p>
+        ${ws.length ? `
+          <div class="case__doc">
+            <div class="case__doc-head"><span>Workstreams</span><span>${done}/${ws.length}</span></div>
+            ${bar(pct)}
+          </div>` : ""}
+        <div class="case__foot">
+          <span class="case__foot-item">${svg("folder")}${num(ws.length)} Workstreams</span>
+          ${systems ? `<span class="case__foot-item">${svg("layers")}${num(systems)} Systeme</span>` : ""}
+        </div>
+        <span class="case__open">Mandat öffnen</span>
+      </a>`;
+  }
+
+  /* ==========================================================================
+     MANDATE DASHBOARD (dossier header) — example widgets, all data/derived
+  ========================================================================== */
+  function renderMandateDashboard(m) {
+    const f = m.figures || {};
+    const ws = m.workstreams || [];
+    const mat = maturityAvgCurrent(m);
+    const ev = evidenceCompleteness({ artifacts: allMandateArtifacts(m) });
+    const cards = [];
+    const push = (icon, label, value) => { if (typeof value === "number" && value > 0) cards.push({ icon, label, value: num(value) }); };
+    push("layers",  "Systeme eingeführt",       f.systemsIntroduced);
+    push("chip",    "API-Integrationen",        f.apisIntegrated);
+    push("gauge",   "Automatisierungen",        f.automations);
+    push("steps",   "Prozesse aufgebaut",       f.processesBuilt);
+    push("users",   "Mitarbeitende betroffen",  f.employeesAffected);
+    push("org",     "Neue Führungsrollen",      f.newLeadershipRoles);
+    push("workshop","Schulungen",               f.trainings);
+    push("chart",   "Datenquellen analysiert",  f.dataSources);
+    if (ws.length) cards.push({ icon: "folder", label: "Workstreams abgeschlossen", value: `${wsCompleted(m)}/${ws.length}` });
+    if (mat != null) cards.push({ icon: "building", label: "Reife (Ø)", value: `${mat.toFixed(1)} / 5` });
+    if (ev.total) cards.push({ icon: "check", label: "Evidenz", value: `${ev.pct} %` });
+    if (!cards.length) return "";
+    return `<div class="stats">${cards.map((c) => `
+      <article class="stat">
+        <span class="stat__icon">${svg(c.icon)}</span>
+        <span class="stat__value">${esc(String(c.value))}</span>
+        <span class="stat__label">${esc(c.label)}</span>
+      </article>`).join("")}</div>`;
+  }
+
+  function renderMandateOverview(m) {
+    const meta = m.meta || {};
+    const s = mStatusOf(m);
+    const text = (l, v) => has(v) ? `<div class="pdash__cell"><span class="pdash__k">${esc(l)}</span><span class="pdash__v">${esc(v)}</span></div>` : "";
+    const cells = [
+      text("Mandatsart", meta.type),
+      text("Rolle", meta.role),
+      text("Mandatsform", meta.form),
+      text("Zeitraum", meta.period),
+      text("Unternehmensgrösse", meta.companySize),
+      text("Branche", meta.industry),
+      text("Berichtslinie", meta.reportingLine),
+      `<div class="pdash__cell"><span class="pdash__k">Status</span><span class="pdash__v"><span class="case__status ${s.cls}">${esc(s.label)}</span></span></div>`,
+    ].filter(Boolean).join("");
+    return `<div class="pdash">${cells}</div>`;
+  }
+
+  /* ==========================================================================
+     MANDATE DETAIL — section builders (each omitted when empty)
+  ========================================================================== */
+  const subGroup = (label, arr, list) =>
+    has(arr) ? `<div class="ws__sub"><span class="ws__sub-l">${esc(label)}</span>${list
+      ? `<ul class="pv__bullets">${arr.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`
+      : `<div class="cm-list">${chips(arr)}</div>`}</div>` : "";
+
+  function renderScope(m) {
+    const sc = m.scope || {};
+    return [
+      has(sc.summary) ? `<p>${esc(sc.summary)}</p>` : "",
+      subGroup("Auftrag", sc.objectives, true),
+      subGroup("In Scope", sc.inScope),
+      subGroup("Out of Scope", sc.outOfScope),
+      subGroup("Domänen", sc.domains),
+    ].join("");
+  }
+
+  function renderAnalysisM(m) {
+    return [
+      has(m.analysis) ? `<p>${esc(m.analysis)}</p>` : "",
+      subGroup("Kernprobleme", m.coreProblems, true),
+    ].join("");
+  }
+
+  function renderWorkstreamsInner(m) {
+    const ws = m.workstreams || [];
+    if (!ws.length) return "";
+    return `<div class="ws-list">${ws.map((w, i) => {
+      const st = WS_STATE_LABEL[w.state] || "";
+      return `
+        <div class="ws">
+          <button class="ws__bar" type="button" aria-expanded="false">
+            <span class="ws__id">${esc(w.id || String.fromCharCode(65 + i))}</span>
+            <span class="ws__name">${esc(w.name || "")}</span>
+            ${st ? `<span class="ws__state ws__state--${esc(w.state)}">${esc(st)}</span>` : ""}
+            <span class="ws__plus" aria-hidden="true">+</span>
+          </button>
+          <div class="ws__panel">
+            <div class="ws__panel-inner">
+              ${has(w.objective) ? `<p class="ws__obj">${esc(w.objective)}</p>` : ""}
+              ${subGroup("Aktivitäten", w.activities)}
+              ${subGroup("Ergebnisse", w.outcomes)}
+              ${has(w.evidence) ? `<p class="ws__ev"><span>Evidenz</span> ${esc(w.evidence)}</p>` : ""}
+              ${has(w.artifacts) ? `<div class="art-grid ws__arts">${w.artifacts.map(renderArtifact).join("")}</div>` : ""}
+            </div>
+          </div>
+        </div>`;
+    }).join("")}</div>`;
+  }
+
+  function renderSystems(m) {
+    const sy = m.systems || {};
+    const col = (label, arr) => has(arr) ? `<div class="sys-col"><span class="sys-col__l">${esc(label)}</span><div class="cm-list">${chips(arr)}</div></div>` : "";
+    const cols = [col("Eingeführt", sy.introduced), col("Integriert", sy.integrated), col("Abgelöst", sy.decommissioned), col("APIs", sy.apis)].filter(Boolean).join("");
+    return cols ? `<div class="sys-land">${cols}</div>` : "";
+  }
+
+  function renderOrgImpact(m) {
+    const o = m.organisationalImpact || {};
+    return [
+      has(o.summary) ? `<p>${esc(o.summary)}</p>` : "",
+      subGroup("Veränderungen", o.changes),
+      subGroup("Rollen", o.rolesChanged),
+    ].join("");
+  }
+
+  function renderProcImpact(m) {
+    const p = m.processImpact || {};
+    return [has(p.summary) ? `<p>${esc(p.summary)}</p>` : "", subGroup("Prozesse", p.processes)].join("");
+  }
+
+  function renderDataAnalytics(m) {
+    const d = m.dataAnalytics || {};
+    return [has(d.summary) ? `<p>${esc(d.summary)}</p>` : "", subGroup("Analysen", d.items)].join("");
+  }
+
+  function renderAutomationM(m) {
+    const a = m.automation || {};
+    return [has(a.summary) ? `<p>${esc(a.summary)}</p>` : "", subGroup("Umgesetzt", a.implemented)].join("");
+  }
+
+  function renderGovernance(m) {
+    const g = m.governance || {};
+    return [
+      has(g.summary) ? `<p>${esc(g.summary)}</p>` : "",
+      has(g.model) ? `<p class="ws__obj">${esc(g.model)}</p>` : "",
+      subGroup("Entscheidungswege", g.decisionRights),
+      subGroup("Stakeholder", g.stakeholders),
+    ].join("");
+  }
+
+  function renderMandateFigures(m) {
+    const f = m.figures || {};
+    const rows = MANDATE_FIGURES.map(([k, l]) => ({ l, v: f[k] })).filter((r) => typeof r.v === "number" && r.v > 0);
+    if (!rows.length) return "";
+    return `<div class="figrow">${rows.map((r) => `<div class="figrow__item"><span class="figrow__v">${num(r.v)}</span><span class="figrow__l">${esc(r.l)}</span></div>`).join("")}</div>`;
+  }
+
+  function renderMandateEvidence(m) {
+    let h = "";
+    const mm = m.measurement;
+    if (mm && ["verified", "estimated", "hypotheses"].some((k) => Number(mm[k]) > 0)) {
+      h += `<div class="meas">${MEASURES.map(([k, l, hint]) => `
+        <div class="meas__row">
+          <div class="meas__meta"><span class="meas__label">${esc(l)}</span><span class="meas__hint">${esc(hint)}</span></div>
+          ${stars(mm[k])}
+        </div>`).join("")}</div>`;
+      if (has(mm.note)) h += `<p class="meas__note">${esc(mm.note)}</p>`;
+    }
+    if (has(m.evidence)) h += `<p class="meas__note">${esc(m.evidence)}</p>`;
+    if (hasMaturity(m)) {
+      const dims = MATURITY_DIMS.map(([key, label]) => ({
+        key, label,
+        current: (m.maturity[key] && m.maturity[key].current) || 0,
+        target: (m.maturity[key] && m.maturity[key].target) || 0,
+      }));
+      const bars = dims.map((d) => `
+        <div class="mat-row">
+          <div class="mat-row__head"><span class="mat-row__name">${esc(d.label)}</span><span class="mat-row__num">${d.current} <span>/ ${d.target}</span></span></div>
+          <span class="mat-bar"><span class="mat-bar__cur" style="width:${(d.current / 5) * 100}%"></span><span class="mat-bar__tar" style="left:${(d.target / 5) * 100}%"></span></span>
+        </div>`).join("");
+      h += `<div class="mat mat--project mat--mandate"><div class="mat-radar">${radarSVG(dims)}${radarLegend()}</div><div class="mat-bars">${bars}</div></div>`;
+    }
+    return h;
+  }
+
+  function renderImpactM(m) {
+    return [
+      has(m.impact) ? `<p>${esc(m.impact)}</p>` : "",
+      has(m.outcomes) ? `<ul class="pv__bullets">${m.outcomes.map((o) => `<li>${esc(o)}</li>`).join("")}</ul>` : "",
+    ].join("");
+  }
+
+  function renderMandateDetail(m) {
+    const s = mStatusOf(m);
+    const secs = [];
+    const add = (id, label, html) => { if (has(html)) secs.push({ id, label, html, raw: false }); };
+    const addRaw = (id, label, html) => { if (has(html)) secs.push({ id, label, html, raw: true }); };
+
+    add("ausgangslage", "Ausgangslage", has(m.context) ? `<p>${esc(m.context)}</p>` : "");
+    add("auftrag", "Auftrag & Scope", renderScope(m));
+    add("analyse", "Analyse", renderAnalysisM(m));
+    add("workstreams", "Workstreams", renderWorkstreamsInner(m));
+    add("systeme", "Systemlandschaft", renderSystems(m));
+    add("organisation", "Organisatorische Wirkung", renderOrgImpact(m));
+    add("prozesse", "Prozess-Wirkung", renderProcImpact(m));
+    add("daten", "Daten & Analytics", renderDataAnalytics(m));
+    add("automation", "Automatisierung & Integrationen", renderAutomationM(m));
+    add("governance", "Leadership & Governance", renderGovernance(m));
+    add("figures", "Facts & Figures", renderMandateFigures(m));
+    add("evidenz", "Evidenz-Bewertung", renderMandateEvidence(m));
+    add("wirkung", "Wirkung", renderImpactM(m));
+    add("lessons", "Lessons Learned", has(m.lessons) ? `<ul class="pv__bullets">${(m.lessons || []).map((l) => `<li>${esc(l)}</li>`).join("")}</ul>` : "");
+    add("abschluss", "Mandatsabschluss", has(m.closing) ? `<p>${esc(m.closing)}</p>` : "");
+    addRaw("projekte", "Verwandte Projekte", renderRelated(m.relatedProjects));
+    addRaw("artefakte", "Artefakte", renderArtifacts(m.artifacts));
+
+    const toc = secs.length
+      ? `<nav class="toc" aria-label="Mandatsinhalt">${secs.map((x) => `<button class="toc__link" type="button" data-target="m-${x.id}">${esc(x.label)}</button>`).join("")}</nav>`
+      : "";
+    const body = secs.map((x) => x.raw
+      ? `<div class="mblock" id="m-${x.id}">${x.html}</div>`
+      : `<section class="cm-block mblock" id="m-${x.id}"><h4>${esc(x.label)}</h4>${x.html}</section>`).join("");
+
+    projectView.innerHTML = `
+      <div class="container pv__inner pv__inner--mandate">
+        <a class="pv__back" href="#/">← Zurück zur Wissensbasis</a>
+
+        <header class="pv__head">
+          <div class="pv__badges">
+            <span class="mandate-tag">Mandat</span>
+            <span class="case__status ${s.cls}">${esc(s.label)}</span>
+            ${has(m.category) ? `<span class="pv__cat">${esc(m.category)}</span>` : ""}
+          </div>
+          <h1 class="pv__title">${esc(m.name)}</h1>
+          ${has(m.meta && m.meta.subtitle) ? `<p class="pv__subtitle">${esc(m.meta.subtitle)}</p>` : ""}
+          ${has(m.executiveSummary) ? `<p class="pv__summary">${esc(m.executiveSummary)}</p>` : ""}
+          ${renderMandateDashboard(m)}
+          ${renderMandateOverview(m)}
+          ${has(m.meta && m.meta.tracked) ? `
+            <div class="pv__tracked">
+              <span class="cm-tracked-lab">Schwerpunkte:</span>
+              ${chips(m.meta.tracked)}
+            </div>` : ""}
+        </header>
+
+        <div class="pv__body pv__body--mandate">
+          ${toc}
+          ${body}
+        </div>
+      </div>`;
+  }
+
+  /* ---- Interactions for the mandate dossier ------------------------------- */
+  function wireWorkstreams() {
+    $$(".ws__bar", projectView).forEach((bar) => {
+      bar.addEventListener("click", () => {
+        const ws = bar.closest(".ws");
+        const open = ws.classList.toggle("is-open");
+        bar.setAttribute("aria-expanded", String(open));
+      });
+    });
+  }
+  function wireToc() {
+    $$(".toc__link", projectView).forEach((b) => {
+      b.addEventListener("click", () => {
+        const t = document.getElementById(b.getAttribute("data-target"));
+        if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
+  /* ==========================================================================
+     ROUTER — #/ = home · #/projekt/<slug> = project · #/mandat/<slug> = mandate
   ========================================================================== */
   function showHome() {
     if (projectView) { projectView.hidden = true; projectView.innerHTML = ""; }
@@ -739,7 +1138,23 @@
     if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
   }
 
+  function showMandate(slug) {
+    const m = BY_MANDATE.get(slug);
+    if (!m) { location.hash = "#/"; return; }
+    renderMandateDetail(m);
+    if (homeView) homeView.hidden = true;
+    projectView.hidden = false;
+    document.title = `${m.name} — Mandat — Dominic Haldi`;
+    window.scrollTo({ top: 0, behavior: "auto" });
+    wireWorkstreams();
+    wireToc();
+    const h = $(".pv__title", projectView);
+    if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
+  }
+
   function route() {
+    const mm = location.hash.match(/^#\/mandat\/(.+)$/);
+    if (mm) { showMandate(decodeURIComponent(mm[1])); return; }
     const m = location.hash.match(/^#\/projekt\/(.+)$/);
     if (m) showDetail(decodeURIComponent(m[1]));
     else showHome();
@@ -770,6 +1185,10 @@
         renderMaturityAggregate();
         renderArtifactLibrary();
         renderGrid();
+      })
+      .then(() => loadMandates())
+      .then(() => {
+        renderMandatesSection();
         route();
       })
       .catch(fail);

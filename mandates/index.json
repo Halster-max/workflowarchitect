@@ -1,0 +1,6 @@
+{
+  "_comment": "MANDATE REGISTRY — the single list the website reads to discover mandates. A mandate is a large, cross-functional transformation assignment that contains multiple workstreams (broader than a single project). To add a mandate: create mandates/<slug>.json and add its slug to the array below. Order here = order in the Mandate section. The project library (projects/index.json) is separate and untouched.",
+  "order": [
+    "atlas"
+  ]
+}

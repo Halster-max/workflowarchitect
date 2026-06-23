@@ -1,0 +1,207 @@
+{
+  "slug": "atlas",
+  "name": "ATLAS",
+  "type": "mandate",
+  "status": "real",
+  "category": "Transformationsmandat · CIO",
+  "summary": "Aufbau einer skalierbaren Unternehmensarchitektur für ein wachsendes Vertriebs- und Logistikunternehmen — fünf Workstreams von der digitalen Betriebsplattform über Automatisierung und Vertriebsarchitektur bis zu Datenintelligenz und Führungsstruktur.",
+  "executiveSummary": "Als extern mandatierter Leiter Zentrale Dienste (CIO) baute ich für ein wachsendes Vertriebs- und Logistikunternehmen der Lebensmittelbranche innerhalb von sechs Monaten eine tragfähige Unternehmensarchitektur auf. Nach dem Ausfall zentraler Führungspersonen fehlten durchgängige Prozesse, eine integrierte Systemlandschaft und eine belastbare Datenbasis. Über fünf Workstreams entstanden eine integrierte digitale Betriebsplattform mit ERP, CRM und Automatisierungs-Layer, eine datengestützte Vertriebs- und Wachstumsarchitektur sowie eine neue Führungs- und Governance-Struktur. Das Mandat überführte einen personenabhängigen, manuellen Betrieb in eine standardisierte, skalierbare Organisation.",
+
+  "meta": {
+    "subtitle": "Business Architecture & Digital Operating Model Transformation",
+    "role": "Leiter Zentrale Dienste (CIO)",
+    "form": "Externer Berater auf Honorarbasis",
+    "industry": "Vertrieb / Logistik / Lebensmittel",
+    "period": "November 2024 – April 2025",
+    "type": "Transformationsmandat",
+    "companySize": "ca. 30 Mitarbeitende",
+    "reportingLine": "Direkt an den CEO",
+    "mandateStatus": "Abgeschlossen",
+    "tracked": ["Systemintegration", "Automatisierung", "Datenbasis", "Führungsstruktur", "Prozessstandardisierung"]
+  },
+
+  "context": "Das Unternehmen befand sich in einer kritischen Wachstums- und Restrukturierungsphase. Kurz zuvor waren zentrale Führungspersonen ausgefallen, wodurch erhebliche organisatorische, operative und digitale Defizite entstanden. Es existierten keine durchgängigen Unternehmensprozesse, keine integrierte Systemlandschaft und keine belastbare Datenbasis für operative oder strategische Entscheidungen. Zahlreiche Abläufe basierten auf manueller Arbeit, Personenwissen und nicht standardisierten Prozessen.",
+
+  "scope": {
+    "summary": "Der Auftrag umfasste den Aufbau einer skalierbaren Unternehmensarchitektur zur Stabilisierung und Weiterentwicklung des Unternehmens — über alle zentralen Funktionsbereiche hinweg.",
+    "objectives": [
+      "Digitalisierung",
+      "IT-Infrastruktur",
+      "Datenmanagement",
+      "Business Intelligence",
+      "Prozessentwicklung",
+      "Vertriebsunterstützung",
+      "Marketingunterstützung",
+      "Forecasting",
+      "Organisationsentwicklung",
+      "Softwareintegration"
+    ],
+    "outOfScope": [
+      "Sanierung der finanziellen Rahmenbedingungen",
+      "Lösung der übergeordneten wirtschaftlichen Herausforderungen des Unternehmens"
+    ],
+    "domains": [
+      "Vertrieb", "Marketing", "Kundenmanagement", "Lieferantenmanagement",
+      "Logistik", "Finanzprozesse", "Datenmanagement", "IT-Systeme", "Organisationsstruktur"
+    ]
+  },
+
+  "analysis": "Untersucht wurden Vertrieb, Marketing, Kunden- und Lieferantenmanagement, Logistik, Finanzprozesse, Datenmanagement, IT-Systeme und die Organisationsstruktur. Die Analyse legte strukturelle Defizite offen, die Wachstum und Steuerbarkeit gleichermassen begrenzten — weniger einzelne Tools als das Fehlen einer gemeinsamen System-, Prozess- und Datenbasis.",
+  "coreProblems": [
+    "Fehlende Systemlandschaft",
+    "Fehlende Standards",
+    "Fehlende Datenbasis",
+    "Fehlende Führungsstruktur",
+    "Fehlende Prozessintegration",
+    "Hohe operative Abhängigkeit von Einzelpersonen"
+  ],
+
+  "workstreams": [
+    {
+      "id": "A",
+      "name": "Digital Operating Platform",
+      "state": "completed",
+      "objective": "Ablösung gewachsener Insellösungen durch eine integrierte digitale Betriebsplattform als gemeinsame Daten- und Prozessbasis.",
+      "activities": ["Dolibarr ERP", "Custom CRM", "Google Workspace", "WordPress", "Bexio"],
+      "outcomes": ["Integrierte Systemlandschaft", "Gemeinsame Daten- und Prozessbasis"],
+      "evidence": "Eingeführte Systeme sind produktiv; Systemlandschaft als Artefakt dokumentiert (anonymisiert nachzureichen)."
+    },
+    {
+      "id": "B",
+      "name": "API & Automation Layer",
+      "state": "completed",
+      "objective": "Verbindung der Systeme und Automatisierung wiederkehrender Abläufe über einen durchgängigen Integrations- und Automatisierungs-Layer.",
+      "activities": ["Google Maps Routing API", "Lieferanten-Benachrichtigungen", "Fahrer-Benachrichtigungen", "Marketing Automation", "VoIP Integration", "ERP-Schnittstellen"],
+      "outcomes": ["Automatisierte Benachrichtigungs- und Routing-Prozesse", "Verbundene Systemlandschaft"],
+      "evidence": "Integrationen und Automatisierungen sind im Betrieb umgesetzt; API-Integrationskarte als Artefakt dokumentiert."
+    },
+    {
+      "id": "C",
+      "name": "Sales & Growth Architecture",
+      "state": "completed",
+      "objective": "Aufbau einer strukturierten Vertriebs- und Wachstumsarchitektur von Lead bis Kunde.",
+      "activities": ["Sales Pipeline", "Lead Management", "Kundenverwaltung", "Vertriebsprozesse", "Marketing-Rollout"],
+      "outcomes": ["Durchgängiger Vertriebsprozess", "Strukturiertes Lead- und Kundenmanagement"],
+      "evidence": "Vertriebs- und Marketingprozesse als Artefakte dokumentiert (anonymisiert nachzureichen)."
+    },
+    {
+      "id": "D",
+      "name": "Data & Intelligence",
+      "state": "completed",
+      "objective": "Schaffung einer belastbaren Datenbasis und analytischer Entscheidungsgrundlagen.",
+      "activities": ["Marktanalysen", "Geodatenanalysen", "Zielgruppenanalysen", "Potenzialanalysen", "Business Case Modellierung"],
+      "outcomes": ["Datenbasierte Entscheidungsgrundlagen", "Quantifizierte Markt- und Potenzialsicht"],
+      "evidence": "Analysen und Business-Case-Modelle wurden erstellt und als Entscheidungsgrundlage verwendet."
+    },
+    {
+      "id": "E",
+      "name": "Governance & Leadership",
+      "state": "completed",
+      "objective": "Einführung einer tragfähigen Führungs- und Entscheidungsstruktur, die den Betrieb von Einzelpersonen unabhängig macht.",
+      "activities": ["Hub Manager Struktur", "Fachliche Führung", "Schulungskonzepte", "Rollenmodelle", "Entscheidungswege"],
+      "outcomes": ["Etablierte Führungsstruktur", "Definierte Rollen und Entscheidungswege"],
+      "evidence": "Führungsstruktur und Rollenmodelle eingeführt; Schulungsunterlagen und Organisationsstruktur als Artefakte dokumentiert."
+    }
+  ],
+
+  "systems": {
+    "introduced": ["Dolibarr ERP", "Custom CRM", "Google Workspace", "WordPress", "Bexio"],
+    "apis": ["Google Maps Routing API", "Lieferanten-Benachrichtigungen", "Fahrer-Benachrichtigungen", "Marketing Automation", "VoIP Integration", "ERP-Schnittstellen"]
+  },
+
+  "organisationalImpact": {
+    "summary": "Das Mandat betraf alle Abteilungen des Unternehmens. An die Stelle hoher operativer Abhängigkeit von Einzelpersonen trat eine Struktur mit definierten Rollen und einer neuen fachlichen Führungsebene.",
+    "changes": ["Hub Manager Struktur", "Fachliche Führung", "Rollenmodelle", "Entscheidungswege"]
+  },
+
+  "processImpact": {
+    "summary": "Über 15 Geschäftsprozesse wurden neu aufgebaut oder standardisiert — von Vertrieb und Marketing über Kunden- und Lieferantenmanagement bis zu Logistik und Finanzprozessen.",
+    "processes": ["Vertriebsprozesse", "Marketingprozesse", "Kundenverwaltung", "Lead Management", "Logistik & Routing", "Finanzprozesse"]
+  },
+
+  "dataAnalytics": {
+    "summary": "Aufbau einer belastbaren Datenarchitektur als Grundlage datenbasierter Entscheidungen — von Markt- und Geodaten bis zur Business-Case-Modellierung.",
+    "items": ["Marktanalysen", "Geodatenanalysen", "Zielgruppenanalysen", "Potenzialanalysen", "Business Case Modellierung"]
+  },
+
+  "automation": {
+    "summary": "Automatisierung wiederkehrender Abläufe entlang der eingeführten Systemlandschaft, sobald die zugrunde liegenden Prozesse standardisiert waren.",
+    "implemented": ["Routing-Automatisierung (Google Maps API)", "Lieferanten-Benachrichtigungen", "Fahrer-Benachrichtigungen", "Marketing Automation", "VoIP-Integration", "ERP-Schnittstellen"]
+  },
+
+  "governance": {
+    "summary": "Einführung einer tragfähigen Führungs- und Entscheidungsstruktur, die operatives Wissen aus Einzelpersonen in Rollen und Prozesse überführt.",
+    "model": "Hub-Manager-Struktur mit fachlicher Führung; direkte Berichtslinie an den CEO.",
+    "decisionRights": ["Definierte Entscheidungswege", "Fachliche Führung je Bereich", "Rollenmodelle"],
+    "stakeholders": ["CEO", "Hub Manager", "Fachbereiche", "Externe Dienstleister"]
+  },
+
+  "figures": {
+    "systemsIntroduced": 5,
+    "apisIntegrated": 6,
+    "automations": 8,
+    "processesBuilt": 15,
+    "employeesAffected": 30,
+    "newLeadershipRoles": 4,
+    "trainings": 20,
+    "dataSources": 5,
+    "workstreams": 5
+  },
+
+  "measurement": {
+    "verified": 3,
+    "estimated": 3,
+    "hypotheses": 1,
+    "note": "Verifiziert ist die Tätigkeit selbst — über eine Tätigkeitsbestätigung des Auftraggebers — sowie der nachweislich aufgebaute System- und Prozessbestand (ERP, CRM, Integrationen, Führungsstruktur). Geschätzt ist die operative Wirkung auf Transparenz und Effizienz, die plausibel, aber nicht systematisch vorher/nachher gemessen wurde. Als Hypothese geführt bleibt die langfristige Skalierbarkeit der Architektur, da das Unternehmen aus übergeordneten finanziellen Gründen nicht fortbestand."
+  },
+
+  "maturity": {
+    "standardization": { "current": 4, "target": 5 },
+    "documentation":   { "current": 4, "target": 5 },
+    "transparency":    { "current": 4, "target": 5 },
+    "digitalization":  { "current": 4, "target": 5 },
+    "automation":      { "current": 3, "target": 4 },
+    "governance":      { "current": 4, "target": 5 }
+  },
+
+  "impact": "Das Mandat überführte einen personen- und manuell getriebenen Betrieb in eine integrierte, digital gestützte Betriebsarchitektur mit klarer Führungsstruktur und höherer operativer Transparenz.",
+  "outcomes": [
+    "Aufbau einer integrierten Betriebsarchitektur",
+    "Digitalisierung zentraler Geschäftsprozesse",
+    "Automatisierung wiederkehrender Abläufe",
+    "Einführung einer Führungsstruktur",
+    "Einführung einer integrierten Systemlandschaft",
+    "Verbesserung der operativen Transparenz"
+  ],
+
+  "lessons": [
+    "Unternehmenswachstum scheitert häufig nicht an Ideen, sondern an fehlenden Systemen.",
+    "Digitale Transformation beginnt bei Prozessen und Menschen, nicht bei Software.",
+    "Datenbasierte Entscheidungen benötigen zuerst eine belastbare Datenarchitektur.",
+    "Automatisierung entfaltet ihren Nutzen erst nach erfolgreicher Standardisierung."
+  ],
+
+  "closing": "Trotz erfolgreichem Aufbau zentraler Geschäfts- und Managementstrukturen konnte das Unternehmen seine wirtschaftlichen Herausforderungen nicht nachhaltig lösen. Die entwickelte Architektur bildete die Grundlage für einen deutlich professionelleren und skalierbareren Betrieb, konnte jedoch die übergeordneten finanziellen Rahmenbedingungen des Unternehmens nicht kompensieren. Das Mandat gilt deshalb als erfolgreiche Transformation auf System- und Prozessebene, unabhängig vom späteren Unternehmensverlauf.",
+
+  "evidence": "Belegt durch Tätigkeitsbestätigung und Stellenbeschreibung des Auftraggebers; weitere Artefakte (Systemlandschaft, Prozess- und Organisationsdokumentation) werden anonymisiert nachgereicht.",
+
+  "relatedProjects": ["datenbasierte-steuerung", "holding-struktur", "neue-erloesfelder"],
+
+  "artifacts": [
+    {
+      "type": "pdf",
+      "title": "Tätigkeitsbestätigung",
+      "caption": "Bestätigung der Mandatstätigkeit als Leiter Zentrale Dienste (CIO) durch den Auftraggeber.",
+      "src": "mandates/artifacts/atlas/beevisio-taetigkeitsbestaetigung.pdf",
+      "pending": false
+    },
+    { "type": "document", "title": "Stellenbeschreibung", "caption": "Rollen- und Aufgabenbeschreibung des Mandats.", "pending": true },
+    { "type": "diagram", "title": "ERP-Systemlandschaft", "caption": "Integrierte Systemlandschaft (Dolibarr, CRM, Bexio, Google Workspace, WordPress).", "pending": true },
+    { "type": "screenshot", "title": "CRM-System", "caption": "Custom CRM mit Sales Pipeline und Lead Management.", "pending": true },
+    { "type": "diagram", "title": "API-Integrationen", "caption": "Integrations- und Automatisierungs-Layer.", "pending": true },
+    { "type": "document", "title": "Marketingprozesse", "pending": true },
+    { "type": "document", "title": "Vertriebsprozesse", "pending": true },
+    { "type": "presentation", "title": "Schulungsunterlagen", "pending": true },
+    { "type": "orgchart", "title": "Organisationsstruktur", "caption": "Hub-Manager-Struktur und Rollenmodell.", "pending": true }
+  ]
+}

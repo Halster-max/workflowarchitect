@@ -41,6 +41,7 @@
       </a>
 
       <ul class="nav__menu" id="navMenu">
+        <li hidden><a href="#mandates" data-nav data-navkey="mandate">Mandate</a></li>
         <li><a href="#dashboard" data-nav>Dashboard</a></li>
         <li><a href="#work" data-nav>Projekte</a></li>
         <li><a href="#figures" data-nav>Facts &amp; Figures</a></li>
@@ -115,6 +116,33 @@
       <a href="#dashboard" class="hero__scroll" aria-label="Zum nächsten Abschnitt scrollen">
         <span></span>
       </a>
+    </section>
+
+    <!-- ====================================================================
+         1b) MANDATE — second content type: large, cross-functional
+              transformation assignments. Cards + aggregate computed from
+              the mandate library by projects.js. Hidden if no mandates exist.
+    ===================================================================== -->
+    <section class="section" id="mandates" hidden>
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Mandate</span>
+          <h2 class="section__title">Transformationsmandate</h2>
+          <p class="section__intro">
+            Grossflächige, bereichsübergreifende Transformationsaufträge mit mehreren Workstreams,
+            Systemen und Initiativen — breiter angelegt als ein einzelnes Projekt. Jedes Mandat öffnet
+            ein vollständiges Dossier mit eigenem Dashboard, Workstream-Modell und Evidenz-Bewertung.
+          </p>
+        </header>
+
+        <div class="stats reveal" id="mandateAggregate" aria-live="polite">
+          <!-- aggregate mandate widgets injected by projects.js -->
+        </div>
+
+        <div class="cases reveal" id="mandateGrid">
+          <!-- mandate cards injected by projects.js -->
+        </div>
+      </div>
     </section>
 
     <!-- ====================================================================
