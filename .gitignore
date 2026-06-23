@@ -1,0 +1,9 @@
+# Local tooling — not part of the website
+/.claude/
+
+# Local prompt / scratch notes — not part of the portfolio
+/Prompt.txt
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
