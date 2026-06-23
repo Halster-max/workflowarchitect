@@ -4,6 +4,10 @@
 # Local prompt / scratch notes — not part of the portfolio
 /Prompt.txt
 
+# Standalone documentation package — kept local-only (the website reads projects/, not this).
+# Leading slash anchors to the ROOT folder so it never matches projects/artifacts/hermes/.
+/hermes/
+
 # OS / editor noise
 Thumbs.db
 .DS_Store
