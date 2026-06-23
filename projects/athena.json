@@ -97,49 +97,22 @@
       "type": "document",
       "title": "Schulungskonzept ERP-System",
       "caption": "Modulares, dreistufiges Ausbildungskonzept: Zielgruppen, Lernziele und Aufbau der aufeinander aufbauenden Module.",
-      "pending": true
-    },
-    {
-      "type": "sop",
-      "title": "Prozessanleitungen (ERP-Kernprozesse)",
-      "caption": "Standardisierte Anleitungen für die dokumentierten Kernprozesse über Service, Lager, Einkauf und Fakturierung.",
-      "pending": true
+      "src": "projects/artifacts/athena/schulungskonzept.pdf",
+      "pending": false
     },
     {
       "type": "sop",
       "title": "Verrechnungsanleitung — Rechnungserstellung",
       "caption": "Schritt-für-Schritt-Anleitung zur korrekten Rechnungsstellung im ERP-System.",
-      "pending": true
+      "src": "projects/artifacts/athena/verrechnung-rechnung.pdf",
+      "pending": false
     },
     {
       "type": "sop",
       "title": "Verrechnungsanleitung — Gutschriften",
       "caption": "Schritt-für-Schritt-Anleitung zur Erstellung von Gutschriften.",
-      "pending": true
-    },
-    {
-      "type": "document",
-      "title": "Schritt-für-Schritt-Dokumentationen (15+)",
-      "caption": "Grafisch unterlegte Detailanleitungen für die wiederkehrenden ERP-Arbeitsschritte.",
-      "pending": true
-    },
-    {
-      "type": "screenshot",
-      "title": "ERP-Screenshots (50+)",
-      "caption": "Bildbelege der ERP-Masken zu den dokumentierten Prozessen — Grundlage der grafischen Anleitungen.",
-      "pending": true
-    },
-    {
-      "type": "diagram",
-      "title": "ERP-Prozessgrafiken & Ablaufdiagramme",
-      "caption": "Visualisierung der Kernprozesse zwischen Service, Lager und Fakturierung.",
-      "pending": true
-    },
-    {
-      "type": "presentation",
-      "title": "Lernmodule / Schulungsunterlagen",
-      "caption": "Grafische Schulungsunterlagen der drei Ausbildungsmodule.",
-      "pending": true
+      "src": "projects/artifacts/athena/verrechnung-gutschrift.pdf",
+      "pending": false
     }
   ],
 
@@ -164,7 +137,7 @@
     "Rückblickend: früher mit mehreren Testpersonen pilotieren, eine digitale Lernplattform einbinden und von Beginn an systematisch über Kennzahlen und Lerntests messen."
   ],
 
-  "evidence": "Die Beleglast tragen die selbst erstellten Kern-Artefakte — Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots und Prozessgrafiken — sowie die dokumentierte produktive Einführung, die gemessene Wirkung (Einarbeitungszeit, Fehlerquote, Prozesssicherheit, Wissensverfügbarkeit, Dokumentationsabdeckung, selbstständige Arbeitsfähigkeit) und die Schulungsevaluation. Belegprofil nach Konfidenz: dokumentarische und prozessuale Evidenz stark (vollständige Unterlagen, ★★★★★ direkte Evidenz); produktiver Einsatz und gemessene Wirkung belegt. Nächster Dokumentationsschritt: die Artefakte in projects/artifacts/athena/ hochladen (derzeit als 'In Vorbereitung' markiert), um auch die Evidenz-Vollständigkeit auf der Detailseite vollständig abzubilden.",
+  "evidence": "Die Beleglast tragen die selbst erstellten Kern-Artefakte — Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots und Prozessgrafiken — sowie die dokumentierte produktive Einführung, die gemessene Wirkung (Einarbeitungszeit, Fehlerquote, Prozesssicherheit, Wissensverfügbarkeit, Dokumentationsabdeckung, selbstständige Arbeitsfähigkeit) und die Schulungsevaluation. Belegprofil nach Konfidenz: dokumentarische und prozessuale Evidenz stark (vollständige Unterlagen, ★★★★★ direkte Evidenz); produktiver Einsatz und gemessene Wirkung belegt. Öffentlich einsehbar sind — NDA-bedingt — drei freigegebene Primärbelege als PDF: Schulungskonzept sowie die Verrechnungsanleitungen für Rechnungsstellung und Gutschriften. Die weiteren Unterlagen (Prozessanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots, Prozessgrafiken, Lernmodule) existieren und sind in den Facts & Figures gezählt, dürfen aber aufgrund der Vertraulichkeitsvereinbarung nicht veröffentlicht werden.",
 
   "related": ["prometheus", "ki-administrative-arbeit", "datenbasierte-steuerung"]
 }
