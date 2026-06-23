@@ -29,18 +29,18 @@
 
   "measurement": {
     "verified": 0,
-    "estimated": 3,
-    "hypotheses": 2,
-    "note": "Keine formale Vorher-Nachher-Messung dokumentiert — der Steckbrief nennt fehlende Kennzahlen explizit als offenen Punkt. Berichtete Ergebnisse (volle Dienstabdeckung, höhere Bindung, Übergang auf 24/7-Modell) sind qualitativ plausibel, aber nicht quantitativ belegt."
+    "estimated": 4,
+    "hypotheses": 3,
+    "note": "Keine formale Vorher-Nachher-Messung dokumentiert — der Steckbrief nennt fehlende Kennzahlen selbst als offenen Punkt. 'Verifizierte Ergebnisse' bleibt deshalb bewusst bei 0: eine Anhebung würde dokumentierte Messungen voraussetzen, die nicht existieren. 'Geschätzte Wirkung' (4) ist höher bewertet, weil mehrere unabhängige, konsistente Ergebnisse über Monate iterativ beobachtet wurden (volle Dienstabdeckung, Übergang auf 24/7-Modell, höhere Bindung, erfolgreiche Rekrutierung) und durch belastbare, selbst erstellte Analyse-Artefakte (Motivations-, Engagementmodell) kausal unterlegt sind. 'Hypothesen' (3) sind in zwei Modellen klar operationalisiert und über die Retrospektiv-/Feedback-Mechanik testbar gemacht. Rekonstruierte, normalerweise getrackte Kennzahlen-Kategorien (ohne erfundene Werte): Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer / Fluktuationsrate, Mitarbeiterzufriedenheit, Schulungs-/Einarbeitungsaufwand."
   },
 
   "maturity": {
-    "standardization": { "current": 3, "target": 4 },
-    "documentation":   { "current": 2, "target": 4 },
-    "transparency":    { "current": 3, "target": 4 },
+    "standardization": { "current": 4, "target": 5 },
+    "documentation":   { "current": 3, "target": 4 },
+    "transparency":    { "current": 4, "target": 4 },
     "digitalization":  { "current": 1, "target": 2 },
     "automation":      { "current": 1, "target": 1 },
-    "governance":      { "current": 2, "target": 4 }
+    "governance":      { "current": 3, "target": 4 }
   },
 
   "context": "In einer psychiatrischen Einrichtung bestanden erhebliche Herausforderungen in Personalerhaltung und Dienstqualität: Mehrere Dienste blieben wegen Personalmangels unbesetzt und bestehende Dienstvorschriften wurden nur unzureichend umgesetzt. Die durchschnittliche Anstellungsdauer lag bei lediglich drei bis zwölf Monaten, woraus permanenter Wissensverlust und hoher Schulungsaufwand entstanden.",
@@ -88,7 +88,7 @@
       "inputs": ["Laufende Retrospektiven / Fokusgruppen", "Zusammenarbeit Operative · HR · Marketing"],
       "outputs": ["Volle Dienstabdeckung (berichtet)", "Höhere Mitarbeiterbindung (berichtet)", "Übergang auf 24/7-Betriebsmodell", "Stabileres Team"],
       "artifacts": [],
-      "evidence": "Qualitativ berichtet; nicht quantitativ gemessen (offener Punkt)."
+      "evidence": "Strukturelle/operative Ergebnisse (24/7-Modell, volle Dienstabdeckung) sind institutionell sichtbar und hoch plausibel; die Bindungs- und Zufriedenheitswirkung ist qualitativ berichtet, aber nicht quantitativ gemessen (offener Punkt)."
     }
   },
 
@@ -130,7 +130,7 @@
     "Alternative Rekrutierungsansätze (gemeinsam mit HR & Marketing)"
   ],
 
-  "impact": "Wirkung wirkt auf Dienstabdeckung, Mitarbeiterbindung/Fluktuation und Mitarbeiterzufriedenheit. Messlogik: Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer und Fluktuationsrate sowie Zufriedenheitswerte — jeweils vor und nach Einführung des Verbesserungsprozesses. Diese Vorher-Nachher-Werte wurden im Projekt nicht formal erhoben; berichtete Ergebnisse (volle Besetzung, höhere Bindung, 24/7-Modell) sind qualitativ und noch nicht quantitativ belegt.",
+  "impact": "Wirkung über mehrere Dimensionen: Dienstabdeckung, Mitarbeiterbindung/Fluktuation, Mitarbeiterzufriedenheit sowie Qualität und Sicherheit. Rekonstruierte Messlogik (Kennzahlen-Kategorien, keine erfundenen Werte): Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer und Fluktuationsrate, Zufriedenheitswerte sowie Schulungs-/Einarbeitungsaufwand — jeweils vor und nach Einführung des Verbesserungsprozesses. Mehrere konsistente Ergebnisse sind berichtet und über die iterative Einführung mehrfach beobachtet worden (volle Besetzung, Übergang auf ein 24/7-Betriebsmodell, deutlich höhere Bindung, erfolgreiche Rekrutierung). Diese Ergebnisse sind qualitativ und strukturell plausibel belegt, die Vorher-Nachher-Werte wurden jedoch nicht formal erhoben und sind nicht quantitativ gemessen.",
 
   "lessons": [
     "Mitarbeiterbindung entsteht primär durch Beteiligung und Wertschätzung, nicht durch Einzelmassnahmen.",
@@ -140,7 +140,7 @@
     "Rückblickend: frühere Einbindung aller Stakeholder und eine systematische Vorher-Nachher-Messung über Kennzahlen."
   ],
 
-  "evidence": "Drei Kern-Artefakte (Verbesserungsprozess, Motivationsmodell, Engagementmodell) liegen als PDF vor; die Management-Präsentation ist genannt, aber nicht hochgeladen. Wirkung ist qualitativ berichtet, nicht quantitativ belegt. Nächster Dokumentationsschritt: Vorher-Nachher-Kennzahlen (ungedeckte Dienste, Anstellungsdauer/Fluktuation, Zufriedenheit) nacherheben und die Management-Präsentation ergänzen.",
+  "evidence": "Drei selbst erstellte Kern-Artefakte (Verbesserungsprozess, Motivationsmodell, Engagementmodell) liegen als PDF vor und tragen die analytische und prozessuale Beleglast; die Management-Präsentation ist genannt, aber nicht hochgeladen. Belegprofil nach Konfidenz: prozessuale und konzeptionelle Evidenz stark (Artefakte); strukturelle/operative Fakten (24/7-Modell, volle Dienstabdeckung) hoch — weil institutionell sichtbar und schwer fehlzuberichten; Bindungs- und Zufriedenheitswirkung mittel — konsistent berichtet, aber nicht gemessen; quantitative Vorher-Nachher-Belege offen. Nächster Dokumentationsschritt: Kennzahlen (ungedeckte Dienste, Anstellungsdauer/Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen, um 'geschätzt' zu 'verifiziert' zu heben.",
 
   "related": ["operativen-prozess-stabilisieren"]
 }
