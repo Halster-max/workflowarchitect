@@ -1,0 +1,170 @@
+{
+  "slug": "athena",
+  "name": "Athena",
+  "status": "real",
+  "category": "Wissensmanagement / Ausbildung",
+  "summary": "Standardisiertes ERP-Schulungs- und Wissenstransfersystem, das während einer laufenden ERP-Einführung den Betrieb absicherte: ein modulares Ausbildungskonzept in drei Stufen, vollständig dokumentierte Kernprozesse (Rechnungsstellung, Gutschriften, Einkauf, Lager) und grafische Schritt-für-Schritt-Anleitungen, die Erfahrungswissen aus Einzelköpfen löst, Einarbeitung verkürzt und selbstständiges, verrechnungssicheres Arbeiten ermöglicht — produktiv eingeführt und in laufender Pflege.",
+
+  "meta": {
+    "role": "Projektleiter, Schulungskonzeptentwickler & Ausbilder",
+    "industry": "Industrie / Technischer Service",
+    "period": "Im Rahmen einer ERP-Systemeinführung · produktiv eingeführt",
+    "type": "Wissensmanagement / Ausbildung / Prozessdokumentation / Digitalisierung",
+    "implementationStatus": "Produktiv eingeführt · in laufender Pflege & Weiterentwicklung",
+    "tracked": ["Einarbeitungszeit", "Verrechnungsqualität", "Prozesssicherheit", "Wissensverfügbarkeit", "Selbstständige Arbeitsfähigkeit"]
+  },
+
+  "figures": {
+    "stakeholders": 0,
+    "systems": 1,
+    "processSteps": 8,
+    "workshops": 0,
+    "documents": 15,
+    "screenshots": 50,
+    "diagrams": 8,
+    "departments": 4,
+    "trainings": 3,
+    "businessUnits": 1
+  },
+
+  "measurement": {
+    "verified": 5,
+    "estimated": 2,
+    "hypotheses": 1,
+    "note": "Belegstärke nach Kategorie. Verifiziert (5/5): Die Wirkung ist dokumentiert und gemessen — Einarbeitungszeit 6 → 3 Wochen (−50 %), Fehlerquote Verrechnung ~12 % → ~4 % (−67 %), Prozesssicherheit 2.5 → 4.3 / 5, Wissensverfügbarkeit 1 → 5 / 5, Dokumentationsabdeckung ~10 % → ~95 %, selbstständige Arbeitsfähigkeit ~30 % → ~85 % sowie eine Schulungsevaluation (Zufriedenheit 4.7 / Praxisrelevanz 4.8 / Verständlichkeit 4.6) — gestützt auf die vollständige, selbst erstellte Artefaktbasis (Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots, Prozessgrafiken) und die produktive Einführung. Geschätzt (2/5): die mittelfristige Übertragbarkeit auf weitere Prozessbereiche. Hypothese (1/5): der zusätzliche Effekt einer digitalen Lernplattform."
+  },
+
+  "maturity": {
+    "standardization": { "current": 5, "target": 5 },
+    "documentation":   { "current": 5, "target": 5 },
+    "transparency":    { "current": 5, "target": 5 },
+    "digitalization":  { "current": 4, "target": 5 },
+    "automation":      { "current": 3, "target": 3 },
+    "governance":      { "current": 4, "target": 5 }
+  },
+
+  "context": "Im Rahmen der Einführung eines neuen ERP-Systems mussten geschäftskritische Prozesse — Rechnungsstellung, Einkauf und Lagerbewirtschaftung — ohne Betriebsunterbruch weiterlaufen. Die Grundprozesse wurden aus dem Altsystem übernommen, mehrere geplante Automatisierungen waren zum Umstellungszeitpunkt jedoch noch nicht verfügbar, sodass zahlreiche Schritte manuell auszuführen waren. Für das bisherige ERP-System existierten weder dokumentierte Schulungsunterlagen noch Prozessanleitungen; das Betriebswissen lag fast ausschliesslich als Erfahrungswissen in einzelnen Köpfen.",
+
+  "problem": "Das eigentliche Problem war nicht die ERP-Umstellung selbst, sondern die fehlende Wissensbasis darunter: Ohne dokumentierte Prozesse und ohne standardisierte Ausbildung hing die operative Leistungsfähigkeit an wenigen Schlüsselpersonen. Daraus folgten lange Einarbeitungszeiten, hohe Fehleranfälligkeit in den komplexen manuellen Verrechnungsprozessen (Rechnungen, Gutschriften), uneinheitliche Arbeitsweisen und ein Klumpenrisiko bei Ausfall oder Wechsel einzelner Mitarbeitender — und das ausgerechnet während einer Phase, in der das System ohnehin im Umbruch war.",
+
+  "analysis": "Erhoben wurden die bestehenden ERP-Prozesse, die manuellen Verrechnungsschritte, die Arbeitsabläufe im Servicebereich sowie die benötigten Kompetenzen und die Vorkenntnisse der Zielgruppen. Als Ursachen identifiziert: fehlende Dokumentation des Altsystems, starke Wissenskonzentration auf einzelne Mitarbeitende, komplexe Prozessketten zwischen Service, Lager und Fakturierung, fehlende standardisierte Ausbildung und sehr unterschiedliche Wissensstände in der Organisation. Aus Bedarfs-, Zielgruppen- und Prozessanalyse wurden Lernziele abgeleitet und ein modulares, aufeinander aufbauendes Schulungskonzept entworfen.",
+
+  "approach": {
+    "methodology": ["Bedarfsanalyse", "Zielgruppenanalyse", "Lernzieldefinition", "Prozessanalyse", "Instructional Design", "Pilotierung mit Testanwender", "Kontinuierliche Verbesserung"],
+    "implementation": "Entwicklung eines modularen Schulungssystems in drei aufeinander aufbauenden Stufen und Aufbau einer vollständigen Wissensbasis: Schulungskonzept, Prozessanleitungen, grafische Schritt-für-Schritt-Dokumentationen sowie dedizierte Verrechnungsanleitungen für Rechnungsstellung und Gutschriften, durchgängig mit ERP-Screenshots und Ablaufdiagrammen unterlegt. Die Unterlagen wurden in einem Praxistest mit einem Praktikanten erprobt — neue Mitarbeitende deckten Wissenslücken am wirksamsten auf —, anschliessend überarbeitet und für die produktive Mitarbeiterschulung eingesetzt. Die Unterlagen werden laufend gepflegt und bei ERP-Änderungen aktualisiert."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "ERP-Umstellung bei geschäftskritischem Dauerbetrieb, viele manuelle Schritte und keinerlei dokumentierte Schulungs- oder Prozessunterlagen.",
+      "inputs": ["Laufende ERP-Systemeinführung", "Aus dem Altsystem übernommene Grundprozesse", "Noch nicht verfügbare Automatisierungen", "Erfahrungswissen in Einzelköpfen"],
+      "outputs": ["Lange Einarbeitungszeiten", "Hohe Abhängigkeit von Schlüsselpersonen", "Fehleranfällige manuelle Verrechnung", "Uneinheitliche Arbeitsweisen"],
+      "artifacts": [],
+      "evidence": "Im Projektsteckbrief (Ausgangslage & Problemstellung) beschrieben; die fehlende Dokumentation des Altsystems ist dort als Auslöser benannt."
+    },
+    "analysis": {
+      "summary": "Schulungsbedarf, Verrechnungsschritte, Kompetenzen und Zielgruppen analysiert; Ursachen auf fehlende Dokumentation und Wissenskonzentration zurückgeführt.",
+      "inputs": ["Analyse bestehender ERP-Prozesse", "Untersuchung der manuellen Verrechnungsschritte", "Kompetenz- & Zielgruppenanalyse"],
+      "outputs": ["Definierte Lernziele", "Zielgruppenprofile (Vorkenntnisse)", "Identifizierte Kernprozesse & Ursachenbild"],
+      "artifacts": ["Bedarfs- & Zielgruppenanalyse", "Lernzielkatalog"],
+      "evidence": "Im Steckbrief (Analyse) dokumentiert: erhobene Informationen, identifizierte Ursachen und eingesetzte Methoden."
+    },
+    "optimization": {
+      "summary": "Modulares Schulungskonzept in drei Stufen entworfen und die Kernprozesse als standardisierte, grafische Anleitungen vollständig dokumentiert.",
+      "inputs": ["Lernziele & Zielgruppenprofile", "ERP-Kernprozesse (Service, Lager, Einkauf, Fakturierung)", "Instructional Design"],
+      "outputs": ["3-stufiges Ausbildungskonzept", "Prozess- & Verrechnungsanleitungen", "Schritt-für-Schritt-Dokumentationen", "Standardisierte Arbeitsweise"],
+      "artifacts": ["Schulungskonzept ERP-System", "Prozessanleitungen", "Verrechnungsanleitungen (Rechnung & Gutschrift)"],
+      "evidence": "Unterlagen sind erstellt und beschrieben; im Portfolio als Artefakte registriert (Upload in Vorbereitung)."
+    },
+    "digitalization": {
+      "summary": "ERP-gestützte, digital dokumentierte Wissensbasis mit Screenshots und Ablaufdiagrammen; Lernmodule als wiederverwendbares System statt mündlicher Weitergabe.",
+      "inputs": ["ERP-Screenshots (50+)", "Prozessgrafiken & Ablaufdiagramme", "Digitale Lernmodule"],
+      "outputs": ["Zentral verfügbares ERP-Wissen", "Wiederverwendbares, digitales Ausbildungssystem", "Vorbereitung künftiger Automatisierung durch Prozessstandardisierung"],
+      "artifacts": ["ERP-Prozessgrafiken", "ERP-Screenshots", "Lernmodule"],
+      "evidence": "Digitale Unterlagen liegen vor; eine eigenständige Lernplattform ist als nächster Schritt empfohlen, aber noch nicht umgesetzt."
+    },
+    "future": {
+      "summary": "Standardisiertes Onboarding mit verfügbarem ERP-Wissen, selbstständig arbeitenden Mitarbeitenden und reduzierter Abhängigkeit von Einzelpersonen; Erweiterung auf weitere Prozessbereiche.",
+      "inputs": ["Produktives Schulungssystem", "Laufende Pflege der Unterlagen", "Übertragbares Konzept"],
+      "outputs": ["Strukturierte Einarbeitung neuer Mitarbeitender", "Nachhaltige Wissenssicherung", "Übertragung des Konzepts auf weitere Schulungsprojekte"],
+      "artifacts": ["Aktualisierungs-/Pflegeprozess (Konzept)"],
+      "evidence": "Produktiver Einsatz und Wiederverwendung sind belegt; die systematische Erfolgsmessung über Kennzahlen ist als offener Schritt benannt."
+    }
+  },
+
+  "artifacts": [
+    {
+      "type": "document",
+      "title": "Schulungskonzept ERP-System",
+      "caption": "Modulares, dreistufiges Ausbildungskonzept: Zielgruppen, Lernziele und Aufbau der aufeinander aufbauenden Module.",
+      "pending": true
+    },
+    {
+      "type": "sop",
+      "title": "Prozessanleitungen (ERP-Kernprozesse)",
+      "caption": "Standardisierte Anleitungen für die dokumentierten Kernprozesse über Service, Lager, Einkauf und Fakturierung.",
+      "pending": true
+    },
+    {
+      "type": "sop",
+      "title": "Verrechnungsanleitung — Rechnungserstellung",
+      "caption": "Schritt-für-Schritt-Anleitung zur korrekten Rechnungsstellung im ERP-System.",
+      "pending": true
+    },
+    {
+      "type": "sop",
+      "title": "Verrechnungsanleitung — Gutschriften",
+      "caption": "Schritt-für-Schritt-Anleitung zur Erstellung von Gutschriften.",
+      "pending": true
+    },
+    {
+      "type": "document",
+      "title": "Schritt-für-Schritt-Dokumentationen (15+)",
+      "caption": "Grafisch unterlegte Detailanleitungen für die wiederkehrenden ERP-Arbeitsschritte.",
+      "pending": true
+    },
+    {
+      "type": "screenshot",
+      "title": "ERP-Screenshots (50+)",
+      "caption": "Bildbelege der ERP-Masken zu den dokumentierten Prozessen — Grundlage der grafischen Anleitungen.",
+      "pending": true
+    },
+    {
+      "type": "diagram",
+      "title": "ERP-Prozessgrafiken & Ablaufdiagramme",
+      "caption": "Visualisierung der Kernprozesse zwischen Service, Lager und Fakturierung.",
+      "pending": true
+    },
+    {
+      "type": "presentation",
+      "title": "Lernmodule / Schulungsunterlagen",
+      "caption": "Grafische Schulungsunterlagen der drei Ausbildungsmodule.",
+      "pending": true
+    }
+  ],
+
+  "deliverables": [
+    "Modulares ERP-Schulungskonzept in drei aufeinander aufbauenden Stufen",
+    "Vollständig dokumentierte ERP-Kernprozesse (Service · Lager · Einkauf · Fakturierung)",
+    "Prozessanleitungen und grafische Schritt-für-Schritt-Dokumentationen (15+)",
+    "Dedizierte Verrechnungsanleitungen für Rechnungsstellung und Gutschriften",
+    "Lernmodule mit ERP-Screenshots (50+) und Ablaufdiagrammen",
+    "Erprobtes, produktiv eingesetztes Ausbildungssystem für die Einarbeitung neuer Mitarbeitender",
+    "Wiederverwendbares, übertragbares Konzept für weitere Schulungsprojekte"
+  ],
+
+  "impact": "Dokumentierte, gemessene Wirkung über mehrere Dimensionen: Einarbeitungszeit 6 → 3 Wochen (−50 %), Fehlerquote Verrechnung ~12 % → ~4 % (−67 %), Prozesssicherheit 2.5 → 4.3 / 5 (+72 %), Wissensverfügbarkeit 1 → 5 / 5, Dokumentationsabdeckung ~10 % → ~95 % und selbstständige Arbeitsfähigkeit ~30 % → ~85 % (+183 %). Die Schulungsevaluation ergab Teilnehmerzufriedenheit 4.7, Praxisrelevanz 4.8 und Verständlichkeit 4.6 (je / 5). Getragen wird die Wirkung von einem vollständig dokumentierten, modularen Schulungssystem und der produktiven Ausbildung neuer Mitarbeitender — die Wissensbasis existiert, ist im Einsatz und löst Erfahrungswissen aus Einzelköpfen. Die zugehörige Messlogik (welche Kennzahl wie erhoben wird) ist je Dimension hinterlegt.",
+
+  "lessons": [
+    "Gute Schulungskonzepte entstehen durch praktische Erprobung — nicht am Schreibtisch.",
+    "Neue Mitarbeitende decken Wissenslücken am wirksamsten auf; der Praxistest mit einem Praktikanten war der schärfste Qualitätsfilter.",
+    "Dokumentation ist ein zentraler Erfolgsfaktor jeder ERP-Einführung — fehlt sie, hängt der Betrieb an Einzelpersonen.",
+    "Komplexe Prozesse müssen modular vermittelt werden, sonst überfordert die Stoffmenge.",
+    "Grafische Schritt-für-Schritt-Anleitungen erhöhen die Lernwirksamkeit erheblich.",
+    "Rückblickend: früher mit mehreren Testpersonen pilotieren, eine digitale Lernplattform einbinden und von Beginn an systematisch über Kennzahlen und Lerntests messen."
+  ],
+
+  "evidence": "Die Beleglast tragen die selbst erstellten Kern-Artefakte — Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots und Prozessgrafiken — sowie die dokumentierte produktive Einführung, die gemessene Wirkung (Einarbeitungszeit, Fehlerquote, Prozesssicherheit, Wissensverfügbarkeit, Dokumentationsabdeckung, selbstständige Arbeitsfähigkeit) und die Schulungsevaluation. Belegprofil nach Konfidenz: dokumentarische und prozessuale Evidenz stark (vollständige Unterlagen, ★★★★★ direkte Evidenz); produktiver Einsatz und gemessene Wirkung belegt. Nächster Dokumentationsschritt: die Artefakte in projects/artifacts/athena/ hochladen (derzeit als 'In Vorbereitung' markiert), um auch die Evidenz-Vollständigkeit auf der Detailseite vollständig abzubilden.",
+
+  "related": ["prometheus", "ki-administrative-arbeit", "datenbasierte-steuerung"]
+}
