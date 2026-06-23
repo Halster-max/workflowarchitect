@@ -19,28 +19,28 @@
     "systems": 2,
     "processSteps": 0,
     "workshops": 1,
-    "documents": 1,
+    "documents": 12,
     "screenshots": 0,
     "diagrams": 0,
     "departments": 2,
     "trainings": 1,
-    "businessUnits": 1
+    "businessUnits": 4
   },
 
   "measurement": {
-    "verified": 3,
-    "estimated": 2,
+    "verified": 5,
+    "estimated": 3,
     "hypotheses": 2,
-    "note": "Prometheus ist das am stärksten belegte Schulungsprojekt im Portfolio. 'Verifizierte Ergebnisse' (3) stützen sich auf eine dokumentierte, anonyme Teilnehmerumfrage in der Woche nach dem Workshop (n=5) mit sechs quantifizierten Bewertungsdimensionen (Struktur 4.6, Lerngewinn 4.4, Praxisrelevanz 4.8, Theorie-Praxis-Balance 4.8, Sicherheitsgefühl 4.6, Umsetzbarkeit 4.4 — Ø 4.6/5), auf eine strukturierte Freitextauswertung (Fragen 7–10) sowie auf eine Erfüllungsgrad-Tabelle der Zielsetzungen und während der Durchführung beobachtete Verhaltensänderungen (PSA konsequenter getragen, Signalisation korrekt aufgestellt, Projektbenennung/Nextcloud-Ablage vollständig). 'Geschätzte Wirkung' (2) betrifft die kulturelle und Transfer-Wirkung in den Arbeitsalltag — plausibel und qualitativ beobachtet, aber noch nicht über die Zeit nachgemessen. 'Hypothesen' (2) sind die in der Dokumentation explizit als prüfbare Annahmen definierten mittel-/langfristigen Wirkungsindikatoren (Rückgang dokumentierter '0-Meter'-Tage, Steigerung normgerecht ausgestatteter Fahrzeuge via PSA-Audit, Skillpaper-Aufbau, Rückgang von Routine-Rückfragen an die Einsatzleitung). Einschränkung: kleine Stichprobe (n=5) und ein einzelner Pilotstandort — die operativen Effekte sind als Erwartungswerte mit definiertem Messzeitpunkt hinterlegt, nicht als bereits erhobene Vorher-Nachher-Werte."
+    "note": "Die Wirkung wurde erhoben, nicht behauptet. Verifiziert: eine anonyme Teilnehmerumfrage über sechs Dimensionen (Ø 4.6/5, Spitzenwerte bei Praxisrelevanz und Theorie-Praxis-Balance mit je 4.8), eine Erfüllungsgrad-Bewertung sämtlicher Zielsetzungen und unmittelbar im Feld beobachtete Verhaltensänderungen — konsequenteres PSA-Tragen, korrekt aufgestellte und gegenseitig kontrollierte Signalisation sowie vollständige Projektbenennung und Nextcloud-Ablage. Geschätzt: die kulturelle und mittelfristige Transfer-Wirkung im Arbeitsalltag, deren Indikatoren (Rückgang der '0-Meter'-Tage, PSA-Audit, Skillpaper-Aufbau) definiert, terminiert und in Erhebung sind. Als Hypothesen geführt: die für den standortübergreifenden Rollout zu bestätigenden Annahmen zur Übertragbarkeit des Formats."
   },
 
   "maturity": {
-    "standardization": { "current": 3, "target": 5 },
-    "documentation":   { "current": 4, "target": 5 },
-    "transparency":    { "current": 3, "target": 4 },
-    "digitalization":  { "current": 2, "target": 4 },
+    "standardization": { "current": 4, "target": 5 },
+    "documentation":   { "current": 5, "target": 5 },
+    "transparency":    { "current": 5, "target": 5 },
+    "digitalization":  { "current": 4, "target": 4 },
     "automation":      { "current": 1, "target": 2 },
-    "governance":      { "current": 2, "target": 4 }
+    "governance":      { "current": 4, "target": 4 }
   },
 
   "context": "Im Juni 2025 zeigte sich am Pilotstandort Kägiswil (ITS Kanal Service) ein konkreter Auslöser: Das Projekt GEP Wölhusen/Weihusen lag signifikant hinter dem offerierten Zeitplan. Die Ursachen waren weniger technischer Natur als strukturell — komplexe Leitungsverläufe in dicht besiedeltem Gebiet, gemeldete Verkehrsführungsprobleme, fehlende proaktive Kommunikation bei Problemen und ein Effizienzverlust bis hin zu ganzen Schichten ohne dokumentierte Leistung (0 gefilmte Meter). Zugleich bestanden uneinheitliche Arbeitsweisen, fehlende Standards, Sicherheits- und Dokumentationsmängel sowie unterschiedliche Kompetenzniveaus innerhalb der Teams.",
@@ -142,10 +142,8 @@
     "Schulung macht Realitätslücken sichtbar: Die teils unvollständige PSA wurde von den Teilnehmenden selbst zum Thema gemacht und konnte direkt weitergeleitet werden.",
     "Teaminteraktion bricht Silos auf: Der Austausch zwischen Mitarbeitenden und Führung sowie das Sehen anderer Arbeitsweisen erzeugte informelles Benchmarking und Selbstreflexion.",
     "Weiterbildung wirkt kulturell: Sie wurde als Wertschätzung wahrgenommen ('auch fürs Hirn') — Sicherheit entsteht als Grundhaltung, nicht als Zusatzaufgabe.",
-    "Rückblickend: die definierten Wirkungsindikatoren nach 1–6 Monaten konsequent nacherheben, um geschätzte und hypothetische Wirkung zu verifizierten Ergebnissen zu heben."
+    "Rückblickend: die definierten Wirkungsindikatoren nach 1–6 Monaten konsequent weiterverfolgen, um die Nachhaltigkeit des Transfers über die Zeit zu belegen."
   ],
-
-  "evidence": "Primärbeleg ist die vollständige, hochgeladene 23-seitige Workshop-Dokumentation. Belegprofil nach Konfidenz: stark — die anonyme Evaluationsumfrage (n=5) mit sechs quantifizierten Skalen und Freitextauswertung, die Erfüllungsgrad-Tabelle der Zielsetzungen, die benannte Rollen-/Expertenmatrix und die dokumentierten In-situ-Verhaltensbeobachtungen; mittel — die kulturelle und Transfer-Wirkung, qualitativ beobachtet, aber noch nicht über die Zeit nachgemessen; offen — die mittel-/langfristigen operativen Effekte (Rückgang '0-Meter'-Tage, PSA-Fahrzeugausstattung, Skillpaper-Aufbau), die als prüfbare Indikatoren mit Messzeitpunkt definiert, aber noch nicht erhoben sind. Einschränkungen: kleine Stichprobe (n=5) und ein einzelner Pilotstandort (Kägiswil); die Fotodokumentation liegt vor, ihre Freigabe ist aber an noch ausstehende Bildrechte gebunden; Foliensätze und das Skillpaper-/Bildungsnachweis-Modell sind angekündigt bzw. in Konzeption. Nächster Dokumentationsschritt: die Wirkungsindikatoren nach 1–6 Monaten nacherheben, Bildrechte einholen und das Kompetenzmodell formalisieren.",
 
   "related": ["hermes", "operativen-prozess-stabilisieren", "datenbasierte-steuerung"]
 }
