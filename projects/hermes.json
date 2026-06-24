@@ -31,7 +31,7 @@
     "verified": 0,
     "estimated": 4,
     "hypotheses": 3,
-    "note": "Keine formale Vorher-Nachher-Messung dokumentiert — der Steckbrief nennt fehlende Kennzahlen selbst als offenen Punkt. 'Verifizierte Ergebnisse' bleibt deshalb bewusst bei 0: eine Anhebung würde dokumentierte Messungen voraussetzen, die nicht existieren. 'Geschätzte Wirkung' (4) ist höher bewertet, weil mehrere unabhängige, konsistente Ergebnisse über Monate iterativ beobachtet wurden (volle Dienstabdeckung, Übergang auf 24/7-Modell, höhere Bindung, erfolgreiche Rekrutierung) und durch belastbare, selbst erstellte Analyse-Artefakte (Motivations-, Engagementmodell) kausal unterlegt sind. 'Hypothesen' (3) sind in zwei Modellen klar operationalisiert und über die Retrospektiv-/Feedback-Mechanik testbar gemacht. Rekonstruierte, normalerweise getrackte Kennzahlen-Kategorien (ohne erfundene Werte): Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer / Fluktuationsrate, Mitarbeiterzufriedenheit, Schulungs-/Einarbeitungsaufwand."
+    "note": "Eine formale Vorher-Nachher-Messung wurde nicht erhoben — der Steckbrief nennt die fehlenden Kennzahlen selbst als offenen Punkt; verifizierte Ergebnisse stehen deshalb auf 0. Die geschätzte Wirkung stützt sich auf mehrere konsistente, über Monate iterativ beobachtete Ergebnisse (volle Dienstabdeckung, Übergang auf ein 24/7-Modell, höhere Bindung, erfolgreiche Rekrutierung) und auf zwei selbst erstellte Analyse-Artefakte (Motivations- und Engagementmodell), die sie kausal unterlegen. Die Hypothesen sind in diesen Modellen operationalisiert und über die Retrospektiv- und Feedback-Mechanik testbar. Üblicherweise getrackte Kennzahlen, ohne erfundene Werte: Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer und Fluktuation, Mitarbeiterzufriedenheit, Schulungs- und Einarbeitungsaufwand."
   },
 
   "maturity": {
@@ -88,7 +88,7 @@
       "inputs": ["Laufende Retrospektiven / Fokusgruppen", "Zusammenarbeit Operative · HR · Marketing"],
       "outputs": ["Volle Dienstabdeckung (berichtet)", "Höhere Mitarbeiterbindung (berichtet)", "Übergang auf 24/7-Betriebsmodell", "Stabileres Team"],
       "artifacts": [],
-      "evidence": "Strukturelle/operative Ergebnisse (24/7-Modell, volle Dienstabdeckung) sind institutionell sichtbar und hoch plausibel; die Bindungs- und Zufriedenheitswirkung ist qualitativ berichtet, aber nicht quantitativ gemessen (offener Punkt)."
+      "evidence": "Strukturelle Ergebnisse wie das 24/7-Modell und die volle Dienstabdeckung sind institutionell sichtbar; die Bindungs- und Zufriedenheitswirkung ist qualitativ berichtet, aber nicht quantitativ gemessen."
     }
   },
 
@@ -130,7 +130,7 @@
     "Alternative Rekrutierungsansätze (gemeinsam mit HR & Marketing)"
   ],
 
-  "impact": "Wirkung über mehrere Dimensionen: Dienstabdeckung, Mitarbeiterbindung/Fluktuation, Mitarbeiterzufriedenheit sowie Qualität und Sicherheit. Rekonstruierte Messlogik (Kennzahlen-Kategorien, keine erfundenen Werte): Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer und Fluktuationsrate, Zufriedenheitswerte sowie Schulungs-/Einarbeitungsaufwand — jeweils vor und nach Einführung des Verbesserungsprozesses. Mehrere konsistente Ergebnisse sind berichtet und über die iterative Einführung mehrfach beobachtet worden (volle Besetzung, Übergang auf ein 24/7-Betriebsmodell, deutlich höhere Bindung, erfolgreiche Rekrutierung). Diese Ergebnisse sind qualitativ und strukturell plausibel belegt, die Vorher-Nachher-Werte wurden jedoch nicht formal erhoben und sind nicht quantitativ gemessen.",
+  "impact": "Wirkung über mehrere Dimensionen — Dienstabdeckung, Mitarbeiterbindung und Fluktuation, Mitarbeiterzufriedenheit sowie Qualität und Sicherheit. Mehrere konsistente Ergebnisse sind über die iterative Einführung mehrfach beobachtet worden: volle Besetzung, Übergang auf ein 24/7-Betriebsmodell, deutlich höhere Bindung und erfolgreiche Rekrutierung. Diese Ergebnisse sind strukturell und qualitativ belegt; die Vorher-Nachher-Werte wurden nicht formal erhoben.",
 
   "lessons": [
     "Mitarbeiterbindung entsteht primär durch Beteiligung und Wertschätzung, nicht durch Einzelmassnahmen.",
@@ -140,7 +140,7 @@
     "Rückblickend: frühere Einbindung aller Stakeholder und eine systematische Vorher-Nachher-Messung über Kennzahlen."
   ],
 
-  "evidence": "Drei selbst erstellte Kern-Artefakte (Verbesserungsprozess, Motivationsmodell, Engagementmodell) liegen als PDF vor und tragen die analytische und prozessuale Beleglast; die Management-Präsentation ist genannt, aber nicht hochgeladen. Belegprofil nach Konfidenz: prozessuale und konzeptionelle Evidenz stark (Artefakte); strukturelle/operative Fakten (24/7-Modell, volle Dienstabdeckung) hoch — weil institutionell sichtbar und schwer fehlzuberichten; Bindungs- und Zufriedenheitswirkung mittel — konsistent berichtet, aber nicht gemessen; quantitative Vorher-Nachher-Belege offen. Nächster Dokumentationsschritt: Kennzahlen (ungedeckte Dienste, Anstellungsdauer/Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen, um 'geschätzt' zu 'verifiziert' zu heben.",
+  "evidence": "Drei selbst erstellte Kern-Artefakte — Verbesserungsprozess, Motivations- und Engagementmodell — liegen als PDF vor und tragen die analytische und prozessuale Beleglast; die Management-Präsentation ist genannt, aber nicht hochgeladen. Strukturelle Ergebnisse wie das 24/7-Modell und die volle Dienstabdeckung sind institutionell sichtbar; die Bindungs- und Zufriedenheitswirkung ist konsistent berichtet, aber nicht quantitativ gemessen. Nächster Dokumentationsschritt: die Kennzahlen (ungedeckte Dienste, Anstellungsdauer und Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen.",
 
   "related": ["operativen-prozess-stabilisieren"]
 }

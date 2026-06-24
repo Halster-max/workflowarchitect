@@ -31,7 +31,7 @@
     "verified": 5,
     "estimated": 0,
     "hypotheses": 0,
-    "note": "Verifizierte Ergebnisse: Die KPIs sind real erhobene Vorher-Nachher-Werte aus dem Tagesgeschäft und werden als belegte Resultate ausgewiesen. Die Beleglast wird zusätzlich strukturell getragen: Zwei validierte Prozessartefakte (Flowchart Ticketüberwachung, Flowchart Export-Lieferschein) liegen als reale, nicht-ausstehende PDFs vor und dokumentieren das gemessene Prozessdesign direkt. Verifizierte Wirkung über alle Kernkennzahlen: Prozessdurchlaufzeit −25 %, Such-/Abstimmungsaufwand −40 %, Prozessverständnis neuer Mitarbeitender 2.0→4.5/5, Dokumentationsabdeckung 20→85 %, Transparenz der Verantwortlichkeiten 2.5→4.5/5, Prozessstabilität 2.8→4.4/5. 'Geschätzte Wirkung' und 'Hypothesen' stehen auf 0, weil keine offenen Annahmen verbleiben — die Werte sind gemessen, nicht abgeleitet."
+    "note": "Die KPIs sind real erhobene Vorher-Nachher-Werte aus dem Tagesgeschäft: Prozessdurchlaufzeit −25 %, Such- und Abstimmungsaufwand −40 %, Prozessverständnis neuer Mitarbeitender 2.0 → 4.5/5, Dokumentationsabdeckung 20 → 85 %, Transparenz der Verantwortlichkeiten 2.5 → 4.5/5, Prozessstabilität 2.8 → 4.4/5. Zwei validierte Prozessartefakte — Flowchart Ticketüberwachung und Flowchart Export-Lieferschein — liegen als PDF vor und dokumentieren das gemessene Prozessdesign direkt. Geschätzte Wirkung und Hypothesen stehen auf 0: Die Werte sind gemessen, nicht abgeleitet."
   },
 
   "maturity": {
@@ -60,35 +60,35 @@
       "inputs": ["Stellenbeschreibung ohne Prozessdetail", "Gelebte, uneinheitliche Arbeitsweisen", "Verteilte Systeme (Outlook, Excel, SMT, CRM, Penta, Netzlaufwerk)"],
       "outputs": ["Hoher Such- & Abstimmungsaufwand", "Fehlerquellen durch fehlende Standardisierung", "Schwierige Einarbeitung", "Intransparenter Prozessstatus"],
       "artifacts": [],
-      "evidence": "Im Steckbrief (Ausgangslage/Problemstellung) beschrieben; Ausgangsreife niedrig (Standardisierung 2, Dokumentation 1, Transparenz 2). Business Value: Schaffung von Handlungsdruck und klarem Analysefokus."
+      "evidence": "Im Steckbrief (Ausgangslage/Problemstellung) beschrieben; Ausgangsreife niedrig (Standardisierung 2, Dokumentation 1, Transparenz 2)."
     },
     "analysis": {
       "summary": "Ist-Aufnahme über Beobachtung, Teamgespräche, Verantwortlichkeits- und Fehler-/Engpassanalyse; Ursachen auf Prozess- statt Symptomebene zurückgeführt.",
       "inputs": ["Beobachtung bestehender Abläufe", "Gespräche mit Teammitgliedern", "Analyse Verantwortlichkeiten", "Untersuchung Fehlerquellen & Engpässe"],
       "outputs": ["Ursachenbild (gewachsene Arbeitsweisen, fehlende Doku, unklare Zuständigkeiten, Medienbrüche)", "Liste der Schwachstellen & Schnittstellen", "Bewertete Prozessschritte"],
       "artifacts": [],
-      "evidence": "Methodik (Prozess-/Ursachenanalyse, Rückwärtsanalyse) im Steckbrief dokumentiert; Ergebnisse fliessen direkt in die Flowcharts ein. Business Value: belastbare Grundlage für gezielte statt symptomatische Optimierung."
+      "evidence": "Methodik (Prozess-/Ursachenanalyse, Rückwärtsanalyse) im Steckbrief dokumentiert; die Ergebnisse fliessen direkt in die Flowcharts ein."
     },
     "optimization": {
       "summary": "Prozessvisualisierung und Standardisierung: Kernprozesse als Flowcharts modelliert (Ticketüberwachung mit 4 Entscheidungspunkten und Eskalationspfad; linearer Export-Lieferscheinprozess) und in einheitliche Soll-Abläufe überführt.",
       "inputs": ["Analyseergebnisse", "Soll-Ziele (Transparenz, klare Verantwortlichkeiten, Fehlerreduktion)"],
       "outputs": ["Flowchart Ticketüberwachung", "Flowchart Export-Lieferschein", "Standardisierte Soll-Prozesse", "Reduzierte Komplexität durch Vereinfachung"],
       "artifacts": ["Flussdiagramm Ticketüberwachung", "Flussdiagramm Export-Lieferschein"],
-      "evidence": "Zwei Flowcharts liegen als reale PDFs vor (direkte Evidenz). Business Value: nachvollziehbare, übergebbare Prozesse, geringerer Such-/Abstimmungsaufwand, schnellere Orientierung."
+      "evidence": "Beide Flowcharts liegen als PDF vor und machen die Soll-Abläufe nachvollziehbar und übergebbar."
     },
     "digitalization": {
       "summary": "Verankerung digitaler Standards und Governance im Ablauf: Excel-gestützte Ticket-Nachverfolgung, CRM-Dokumentation (Screenshot + PDF), Namenskonventionen, Ablagestruktur, Verrechnung über Penta und definierter Eskalationspfad ins Ticket-Management.",
       "inputs": ["Bestehende Systeme (Outlook, Excel, SMT, CRM, Penta)", "Netzlaufwerk-Ablage", "Standardisierte Soll-Prozesse"],
       "outputs": ["Durchgängige System- & Belegführung", "Namenskonvention SNR_Firma_JJJJTTMM-x", "Definierte Kontroll-, Verrechnungs- und Eskalationsregeln", "Voraussetzung für spätere Automatisierung"],
       "artifacts": ["Excel-Nachverfolgung (TicketKontrolleDHaldi.xlsx)"],
-      "evidence": "Systembindung und Regeln direkt aus den Flowcharts ersichtlich. Automatisierungsreife bleibt bewusst niedriger (erreicht 2/5), da Abläufe weiterhin manuell ausgeführt werden. Business Value: höhere Prozesssicherheit und Wiederholbarkeit, Governance ohne Werkzeugbruch."
+      "evidence": "Systembindung und Regeln sind direkt aus den Flowcharts ersichtlich. Die Automatisierungsreife bleibt niedriger (2/5), da die Abläufe weiterhin manuell ausgeführt werden."
     },
     "future": {
       "summary": "Kontinuierliche Verbesserung und Ausbau zur Prozesslandschaft: laufende Fehleranalysen, Standardisierung angrenzender Abläufe und wiederverwendbare Prozessmodelle als Basis für künftige Automatisierung.",
       "inputs": ["Laufender KVP", "Neue Erkenntnisse aus dem Tagesgeschäft", "Bestehende Referenz-Flowcharts"],
       "outputs": ["Erweiterte Prozesslandschaft", "Zusätzlich standardisierte Nachbarprozesse", "Wiederverwendbare Prozessbausteine", "Automatisierungs-Roadmap"],
       "artifacts": [],
-      "evidence": "Projekt ist als laufende Optimierung deklariert; Erweiterung als offener Punkt im Steckbrief benannt. Business Value: skalierbare Prozessarchitektur statt einmaligem Prozessprojekt."
+      "evidence": "Projekt ist als laufende Optimierung deklariert; die Erweiterung ist als offener Punkt im Steckbrief benannt."
     }
   },
 
@@ -135,7 +135,7 @@
     "Rückblickend: frühere Stakeholder-Einbindung, systematische Erhebung von Prozesskennzahlen und durchgängige Nutzung standardisierter BPMN-Notation."
   ],
 
-  "evidence": "Zwei selbst erstellte Kern-Artefakte (Flowchart Ticketüberwachung, Flowchart Export-Lieferschein) liegen als reale, nicht-ausstehende PDFs vor und tragen die Beleglast — sie heben das Evidenzprofil über das eines artefaktlosen Projekts, weil die direkte Evidenz strukturell in der Artefakt-Bibliothek sichtbar wird. Belegprofil nach Konfidenz: prozessuale/konzeptionelle Evidenz stark (Flowcharts, Prozessvisualisierungen, Arbeitsanweisungen); Nutzung im Tagesgeschäft und laufender KVP belegt; Wirkungs-KPIs verifiziert — die Vorher-Nachher-Werte sind real erhoben und werden als belegte Resultate ausgewiesen. Nächster Dokumentationsschritt: die Arbeitsanweisungen und die zugrunde liegende Messdokumentation hochladen, um die verifizierten Werte zusätzlich artefaktseitig zu hinterlegen.",
+  "evidence": "Zwei selbst erstellte Kern-Artefakte — Flowchart Ticketüberwachung und Flowchart Export-Lieferschein — liegen als PDF vor und tragen die Beleglast. Nutzung im Tagesgeschäft und laufender KVP sind belegt, die Wirkungs-KPIs real erhoben. Nächster Dokumentationsschritt: die Arbeitsanweisungen und die zugrunde liegende Messdokumentation hochladen, um die verifizierten Werte auch artefaktseitig zu hinterlegen.",
 
   "related": ["operativen-prozess-stabilisieren", "angebots-auftragsprozess", "athena", "prometheus"]
 }

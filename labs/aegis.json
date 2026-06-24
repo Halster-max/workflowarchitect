@@ -19,7 +19,7 @@
   },
 
   "vision": "Eine einzige, mandantenfähige Plattform, die einen kompletten Mittelstandsbetrieb trägt — von der ersten Kundeninteraktion bis zur doppelten Buchhaltung — und dabei die Architekturtiefe kommerzieller ERP-Produkte erreicht statt der einer typischen Portfolio-CRUD-App. Zwölf Abteilungen teilen eine Datenbank, ein Login und ein Berechtigungssystem.",
-  "purpose": "AEGIS ist eine Eigeninitiative mit dem Ziel, zu lernen, zu forschen und Architektur zu entwickeln — nicht zu kommerzialisieren. Es ist der Ort, an dem Enterprise-Muster (Multi-Tenancy, hierarchisches RBAC, doppelte Buchhaltung, event-getriebene Workflows, unveränderliche Ledger) am realen Maßstab erprobt werden.",
+  "purpose": "AEGIS ist eine Eigeninitiative mit dem Ziel, zu lernen, zu forschen und Architektur zu entwickeln — nicht zu kommerzialisieren. Es ist der Ort, an dem Enterprise-Muster (Multi-Tenancy, hierarchisches RBAC, doppelte Buchhaltung, event-getriebene Workflows, unveränderliche Ledger) am realen Massstab erprobt werden.",
 
   "researchAreas": [
     { "name": "ERP-Architektur", "description": "Doppelte Buchhaltung, Kontenrahmen, Kosten-/Profit-Center, Perioden-Lockdown, automatische Buchungen aus Rechnungen, Zahlungen, Lohn und Lagerbewegungen." },
@@ -125,7 +125,7 @@
   ],
 
   "lessons": [
-    "Geteilte Typen über das gesamte Monorepo sind der größte Hebel gegen Bugs — Frontend/Backend-Drift verschwindet als Fehlerklasse, nicht nur als Symptom.",
+    "Geteilte Typen über das gesamte Monorepo sind der grösste Hebel gegen Bugs — Frontend/Backend-Drift verschwindet als Fehlerklasse, nicht nur als Symptom.",
     "Echte doppelte Buchhaltung zwingt zu sauberer Modellierung: unveränderliche Ledger, Perioden-Lockdown und automatische Buchungen lassen sich nicht nachträglich aufsetzen.",
     "Multi-Tenancy und Audit-Logging gehören ab der ersten Tabelle ins Schema — nachträglich org-scoping einzuziehen wäre eine Migration durch 103 Modelle.",
     "Ein Warn-vs-Enforce-Modus für RBAC macht ein hartes Berechtigungssystem überhaupt erst sicher ausrollbar.",
