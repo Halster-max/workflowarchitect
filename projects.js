@@ -1505,13 +1505,143 @@
   }
 
   /* ==========================================================================
+     ████  FEATURED WORK — the strongest representative examples, surfaced
+           ahead of the full libraries. The selection and the editorial
+           "why it matters" are curated here; everything else (name, status,
+           subtitle, route) is read live from the loaded item. Missing items
+           degrade silently, consistent with the rest of the engine.
+  ========================================================================== */
+  const FEATURED_TIER = {
+    project: { map: BY_SLUG,    route: "projekt", mod: "",              label: "Projekt", open: "Dossier öffnen", statusFn: statusOf },
+    mandate: { map: BY_MANDATE, route: "mandat",  mod: " case--mandate", label: "Mandat",  open: "Mandat öffnen", statusFn: mStatusOf },
+    lab:     { map: BY_LAB,     route: "lab",     mod: " case--lab",     label: "Lab",     open: "Lab öffnen",    statusFn: lStatusOf },
+  };
+
+  const FEATURED = [
+    {
+      tier: "mandate", slug: "atlas", cap: "Business Architecture",
+      why: "Ein CIO-Mandat in Reinform: fünf Workstreams, eine integrierte Systemlandschaft und eine neue Führungsstruktur in sechs Monaten. Zeigt die Fähigkeit auf Unternehmensebene — Architektur, nicht Einzelmassnahme.",
+    },
+    {
+      tier: "project", slug: "prometheus", cap: "Process Engineering",
+      why: "Wirkung, die gemessen wurde statt behauptet: ein Pilot mit Ø 4.6/5 (n=5), ein Rollout-Konzept und eine Empfehlung an die Geschäftsleitung. Process Engineering und Organisationsentwicklung im realen Feld.",
+    },
+    {
+      tier: "project", slug: "athena", cap: "Knowledge Systems",
+      why: "Wissen, aus Einzelköpfen gelöst: ein dreistufiges ERP-Schulungssystem, das während einer laufenden Einführung den Betrieb absicherte — produktiv eingeführt und in laufender Pflege.",
+    },
+    {
+      tier: "lab", slug: "aegis", cap: "Enterprise Platforms",
+      why: "Systemdenken bis auf den Code: eine mandantenfähige Enterprise-Plattform (CRM, ERP, DMS, HR) mit dokumentierter REST-API. Der Beleg, dass die Architektur nicht nur beschrieben, sondern gebaut wird.",
+    },
+  ];
+
+  function renderFeatured() {
+    const host = $("#featuredGrid");
+    if (!host) return;
+    const cards = FEATURED.map((f, i) => {
+      const cfg = FEATURED_TIER[f.tier];
+      if (!cfg) return "";
+      const item = cfg.map.get(f.slug);
+      if (!item) return "";
+      const s = cfg.statusFn(item);
+      const sub = item.meta && item.meta.subtitle;
+      return `
+        <a class="case${cfg.mod}" href="#/${cfg.route}/${esc(item.slug)}" aria-label="${esc(item.name)} – ${esc(cfg.label)} öffnen">
+          <div class="case__top">
+            <span class="case__status ${s.cls}">${esc(s.label)}</span>
+            <span class="case__index">${String(i + 1).padStart(2, "0")}</span>
+          </div>
+          <span class="case__domain">${esc(cfg.label)} · ${esc(f.cap)}</span>
+          <h3 class="case__title">${esc(item.name)}</h3>
+          ${has(sub) ? `<p class="case__sub">${esc(sub)}</p>` : ""}
+          <p class="case__summary">${esc(f.why)}</p>
+          <span class="case__open">${esc(cfg.open)}</span>
+        </a>`;
+    }).filter(Boolean).join("");
+    host.innerHTML = cards || `<p class="pv__empty">Ausgewählte Arbeiten erscheinen, sobald die zugehörigen Dossiers vorliegen.</p>`;
+  }
+
+  /* ==========================================================================
+     ████  CAPABILITY → EVIDENCE — each capability is mapped to the work that
+           demonstrates it (drawn from each item's declared category / type).
+           The cards' names and descriptions live in the HTML (robust even if
+           data fails to load); only the evidence links are injected here, so a
+           capability is never claimed without something to click through to.
+  ========================================================================== */
+  const CAP_EVIDENCE = {
+    "business-architecture":    ["atlas", "holding-struktur", "hephaistos", "neue-erloesfelder"],
+    "process-engineering":      ["operativen-prozess-stabilisieren", "hephaistos", "hermes", "angebots-auftragsprozess", "atlas"],
+    "digital-transformation":   ["atlas", "angebots-auftragsprozess", "athena", "aegis"],
+    "knowledge-systems":        ["athena", "prometheus", "hephaistos"],
+    "enterprise-platforms":     ["aegis", "atlas", "athena"],
+    "organisational-development":["hermes", "holding-struktur", "prometheus", "atlas"],
+    "data-analytics":           ["datenbasierte-steuerung", "atlas", "aegis"],
+    "automation":               ["ki-administrative-arbeit", "datenbasierte-steuerung", "atlas", "aegis"],
+  };
+
+  function capLink(slug) {
+    let item, route;
+    if (BY_SLUG.has(slug))         { item = BY_SLUG.get(slug);    route = "projekt"; }
+    else if (BY_MANDATE.has(slug)) { item = BY_MANDATE.get(slug); route = "mandat"; }
+    else if (BY_LAB.has(slug))     { item = BY_LAB.get(slug);     route = "lab"; }
+    else return "";
+    return `<a class="toc__link" href="#/${route}/${esc(item.slug)}">${esc(item.name)}</a>`;
+  }
+
+  function renderCapabilityEvidence() {
+    $$("[data-cap]").forEach((host) => {
+      const slugs = CAP_EVIDENCE[host.getAttribute("data-cap")] || [];
+      const links = slugs.map(capLink).filter(Boolean).join("");
+      host.innerHTML = links
+        ? `<span class="cm-tracked-lab">Belegt durch</span><div class="cm-list">${links}</div>`
+        : "";
+    });
+  }
+
+  /* ==========================================================================
+     ████  PORTFOLIO NAVIGATION HUB — the four content types and their counts,
+           introduced together after the executive layer. Counts are read live
+           from the loaded libraries; Publications are flagged as in preparation.
+  ========================================================================== */
+  function renderNavHub() {
+    const host = $("#portfolioHub");
+    if (!host) return;
+    const items = [
+      { name: "Projekte",      count: PROJECTS.length, href: "#work",     domain: "Einheit der Lieferung",
+        desc: "Einzelne, klar abgegrenzte Transformationsvorhaben — dokumentiert entlang der vollständigen Beweiskette." },
+      { name: "Mandate",       count: MANDATES.length, href: "#mandates", domain: "Breite & Führung",
+        desc: "Grossflächige, bereichsübergreifende Aufträge mit mehreren Workstreams, Systemen und Initiativen." },
+      { name: "Labs",          count: LABS.length,     href: "#labs",     domain: "Tiefe & Forschung",
+        desc: "Eigeninitiierte Architektur- und Engineering-Arbeit ausserhalb von Kundenprojekten." },
+      { name: "Publikationen", count: 0,               href: null,        domain: "Verdichtung",
+        desc: "Methodik und Frameworks, abstrahiert aus der Arbeit — in Vorbereitung." },
+    ];
+    host.innerHTML = items.map((it) => {
+      const top = `
+        <div class="case__top">
+          <span class="case__domain">${esc(it.domain)}</span>
+          <span class="case__index">${it.count > 0 ? num(it.count) : "—"}</span>
+        </div>`;
+      const inner = `
+        ${top}
+        <h3 class="case__title">${esc(it.name)}</h3>
+        <p class="case__summary">${esc(it.desc)}</p>
+        ${it.href ? `<span class="case__open">Ansehen</span>` : `<p class="case__sub">In Vorbereitung</p>`}`;
+      return it.href
+        ? `<a class="case" href="${esc(it.href)}" aria-label="${esc(it.name)} ansehen">${inner}</a>`
+        : `<div class="case" aria-disabled="true">${inner}</div>`;
+    }).join("");
+  }
+
+  /* ==========================================================================
      ROUTER — #/ = home · #/projekt/<slug> = project · #/mandat/<slug> = mandate
               · #/lab/<slug> = lab
   ========================================================================== */
   function showHome() {
     if (projectView) { projectView.hidden = true; projectView.innerHTML = ""; }
     if (homeView) homeView.hidden = false;
-    document.title = "Dominic Haldi — Digital Transformation Knowledge Base";
+    document.title = "Dominic Haldi — Business Architect & Process Engineer";
   }
 
   function showDetail(slug) {
@@ -1581,6 +1711,9 @@
       .then(() => loadLabs())
       .then(() => {
         renderLabsSection();
+        renderFeatured();
+        renderNavHub();
+        renderCapabilityEvidence();
         route();
       })
       .catch(fail);
