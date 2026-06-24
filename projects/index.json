@@ -2,13 +2,8 @@
   "_comment": "PROJECT REGISTRY — the single list the website reads to discover projects. To add a project: create projects/<slug>.json and add its slug to the array below. Order here = order on the homepage. Nothing else needs editing.",
   "order": [
     "prometheus",
-    "angebots-auftragsprozess",
-    "operativen-prozess-stabilisieren",
-    "ki-administrative-arbeit",
-    "datenbasierte-steuerung",
-    "holding-struktur",
-    "neue-erloesfelder",
     "hermes",
+    "themis",
     "athena",
     "hephaistos"
   ]

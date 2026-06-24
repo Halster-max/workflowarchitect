@@ -338,7 +338,7 @@
       .map(([key, label]) => ({ key, label, value: sumFig(PROJECTS, key) }))
       .filter((r) => r.value > 0);
     if (!rows.length) {
-      host.innerHTML = `<p class="pv__empty">Sobald Projektdaten Zahlen enthalten, erscheinen sie hier — automatisch summiert.</p>`;
+      host.innerHTML = `<p class="pv__empty">Sobald Projektdaten Zahlen enthalten, erscheinen sie hier, automatisch summiert.</p>`;
       return;
     }
     host.innerHTML = rows.map((r) => `
@@ -507,7 +507,7 @@
           <a class="art__frame" href="${esc(a.src)}" target="_blank" rel="noopener" aria-label="${esc(a.title || cfg.label)} öffnen">
             <img src="${esc(a.src)}" alt="${esc(a.title || cfg.label)}" loading="lazy" />
           </a>
-          <figcaption class="art__cap"><span class="art__type">${esc(cfg.label)}</span>${esc(a.title || "")}${has(a.caption) ? " — " + esc(a.caption) : ""}</figcaption>
+          <figcaption class="art__cap"><span class="art__type">${esc(cfg.label)}</span>${esc(a.title || "")}${has(a.caption) ? ": " + esc(a.caption) : ""}</figcaption>
         </figure>`;
     }
 
@@ -616,7 +616,7 @@
       </div>`).join("");
     return `
       <div class="cm-block cm-block--meas">
-        <h4>Messmodell — Transparenz statt Behauptung</h4>
+        <h4>Messmodell: Transparenz statt Behauptung</h4>
         <div class="meas">${rows}</div>
         ${has(mm.note) ? `<p class="meas__note">${esc(mm.note)}</p>` : ""}
       </div>`;
@@ -664,7 +664,7 @@
       </div>`).join("");
     return `
       <div class="cm-block">
-        <h4>Prozessreife — aktueller Stand vs. Ziel</h4>
+        <h4>Prozessreife: aktueller Stand vs. Ziel</h4>
         <div class="mat mat--project">
           <div class="mat-radar">${radarSVG(dims)}${radarLegend()}</div>
           <div class="mat-bars">${bars}</div>
@@ -1497,7 +1497,7 @@
     renderLabDetail(l);
     if (homeView) homeView.hidden = true;
     projectView.hidden = false;
-    document.title = `${l.name} — Lab — Dominic Haldi`;
+    document.title = `${l.name} · Lab · Dominic Haldi`;
     window.scrollTo({ top: 0, behavior: "auto" });
     wireToc();
     const h = $(".pv__title", projectView);
@@ -1520,7 +1520,7 @@
   const FEATURED = [
     {
       tier: "mandate", slug: "atlas", cap: "Business Architecture",
-      why: "Ein CIO-Mandat in Reinform: fünf Workstreams, eine integrierte Systemlandschaft und eine neue Führungsstruktur in sechs Monaten. Zeigt die Fähigkeit auf Unternehmensebene — Architektur, nicht Einzelmassnahme.",
+      why: "Ein CIO-Mandat in Reinform: fünf Workstreams, eine integrierte Systemlandschaft und eine neue Führungsstruktur in sechs Monaten. Die Fähigkeit auf Unternehmensebene, als Architektur statt Einzelmassnahme.",
     },
     {
       tier: "project", slug: "prometheus", cap: "Process Engineering",
@@ -1528,7 +1528,7 @@
     },
     {
       tier: "project", slug: "athena", cap: "Knowledge Systems",
-      why: "Wissen, aus Einzelköpfen gelöst: ein dreistufiges ERP-Schulungssystem, das während einer laufenden Einführung den Betrieb absicherte — produktiv eingeführt und in laufender Pflege.",
+      why: "Wissen, aus Einzelköpfen gelöst: ein dreistufiges ERP-Schulungssystem, das während einer laufenden Einführung den Betrieb absicherte, produktiv eingeführt und in laufender Pflege.",
     },
     {
       tier: "lab", slug: "aegis", cap: "Enterprise Platforms",
@@ -1570,14 +1570,14 @@
            capability is never claimed without something to click through to.
   ========================================================================== */
   const CAP_EVIDENCE = {
-    "business-architecture":    ["atlas", "holding-struktur", "hephaistos", "neue-erloesfelder"],
-    "process-engineering":      ["operativen-prozess-stabilisieren", "hephaistos", "hermes", "angebots-auftragsprozess", "atlas"],
-    "digital-transformation":   ["atlas", "angebots-auftragsprozess", "athena", "aegis"],
+    "business-architecture":    ["atlas", "hephaistos"],
+    "process-engineering":      ["hephaistos", "hermes", "atlas"],
+    "digital-transformation":   ["atlas", "athena", "aegis"],
     "knowledge-systems":        ["athena", "prometheus", "hephaistos"],
     "enterprise-platforms":     ["aegis", "atlas", "athena"],
-    "organisational-development":["hermes", "holding-struktur", "prometheus", "atlas"],
-    "data-analytics":           ["datenbasierte-steuerung", "atlas", "aegis"],
-    "automation":               ["ki-administrative-arbeit", "datenbasierte-steuerung", "atlas", "aegis"],
+    "organisational-development":["hermes", "prometheus", "atlas"],
+    "data-analytics":           ["atlas", "aegis"],
+    "automation":               ["atlas", "aegis"],
   };
 
   function capLink(slug) {
@@ -1609,19 +1609,19 @@
     if (!host) return;
     const items = [
       { name: "Projekte",      count: PROJECTS.length, href: "#work",     domain: "Einheit der Lieferung",
-        desc: "Einzelne, klar abgegrenzte Transformationsvorhaben — dokumentiert entlang der vollständigen Beweiskette." },
+        desc: "Einzelne, klar abgegrenzte Transformationsvorhaben, dokumentiert entlang der vollständigen Beweiskette." },
       { name: "Mandate",       count: MANDATES.length, href: "#mandates", domain: "Breite & Führung",
         desc: "Grossflächige, bereichsübergreifende Aufträge mit mehreren Workstreams, Systemen und Initiativen." },
       { name: "Labs",          count: LABS.length,     href: "#labs",     domain: "Tiefe & Forschung",
         desc: "Eigeninitiierte Architektur- und Engineering-Arbeit ausserhalb von Kundenprojekten." },
       { name: "Publikationen", count: 0,               href: null,        domain: "Verdichtung",
-        desc: "Methodik und Frameworks, abstrahiert aus der Arbeit — in Vorbereitung." },
+        desc: "Methodik und Frameworks, abstrahiert aus der Arbeit. In Vorbereitung." },
     ];
     host.innerHTML = items.map((it) => {
       const top = `
         <div class="case__top">
           <span class="case__domain">${esc(it.domain)}</span>
-          <span class="case__index">${it.count > 0 ? num(it.count) : "—"}</span>
+          <span class="case__index">${it.count > 0 ? num(it.count) : "·"}</span>
         </div>`;
       const inner = `
         ${top}
@@ -1641,7 +1641,7 @@
   function showHome() {
     if (projectView) { projectView.hidden = true; projectView.innerHTML = ""; }
     if (homeView) homeView.hidden = false;
-    document.title = "Dominic Haldi — Business Architect & Process Engineer";
+    document.title = "Dominic Haldi · Business Architect & Process Engineer";
   }
 
   function showDetail(slug) {
@@ -1650,7 +1650,7 @@
     renderDetail(p);
     if (homeView) homeView.hidden = true;
     projectView.hidden = false;
-    document.title = `${p.name} — Dominic Haldi`;
+    document.title = `${p.name} · Dominic Haldi`;
     window.scrollTo({ top: 0, behavior: "auto" });
     const h = $(".pv__title", projectView);
     if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
@@ -1662,7 +1662,7 @@
     renderMandateDetail(m);
     if (homeView) homeView.hidden = true;
     projectView.hidden = false;
-    document.title = `${m.name} — Mandat — Dominic Haldi`;
+    document.title = `${m.name} · Mandat · Dominic Haldi`;
     window.scrollTo({ top: 0, behavior: "auto" });
     wireWorkstreams();
     wireToc();
@@ -1689,7 +1689,7 @@
       grid.innerHTML = `
         <div class="pv__error">
           <p><strong>Projekte konnten nicht geladen werden.</strong></p>
-          <p>Die Seite liest die Projektdaten per <code>fetch</code> — das funktioniert auf
+          <p>Die Seite liest die Projektdaten per <code>fetch</code>. Das funktioniert auf
           GitHub Pages bzw. über einen Webserver, aber nicht beim direkten Öffnen der Datei
           (<code>file://</code>). Lokal z. B. mit <code>python -m http.server</code> starten.</p>
         </div>`;

@@ -31,7 +31,7 @@
     "verified": 0,
     "estimated": 4,
     "hypotheses": 3,
-    "note": "Eine formale Vorher-Nachher-Messung wurde nicht erhoben — der Steckbrief nennt die fehlenden Kennzahlen selbst als offenen Punkt; verifizierte Ergebnisse stehen deshalb auf 0. Die geschätzte Wirkung stützt sich auf mehrere konsistente, über Monate iterativ beobachtete Ergebnisse (volle Dienstabdeckung, Übergang auf ein 24/7-Modell, höhere Bindung, erfolgreiche Rekrutierung) und auf zwei selbst erstellte Analyse-Artefakte (Motivations- und Engagementmodell), die sie kausal unterlegen. Die Hypothesen sind in diesen Modellen operationalisiert und über die Retrospektiv- und Feedback-Mechanik testbar. Üblicherweise getrackte Kennzahlen, ohne erfundene Werte: Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer und Fluktuation, Mitarbeiterzufriedenheit, Schulungs- und Einarbeitungsaufwand."
+    "note": "Eine formale Vorher-Nachher-Messung wurde nicht erhoben. Der Steckbrief nennt die fehlenden Kennzahlen selbst als offenen Punkt, verifizierte Ergebnisse stehen deshalb auf 0. Die geschätzte Wirkung stützt sich auf mehrere konsistente, über Monate iterativ beobachtete Ergebnisse (volle Dienstabdeckung, Übergang auf ein 24/7-Modell, höhere Bindung, erfolgreiche Rekrutierung) und auf zwei selbst erstellte Analyse-Artefakte (Motivations- und Engagementmodell), die sie kausal unterlegen. Die Hypothesen sind in diesen Modellen operationalisiert und über die Retrospektiv- und Feedback-Mechanik testbar. Üblicherweise getrackte Kennzahlen, ohne erfundene Werte: Quote ungedeckter Dienste, durchschnittliche Anstellungsdauer und Fluktuation, Mitarbeiterzufriedenheit, Schulungs- und Einarbeitungsaufwand."
   },
 
   "maturity": {
@@ -47,7 +47,7 @@
 
   "problem": "Das eigentliche Problem war nicht der Personalmangel als Symptom, sondern eine fehlende Beteiligungs- und Feedback-Kultur: Mitarbeiteranliegen und Verbesserungsvorschläge wurden kaum wahrgenommen oder umgesetzt, die interne Kommunikation war schwach, und es gab keinen Prozess für kontinuierliche Verbesserung. Folgen waren hohe Fluktuation, ungedeckte Dienste, unzureichende Arbeitsqualität und Sicherheitsrisiken für Pflegepersonal und Patienten.",
 
-  "analysis": "Erhoben wurden Einzelgespräche mit Pflege- und Sicherheitspersonal sowie Analysen von Dienstabdeckung, Mitarbeiterzufriedenheit und Fluktuationsursachen. Als Ursachen identifiziert: schwache interne Kommunikation, fehlende Feedback- und Beteiligungskultur, geringe Wahrnehmung von Mitarbeiteranliegen, unattraktive Arbeitsbedingungen und fehlende Verbesserungsprozesse. Die Befunde wurden in einem Motivationsmodell (Treiber/Hindernisse) und einem Engagementmodell (Bedürfnis- zu Engagement-Stufen) verdichtet — fachlich begleitet durch einen Spezialisten für Personalpsychologie.",
+  "analysis": "Erhoben wurden Einzelgespräche mit Pflege- und Sicherheitspersonal sowie Analysen von Dienstabdeckung, Mitarbeiterzufriedenheit und Fluktuationsursachen. Als Ursachen identifiziert: schwache interne Kommunikation, fehlende Feedback- und Beteiligungskultur, geringe Wahrnehmung von Mitarbeiteranliegen, unattraktive Arbeitsbedingungen und fehlende Verbesserungsprozesse. Die Befunde wurden in einem Motivationsmodell (Treiber/Hindernisse) und einem Engagementmodell (Bedürfnis- zu Engagement-Stufen) verdichtet, fachlich begleitet durch einen Spezialisten für Personalpsychologie.",
 
   "approach": {
     "methodology": ["Stakeholder-Interviews", "Ursachenanalyse", "Prozessanalyse", "Beratung Personalpsychologie", "Iterative Pilotierung", "Retrospektiven / Fokusgruppen"],
@@ -77,7 +77,7 @@
       "evidence": "Prozessdiagramm liegt als PDF vor; Management-Präsentation im Steckbrief genannt, nicht hochgeladen."
     },
     "digitalization": {
-      "summary": "Kein Schwerpunkt — Digitalisierung war laut Steckbrief nicht Projektziel.",
+      "summary": "Kein Schwerpunkt: Digitalisierung war laut Steckbrief nicht Projektziel.",
       "inputs": [],
       "outputs": [],
       "artifacts": [],
@@ -96,7 +96,7 @@
     {
       "type": "pdf",
       "title": "Verbesserungsprozess (Prozess-/Flussdiagramm)",
-      "caption": "Iterativer Beteiligungs- und Verbesserungsprozess: von Vision/Input über Vorbereitung, Sprint, Retrospektive und Team-Tests bis zur Umsetzung beim Kunden — inkl. Prozess-Parkplatz für offene Punkte.",
+      "caption": "Iterativer Beteiligungs- und Verbesserungsprozess: von Vision/Input über Vorbereitung, Sprint, Retrospektive und Team-Tests bis zur Umsetzung beim Kunden, inkl. Prozess-Parkplatz für offene Punkte.",
       "src": "projects/artifacts/hermes/verbesserungsprozess.pdf",
       "pending": false
     },
@@ -130,17 +130,17 @@
     "Alternative Rekrutierungsansätze (gemeinsam mit HR & Marketing)"
   ],
 
-  "impact": "Wirkung über mehrere Dimensionen — Dienstabdeckung, Mitarbeiterbindung und Fluktuation, Mitarbeiterzufriedenheit sowie Qualität und Sicherheit. Mehrere konsistente Ergebnisse sind über die iterative Einführung mehrfach beobachtet worden: volle Besetzung, Übergang auf ein 24/7-Betriebsmodell, deutlich höhere Bindung und erfolgreiche Rekrutierung. Diese Ergebnisse sind strukturell und qualitativ belegt; die Vorher-Nachher-Werte wurden nicht formal erhoben.",
+  "impact": "Wirkung über mehrere Dimensionen: Dienstabdeckung, Mitarbeiterbindung und Fluktuation, Mitarbeiterzufriedenheit sowie Qualität und Sicherheit. Mehrere konsistente Ergebnisse sind über die iterative Einführung mehrfach beobachtet worden: volle Besetzung, Übergang auf ein 24/7-Betriebsmodell, deutlich höhere Bindung und erfolgreiche Rekrutierung. Diese Ergebnisse sind strukturell und qualitativ belegt; die Vorher-Nachher-Werte wurden nicht formal erhoben.",
 
   "lessons": [
     "Mitarbeiterbindung entsteht primär durch Beteiligung und Wertschätzung, nicht durch Einzelmassnahmen.",
     "Kommunikation ist ein zentraler Hebel für Leistungsfähigkeit und Sicherheit.",
     "Kleine organisatorische Probleme haben oft grosse Wirkung auf Motivation.",
-    "Nachhaltige Verbesserung braucht mehrere Iterationen — nicht einen einzelnen Wurf.",
+    "Nachhaltige Verbesserung braucht mehrere Iterationen, nicht einen einzelnen Wurf.",
     "Rückblickend: frühere Einbindung aller Stakeholder und eine systematische Vorher-Nachher-Messung über Kennzahlen."
   ],
 
-  "evidence": "Drei selbst erstellte Kern-Artefakte — Verbesserungsprozess, Motivations- und Engagementmodell — liegen als PDF vor und tragen die analytische und prozessuale Beleglast; die Management-Präsentation ist genannt, aber nicht hochgeladen. Strukturelle Ergebnisse wie das 24/7-Modell und die volle Dienstabdeckung sind institutionell sichtbar; die Bindungs- und Zufriedenheitswirkung ist konsistent berichtet, aber nicht quantitativ gemessen. Nächster Dokumentationsschritt: die Kennzahlen (ungedeckte Dienste, Anstellungsdauer und Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen.",
+  "evidence": "Drei selbst erstellte Kern-Artefakte (Verbesserungsprozess, Motivations- und Engagementmodell) liegen als PDF vor und tragen die analytische und prozessuale Beleglast. Die Management-Präsentation ist genannt, aber nicht hochgeladen. Strukturelle Ergebnisse wie das 24/7-Modell und die volle Dienstabdeckung sind institutionell sichtbar; die Bindungs- und Zufriedenheitswirkung ist konsistent berichtet, aber nicht quantitativ gemessen. Nächster Dokumentationsschritt: die Kennzahlen (ungedeckte Dienste, Anstellungsdauer und Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen.",
 
-  "related": ["operativen-prozess-stabilisieren"]
+  "related": ["prometheus", "themis"]
 }

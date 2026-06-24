@@ -3,7 +3,7 @@
   "name": "Athena",
   "status": "real",
   "category": "Wissensmanagement / Ausbildung",
-  "summary": "Standardisiertes ERP-Schulungs- und Wissenstransfersystem, das während einer laufenden ERP-Einführung den Betrieb absicherte: ein modulares Ausbildungskonzept in drei Stufen, vollständig dokumentierte Kernprozesse (Rechnungsstellung, Gutschriften, Einkauf, Lager) und grafische Schritt-für-Schritt-Anleitungen, die Erfahrungswissen aus Einzelköpfen löst, Einarbeitung verkürzt und selbstständiges, verrechnungssicheres Arbeiten ermöglicht — produktiv eingeführt und in laufender Pflege.",
+  "summary": "Standardisiertes ERP-Schulungs- und Wissenstransfersystem, das während einer laufenden ERP-Einführung den Betrieb absicherte: ein modulares Ausbildungskonzept in drei Stufen, vollständig dokumentierte Kernprozesse (Rechnungsstellung, Gutschriften, Einkauf, Lager) und grafische Schritt-für-Schritt-Anleitungen, die Erfahrungswissen aus Einzelköpfen löst, Einarbeitung verkürzt und selbstständiges, verrechnungssicheres Arbeiten ermöglicht. Produktiv eingeführt und in laufender Pflege.",
 
   "meta": {
     "role": "Projektleiter, Schulungskonzeptentwickler & Ausbilder",
@@ -31,7 +31,7 @@
     "verified": 5,
     "estimated": 2,
     "hypotheses": 1,
-    "note": "Die Wirkung ist dokumentiert und gemessen: Einarbeitungszeit 6 → 3 Wochen (−50 %), Fehlerquote Verrechnung ~12 % → ~4 % (−67 %), Prozesssicherheit 2.5 → 4.3 / 5, Wissensverfügbarkeit 1 → 5 / 5, Dokumentationsabdeckung ~10 % → ~95 %, selbstständige Arbeitsfähigkeit ~30 % → ~85 % sowie eine Schulungsevaluation (Zufriedenheit 4.7 / Praxisrelevanz 4.8 / Verständlichkeit 4.6). Getragen wird sie von der vollständigen, selbst erstellten Artefaktbasis — Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots, Prozessgrafiken — und der produktiven Einführung. Geschätzt bleibt die mittelfristige Übertragbarkeit auf weitere Prozessbereiche, hypothetisch der zusätzliche Effekt einer digitalen Lernplattform."
+    "note": "Die Wirkung ist dokumentiert und gemessen: Einarbeitungszeit 6 → 3 Wochen (−50 %), Fehlerquote Verrechnung ~12 % → ~4 % (−67 %), Prozesssicherheit 2.5 → 4.3 / 5, Wissensverfügbarkeit 1 → 5 / 5, Dokumentationsabdeckung ~10 % → ~95 %, selbstständige Arbeitsfähigkeit ~30 % → ~85 % sowie eine Schulungsevaluation (Zufriedenheit 4.7 / Praxisrelevanz 4.8 / Verständlichkeit 4.6). Getragen wird sie von der vollständigen, selbst erstellten Artefaktbasis (Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots, Prozessgrafiken) und der produktiven Einführung. Geschätzt bleibt die mittelfristige Übertragbarkeit auf weitere Prozessbereiche, hypothetisch der zusätzliche Effekt einer digitalen Lernplattform."
   },
 
   "maturity": {
@@ -43,15 +43,15 @@
     "governance":      { "current": 4, "target": 5 }
   },
 
-  "context": "Im Rahmen der Einführung eines neuen ERP-Systems mussten geschäftskritische Prozesse — Rechnungsstellung, Einkauf und Lagerbewirtschaftung — ohne Betriebsunterbruch weiterlaufen. Die Grundprozesse wurden aus dem Altsystem übernommen, mehrere geplante Automatisierungen waren zum Umstellungszeitpunkt jedoch noch nicht verfügbar, sodass zahlreiche Schritte manuell auszuführen waren. Für das bisherige ERP-System existierten weder dokumentierte Schulungsunterlagen noch Prozessanleitungen; das Betriebswissen lag fast ausschliesslich als Erfahrungswissen in einzelnen Köpfen.",
+  "context": "Im Rahmen der Einführung eines neuen ERP-Systems mussten geschäftskritische Prozesse (Rechnungsstellung, Einkauf und Lagerbewirtschaftung) ohne Betriebsunterbruch weiterlaufen. Die Grundprozesse wurden aus dem Altsystem übernommen, mehrere geplante Automatisierungen waren zum Umstellungszeitpunkt jedoch noch nicht verfügbar, sodass zahlreiche Schritte manuell auszuführen waren. Für das bisherige ERP-System existierten weder dokumentierte Schulungsunterlagen noch Prozessanleitungen; das Betriebswissen lag fast ausschliesslich als Erfahrungswissen in einzelnen Köpfen.",
 
-  "problem": "Das eigentliche Problem war nicht die ERP-Umstellung selbst, sondern die fehlende Wissensbasis darunter: Ohne dokumentierte Prozesse und ohne standardisierte Ausbildung hing die operative Leistungsfähigkeit an wenigen Schlüsselpersonen. Daraus folgten lange Einarbeitungszeiten, hohe Fehleranfälligkeit in den komplexen manuellen Verrechnungsprozessen (Rechnungen, Gutschriften), uneinheitliche Arbeitsweisen und ein Klumpenrisiko bei Ausfall oder Wechsel einzelner Mitarbeitender — und das ausgerechnet während einer Phase, in der das System ohnehin im Umbruch war.",
+  "problem": "Der kritische Engpass lag nicht in der ERP-Umstellung, sondern in der fehlenden Wissensbasis darunter: Ohne dokumentierte Prozesse und ohne standardisierte Ausbildung hing die operative Leistungsfähigkeit an wenigen Schlüsselpersonen. Daraus folgten lange Einarbeitungszeiten, hohe Fehleranfälligkeit in den komplexen manuellen Verrechnungsprozessen (Rechnungen, Gutschriften), uneinheitliche Arbeitsweisen und ein Klumpenrisiko bei Ausfall oder Wechsel einzelner Mitarbeitender, und das ausgerechnet während einer Phase, in der das System ohnehin im Umbruch war.",
 
   "analysis": "Erhoben wurden die bestehenden ERP-Prozesse, die manuellen Verrechnungsschritte, die Arbeitsabläufe im Servicebereich sowie die benötigten Kompetenzen und die Vorkenntnisse der Zielgruppen. Als Ursachen identifiziert: fehlende Dokumentation des Altsystems, starke Wissenskonzentration auf einzelne Mitarbeitende, komplexe Prozessketten zwischen Service, Lager und Fakturierung, fehlende standardisierte Ausbildung und sehr unterschiedliche Wissensstände in der Organisation. Aus Bedarfs-, Zielgruppen- und Prozessanalyse wurden Lernziele abgeleitet und ein modulares, aufeinander aufbauendes Schulungskonzept entworfen.",
 
   "approach": {
     "methodology": ["Bedarfsanalyse", "Zielgruppenanalyse", "Lernzieldefinition", "Prozessanalyse", "Instructional Design", "Pilotierung mit Testanwender", "Kontinuierliche Verbesserung"],
-    "implementation": "Entwicklung eines modularen Schulungssystems in drei aufeinander aufbauenden Stufen und Aufbau einer vollständigen Wissensbasis: Schulungskonzept, Prozessanleitungen, grafische Schritt-für-Schritt-Dokumentationen sowie dedizierte Verrechnungsanleitungen für Rechnungsstellung und Gutschriften, durchgängig mit ERP-Screenshots und Ablaufdiagrammen unterlegt. Die Unterlagen wurden in einem Praxistest mit einem Praktikanten erprobt — neue Mitarbeitende deckten Wissenslücken am wirksamsten auf —, anschliessend überarbeitet und für die produktive Mitarbeiterschulung eingesetzt. Die Unterlagen werden laufend gepflegt und bei ERP-Änderungen aktualisiert."
+    "implementation": "Entwicklung eines modularen Schulungssystems in drei aufeinander aufbauenden Stufen und Aufbau einer vollständigen Wissensbasis: Schulungskonzept, Prozessanleitungen, grafische Schritt-für-Schritt-Dokumentationen sowie dedizierte Verrechnungsanleitungen für Rechnungsstellung und Gutschriften, mit ERP-Screenshots und Ablaufdiagrammen unterlegt. Die Unterlagen wurden in einem Praxistest mit einem Praktikanten erprobt (neue Mitarbeitende deckten Wissenslücken am wirksamsten auf), anschliessend überarbeitet und für die produktive Mitarbeiterschulung eingesetzt. Die Unterlagen werden laufend gepflegt und bei ERP-Änderungen aktualisiert."
   },
 
   "transformation": {
@@ -102,14 +102,14 @@
     },
     {
       "type": "sop",
-      "title": "Verrechnungsanleitung — Rechnungserstellung",
+      "title": "Verrechnungsanleitung: Rechnungserstellung",
       "caption": "Schritt-für-Schritt-Anleitung zur korrekten Rechnungsstellung im ERP-System.",
       "src": "projects/artifacts/athena/verrechnung-rechnung.pdf",
       "pending": false
     },
     {
       "type": "sop",
-      "title": "Verrechnungsanleitung — Gutschriften",
+      "title": "Verrechnungsanleitung: Gutschriften",
       "caption": "Schritt-für-Schritt-Anleitung zur Erstellung von Gutschriften.",
       "src": "projects/artifacts/athena/verrechnung-gutschrift.pdf",
       "pending": false
@@ -126,18 +126,18 @@
     "Wiederverwendbares, übertragbares Konzept für weitere Schulungsprojekte"
   ],
 
-  "impact": "Dokumentierte, gemessene Wirkung über mehrere Dimensionen: Einarbeitungszeit 6 → 3 Wochen (−50 %), Fehlerquote Verrechnung ~12 % → ~4 % (−67 %), Prozesssicherheit 2.5 → 4.3 / 5 (+72 %), Wissensverfügbarkeit 1 → 5 / 5, Dokumentationsabdeckung ~10 % → ~95 % und selbstständige Arbeitsfähigkeit ~30 % → ~85 % (+183 %). Die Schulungsevaluation ergab Teilnehmerzufriedenheit 4.7, Praxisrelevanz 4.8 und Verständlichkeit 4.6 (je / 5). Getragen wird die Wirkung von einem vollständig dokumentierten, modularen Schulungssystem und der produktiven Ausbildung neuer Mitarbeitender — die Wissensbasis existiert, ist im Einsatz und löst Erfahrungswissen aus Einzelköpfen. Die zugehörige Messlogik (welche Kennzahl wie erhoben wird) ist je Dimension hinterlegt.",
+  "impact": "Dokumentierte, gemessene Wirkung über mehrere Dimensionen: Einarbeitungszeit 6 → 3 Wochen (−50 %), Fehlerquote Verrechnung ~12 % → ~4 % (−67 %), Prozesssicherheit 2.5 → 4.3 / 5 (+72 %), Wissensverfügbarkeit 1 → 5 / 5, Dokumentationsabdeckung ~10 % → ~95 % und selbstständige Arbeitsfähigkeit ~30 % → ~85 % (+183 %). Die Schulungsevaluation ergab Teilnehmerzufriedenheit 4.7, Praxisrelevanz 4.8 und Verständlichkeit 4.6 (je / 5). Getragen wird die Wirkung von einem vollständig dokumentierten, modularen Schulungssystem und der produktiven Ausbildung neuer Mitarbeitender. Die Wissensbasis existiert, ist im Einsatz und löst Erfahrungswissen aus Einzelköpfen. Die zugehörige Messlogik (welche Kennzahl wie erhoben wird) ist je Dimension hinterlegt.",
 
   "lessons": [
-    "Gute Schulungskonzepte entstehen durch praktische Erprobung — nicht am Schreibtisch.",
+    "Gute Schulungskonzepte entstehen durch praktische Erprobung, nicht am Schreibtisch.",
     "Neue Mitarbeitende decken Wissenslücken am wirksamsten auf; der Praxistest mit einem Praktikanten war der schärfste Qualitätsfilter.",
-    "Dokumentation ist ein zentraler Erfolgsfaktor jeder ERP-Einführung — fehlt sie, hängt der Betrieb an Einzelpersonen.",
+    "Dokumentation ist ein zentraler Erfolgsfaktor jeder ERP-Einführung. Fehlt sie, hängt der Betrieb an Einzelpersonen.",
     "Komplexe Prozesse müssen modular vermittelt werden, sonst überfordert die Stoffmenge.",
     "Grafische Schritt-für-Schritt-Anleitungen erhöhen die Lernwirksamkeit erheblich.",
     "Rückblickend: früher mit mehreren Testpersonen pilotieren, eine digitale Lernplattform einbinden und von Beginn an systematisch über Kennzahlen und Lerntests messen."
   ],
 
-  "evidence": "Die Beleglast tragen die selbst erstellten Kern-Artefakte — Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots und Prozessgrafiken — sowie die dokumentierte produktive Einführung, die gemessene Wirkung und die Schulungsevaluation. Öffentlich einsehbar sind aus NDA-Gründen drei freigegebene Primärbelege als PDF: das Schulungskonzept und die Verrechnungsanleitungen für Rechnungsstellung und Gutschriften. Die weiteren Unterlagen existieren und sind in den Facts & Figures gezählt, dürfen aber aufgrund der Vertraulichkeitsvereinbarung nicht veröffentlicht werden.",
+  "evidence": "Die Beleglast tragen die selbst erstellten Kern-Artefakte (Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots und Prozessgrafiken) sowie die dokumentierte produktive Einführung, die gemessene Wirkung und die Schulungsevaluation. Öffentlich einsehbar sind aus NDA-Gründen drei freigegebene Primärbelege als PDF: das Schulungskonzept und die Verrechnungsanleitungen für Rechnungsstellung und Gutschriften. Die weiteren Unterlagen existieren und sind in den Facts & Figures gezählt, dürfen aber aufgrund der Vertraulichkeitsvereinbarung nicht veröffentlicht werden.",
 
-  "related": ["prometheus", "ki-administrative-arbeit", "datenbasierte-steuerung"]
+  "related": ["prometheus", "hephaistos"]
 }

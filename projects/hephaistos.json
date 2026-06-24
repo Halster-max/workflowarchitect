@@ -3,7 +3,7 @@
   "name": "Hephaistos",
   "status": "real",
   "category": "Prozessengineering",
-  "summary": "Operative Arbeitsprozesse im Verkaufsinnendienst und Serviceumfeld analysiert, als standardisierte Flowcharts visualisiert und in einem laufenden Verbesserungszyklus stabilisiert — mit den Kernprozessen Ticketüberwachung und Export-Lieferschein als belegten Referenzartefakten.",
+  "summary": "Operative Arbeitsprozesse im Verkaufsinnendienst und Serviceumfeld analysiert, als standardisierte Flowcharts visualisiert und in einem laufenden Verbesserungszyklus stabilisiert. Die Kernprozesse Ticketüberwachung und Export-Lieferschein dienen als belegte Referenzartefakte.",
 
   "meta": {
     "role": "Prozessanalyst und Prozessdesigner",
@@ -31,7 +31,7 @@
     "verified": 5,
     "estimated": 0,
     "hypotheses": 0,
-    "note": "Die KPIs sind real erhobene Vorher-Nachher-Werte aus dem Tagesgeschäft: Prozessdurchlaufzeit −25 %, Such- und Abstimmungsaufwand −40 %, Prozessverständnis neuer Mitarbeitender 2.0 → 4.5/5, Dokumentationsabdeckung 20 → 85 %, Transparenz der Verantwortlichkeiten 2.5 → 4.5/5, Prozessstabilität 2.8 → 4.4/5. Zwei validierte Prozessartefakte — Flowchart Ticketüberwachung und Flowchart Export-Lieferschein — liegen als PDF vor und dokumentieren das gemessene Prozessdesign direkt. Geschätzte Wirkung und Hypothesen stehen auf 0: Die Werte sind gemessen, nicht abgeleitet."
+    "note": "Die KPIs sind real erhobene Vorher-Nachher-Werte aus dem Tagesgeschäft: Prozessdurchlaufzeit −25 %, Such- und Abstimmungsaufwand −40 %, Prozessverständnis neuer Mitarbeitender 2.0 → 4.5/5, Dokumentationsabdeckung 20 → 85 %, Transparenz der Verantwortlichkeiten 2.5 → 4.5/5, Prozessstabilität 2.8 → 4.4/5. Zwei validierte Prozessartefakte (Flowchart Ticketüberwachung und Flowchart Export-Lieferschein) liegen als PDF vor und dokumentieren das gemessene Prozessdesign direkt. Geschätzte Wirkung und Hypothesen stehen auf 0, weil die Werte gemessen und nicht abgeleitet sind."
   },
 
   "maturity": {
@@ -43,9 +43,9 @@
     "governance":      { "current": 4, "target": 5 }
   },
 
-  "context": "Im Verkaufsinnendienst und Serviceumfeld eines Industrie-/Maschinenbauunternehmens waren Zuständigkeiten und Arbeitsabläufe nur unvollständig definiert. Eine Stellenbeschreibung war vorhanden, doch klar dokumentierte Prozesse und Kompetenzabgrenzungen fehlten teilweise. Abläufe waren historisch gewachsen, unterschiedlich gelebt und über mehrere Systeme (Outlook, Excel, SMT, CRM, Penta) sowie eine Ablage auf Netzlaufwerk verteilt — ohne durchgängige Visualisierung.",
+  "context": "Im Verkaufsinnendienst und Serviceumfeld eines Industrie-/Maschinenbauunternehmens waren Zuständigkeiten und Arbeitsabläufe nur unvollständig definiert. Eine Stellenbeschreibung war vorhanden, doch klar dokumentierte Prozesse und Kompetenzabgrenzungen fehlten teilweise. Abläufe waren historisch gewachsen, unterschiedlich gelebt und über mehrere Systeme (Outlook, Excel, SMT, CRM, Penta) sowie eine Ablage auf Netzlaufwerk verteilt, ohne durchgängige Visualisierung.",
 
-  "problem": "Das eigentliche Problem war nicht ein einzelner Engpass, sondern fehlende Prozessarchitektur: unklare bzw. fehlende Prozessdefinitionen, uneinheitliche Arbeitsweisen im Team, mangelnde Transparenz über Prozesszustände, potenzielle Fehlerquellen durch fehlende Standardisierung, nicht visualisierte komplexe Abläufe und ineffiziente Schnittstellen zwischen Arbeitsbereichen. Folge waren erhöhter Such- und Abstimmungsaufwand, schwierige Einarbeitung und Wissen, das an Einzelpersonen gebunden blieb.",
+  "problem": "Das Problem war kein einzelner Engpass, sondern fehlende Prozessarchitektur: unklare bzw. fehlende Prozessdefinitionen, uneinheitliche Arbeitsweisen im Team, mangelnde Transparenz über Prozesszustände, Fehlerquellen durch fehlende Standardisierung, nicht visualisierte komplexe Abläufe und ineffiziente Schnittstellen zwischen Arbeitsbereichen. Folge waren erhöhter Such- und Abstimmungsaufwand, schwierige Einarbeitung und Wissen, das an Einzelpersonen gebunden blieb.",
 
   "analysis": "Erhoben wurden bestehende Arbeitsabläufe (Beobachtung), Gespräche mit Teammitgliedern, eine Analyse der Verantwortlichkeiten sowie eine Untersuchung von Fehlerquellen und Engpässen. Als Ursachen identifiziert: historisch gewachsene Arbeitsweisen, fehlende Prozessdokumentation, unklare Zuständigkeiten, Medienbrüche zwischen Arbeitsschritten und fehlende Transparenz über den Prozessstatus. Die Befunde wurden über Flowchart-Modellierung verdichtet: Die Ticketüberwachung zeigt eine mehrpfadige Kontrolllogik mit vier Entscheidungspunkten (Auftragsart SRS/ERS/GAR vs. IBN, Rapport vorhanden?, Dokumente vorhanden?, Folgeeinsatz/Anliegen nicht behoben?), einer Excel-gestützten Nachverfolgung (TicketKontrolleDHaldi.xlsx), einer Verrechnungsstufe (Penta) und einem Eskalationspfad an das Ticket-Management bei Unklarheiten. Der Export-Lieferscheinprozess ist demgegenüber ein linearer Ablauf mit Datenbank-Vorlage, standardisierter Namenskonvention (SNR_Firma_JJJJTTMM-x), CRM-Dokumentation per Screenshot/PDF und einer Versand-Regel (Abgabe vor 12:00 für Versand am selben Tag).",
 
@@ -103,7 +103,7 @@
     {
       "type": "pdf",
       "title": "Flussdiagramm Export-Lieferscheinprozess (Hand Lieferschein)",
-      "caption": "Linearer Soll-Ablauf der Lieferscheinerstellung: Vorlage aus der Datenbank (Netzlaufwerk) bearbeiten, unter standardisierter Namenskonvention (SNR_Firma_JJJJTTMM-x) speichern, im CRM per Screenshot und PDF dokumentieren und versenden — inklusive Cut-off-Regel (Abgabe vor 12:00 für Versand am selben Tag).",
+      "caption": "Linearer Soll-Ablauf der Lieferscheinerstellung: Vorlage aus der Datenbank (Netzlaufwerk) bearbeiten, unter standardisierter Namenskonvention (SNR_Firma_JJJJTTMM-x) speichern, im CRM per Screenshot und PDF dokumentieren und versenden, inklusive Cut-off-Regel (Abgabe vor 12:00 für Versand am selben Tag).",
       "src": "projects/artifacts/hephaistos/lieferschein-prozess.pdf",
       "pending": false
     },
@@ -124,7 +124,7 @@
     "Begleitende Arbeitsanweisungen & Prozessdokumentation"
   ],
 
-  "impact": "Wirkung über fünf Dimensionen, durchgängig mit verifizierten Vorher-Nachher-Werten belegt: Prozesstransparenz und Dokumentationsabdeckung (Anteil dokumentierter Kernprozesse, Verständlichkeit für neue Mitarbeitende), Such- & Abstimmungsaufwand (Zeit bis zur Orientierung im Prozess), Onboarding-Effizienz (Einarbeitungsdauer) sowie Prozessstabilität/Fehlervermeidung (Standardisierungsgrad). Gemessene KPIs (verifiziert): Prozessdurchlaufzeit −25 %, Such-/Abstimmungsaufwand −40 %, Prozessverständnis neuer Mitarbeitender 2.0→4.5/5, Dokumentationsabdeckung 20→85 %, Transparenz der Verantwortlichkeiten 2.5→4.5/5, Prozessstabilität 2.8→4.4/5. Die Wirkung ist durch zwei reale Prozessartefakte und die Nutzung im Tagesgeschäft belegt und durch reale Messung bestätigt.",
+  "impact": "Wirkung über fünf Dimensionen, durchgängig mit verifizierten Vorher-Nachher-Werten belegt: Prozesstransparenz und Dokumentationsabdeckung (Anteil dokumentierter Kernprozesse, Verständlichkeit für neue Mitarbeitende), Such- & Abstimmungsaufwand (Zeit bis zur Orientierung im Prozess), Onboarding-Effizienz (Einarbeitungsdauer) sowie Prozessstabilität/Fehlervermeidung (Standardisierungsgrad). Gemessene KPIs (verifiziert): Prozessdurchlaufzeit −25 %, Such-/Abstimmungsaufwand −40 %, Prozessverständnis neuer Mitarbeitender 2.0→4.5/5, Dokumentationsabdeckung 20→85 %, Transparenz der Verantwortlichkeiten 2.5→4.5/5, Prozessstabilität 2.8→4.4/5. Die Wirkung ist durch zwei reale Prozessartefakte und die Nutzung im Tagesgeschäft belegt.",
 
   "lessons": [
     "Prozesse werden oft erst durch Visualisierung vollständig verständlich.",
@@ -135,7 +135,7 @@
     "Rückblickend: frühere Stakeholder-Einbindung, systematische Erhebung von Prozesskennzahlen und durchgängige Nutzung standardisierter BPMN-Notation."
   ],
 
-  "evidence": "Zwei selbst erstellte Kern-Artefakte — Flowchart Ticketüberwachung und Flowchart Export-Lieferschein — liegen als PDF vor und tragen die Beleglast. Nutzung im Tagesgeschäft und laufender KVP sind belegt, die Wirkungs-KPIs real erhoben. Nächster Dokumentationsschritt: die Arbeitsanweisungen und die zugrunde liegende Messdokumentation hochladen, um die verifizierten Werte auch artefaktseitig zu hinterlegen.",
+  "evidence": "Zwei selbst erstellte Kern-Artefakte, das Flowchart Ticketüberwachung und das Flowchart Export-Lieferschein, liegen als PDF vor und tragen die Beleglast. Nutzung im Tagesgeschäft und laufender KVP sind belegt, die Wirkungs-KPIs real erhoben. Nächster Dokumentationsschritt: die Arbeitsanweisungen und die zugrunde liegende Messdokumentation hochladen, um die verifizierten Werte auch artefaktseitig zu hinterlegen.",
 
-  "related": ["operativen-prozess-stabilisieren", "angebots-auftragsprozess", "athena", "prometheus"]
+  "related": ["athena", "prometheus"]
 }

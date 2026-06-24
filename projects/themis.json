@@ -1,0 +1,149 @@
+{
+  "slug": "themis",
+  "name": "Themis",
+  "status": "anonymized",
+  "category": "Talent Assessment / Entscheidungsarchitektur",
+  "summary": "Neugestaltung der Selektions- und Entscheidungslogik für eine seit über sechs Monaten unbesetzte Schlüsselposition in der Qualitätssicherung. Der Kern lag nicht in der Kandidatensuche, sondern in einem fehlerhaften Bewertungs- und Entscheidungsmodell: zu enge Zielgruppe, überhöhte Formalkriterien und eine automatisierte Vorselektion, die geeignete Profile aussortierte. Entwickelt wurde ein mehrstufiges Talent-Assessment-Framework mit OCEAN-Persönlichkeitsmodell, Bewertungsmatrix und strukturiertem Interviewleitfaden. Es wurde eingeführt, an das Management übergeben und ist auf weitere Rollen übertragbar.",
+
+  "meta": {
+    "role": "Prozessdesigner, Assessment-Architekt & HR-Analyst",
+    "industry": "Maschinenbau / Industrie",
+    "period": "Vertrauliches Kundenprojekt · abgeschlossen und eingeführt",
+    "type": "Entscheidungsarchitektur / Talent Assessment / Organisationspsychologie / Prozessengineering",
+    "implementationStatus": "Framework entwickelt & eingeführt · Entscheidungsmodell produktiv genutzt",
+    "tracked": ["Vakanzdauer", "Time-to-Hire", "Bewertungskriterien", "Assessment-Abdeckung", "Fehlbesetzungsrisiko", "Kultur-Fit"]
+  },
+
+  "figures": {
+    "stakeholders": 3,
+    "systems": 1,
+    "processSteps": 0,
+    "workshops": 0,
+    "documents": 9,
+    "screenshots": 0,
+    "diagrams": 3,
+    "departments": 3,
+    "trainings": 0,
+    "businessUnits": 1
+  },
+
+  "measurement": {
+    "verified": 4,
+    "estimated": 3,
+    "hypotheses": 1,
+    "note": "Die Beleglast trägt eine selbst erstellte Artefaktbasis, von der zwei Primärbelege öffentlich vorliegen: eine empirische Arbeitsmarkt- und Zielgruppenstudie zur Arbeitgeberattraktivität (24-seitige Datenanalyse mit Hypothesen, Auswertung und Handlungsempfehlungen) und die HRM-Gewinnungs-Präsentation, die den mehrstufigen Prozess, die OCEAN-Kulturanalyse, das Maslow-Motivationsmodell und den Kandidatenvergleich zeigt. Hinzu kommen die im Prozess angewandten, noch nicht eigenständig veröffentlichten Unterlagen (Bewertungsmatrix, Interviewleitfaden). Diese Basis verifiziert Methodik, Assessment-Design und Entscheidungslogik, weshalb der verifizierte Anteil hoch liegt; das Projekt ist nicht spekulativ. Die wirtschaftlichen und zeitlichen Kennzahlen (Vakanz- und Time-to-Hire-Reduktion, Kosten und Risiko einer Fehlbesetzung) sind als geschätzte / rekonstruierte Metriken ausgewiesen: plausibel hergeleitet, aber bewusst nicht als auditierte Messung dargestellt. Offen bleibt allein die langfristige Erfolgsmessung nach Einstellung; die Hypothesenlast ist entsprechend gering. Der Kunde (Industrieunternehmen) ist anonymisiert, die methodischen Artefakte stammen aus dem eigenen Beratungsansatz."
+  },
+
+  "maturity": {
+    "standardization": { "current": 4, "target": 5 },
+    "documentation":   { "current": 4, "target": 5 },
+    "transparency":    { "current": 4, "target": 5 },
+    "digitalization":  { "current": 2, "target": 4 },
+    "automation":      { "current": 2, "target": 4 },
+    "governance":      { "current": 3, "target": 4 }
+  },
+
+  "context": "Ein Industrieunternehmen im Maschinenbau suchte seit über sechs Monaten erfolglos eine Fachperson für eine Schlüsselposition in der Qualitätssicherung innerhalb der Produktion. Die Vakanz erzeugte operative Einschränkungen und trug zeitweise zu Produktionsengpässen und Kurzarbeit in betroffenen Bereichen bei. Der bestehende Rekrutierungsprozess stützte sich primär auf klassische HR-Methoden, automatisierte Vorselektion und formale Qualifikationsanforderungen und blieb trotz zahlreicher Bewerbungen ohne nachhaltige Besetzung.",
+
+  "problem": "Das eigentliche Problem lag nicht in der Kandidatensuche, sondern in der Selektions- und Entscheidungslogik dahinter. Bewertet wurde nach überhöhten Formalkriterien und Zertifikaten statt nach Potenzial und Entwicklungsfähigkeit, die Zielgruppe war zu eng definiert, das Lohnband unattraktiv positioniert, und eine automatisierte Vorselektion sortierte potenziell geeignete Profile aus, bevor sie überhaupt bewertet wurden. Der kulturelle Fit wurde gar nicht systematisch erfasst. Die Ursache war also kein Mangel an Bewerbungen, sondern ein fehlerhaft gebautes Entscheidungsmodell.",
+
+  "analysis": "Erhoben wurden der bestehende Rekrutierungsprozess, die Stellenbeschreibung, das Lohnband, die verfügbaren Kandidatenprofile, die Marktsituation der Fachkräfte und die Zielgruppenansprache, ergänzt durch Interviews mit den HR-Verantwortlichen. Als Ursachen identifiziert: eine zu eng gefasste Zielgruppe, überhöhte Anforderungskriterien, ein Fokus auf Zertifizierungen statt Entwicklungspotenzial, ein unterdurchschnittliches Lohnband, eine hohe Abhängigkeit von automatisierten Selektionsmechanismen und das vollständige Fehlen einer Bewertung kultureller Passung. Die Befunde wurden zu einem Soll-Konzept für ein mehrstufiges Assessment-Framework verdichtet.",
+
+  "approach": {
+    "methodology": ["Prozessanalyse", "Zielgruppenanalyse", "Arbeitsmarktanalyse", "Kandidatenvergleich", "OCEAN-Persönlichkeitsmodell", "Assessment Design", "Bewertungsmatrix", "Stakeholder-Interviews"],
+    "implementation": "Analyse des bestehenden Recruiting-Prozesses und der Markt-/Kandidatensituation, gezielte Untersuchung der Ausschlusskriterien und anschliessende Entwicklung eines neuen, mehrstufigen Talent-Assessment-Frameworks. Integriert wurden OCEAN-Persönlichkeitsanalysen und ein Maslow-basiertes Motivationsmodell, eine Bewertungsmatrix zur objektivierbaren Kandidatenbeurteilung sowie ein strukturierter Interviewleitfaden. Das Modell wurde HR und Management präsentiert und als neues Entscheidungsmodell eingeführt."
+  },
+
+  "transformation": {
+    "before": {
+      "summary": "Sechs Monate unbesetzte Schlüsselposition trotz vieler Bewerbungen, getrieben von einer fehlerhaften Selektionslogik, nicht von Kandidatenmangel.",
+      "inputs": ["Klassischer HR-Prozess", "Automatisierte Vorselektion", "Formale Qualifikations- und Zertifikatskriterien", "Eng definierte Zielgruppe", "Unterdurchschnittliches Lohnband"],
+      "outputs": ["Vakanz > 180 Tage", "Produktionsrisiken & zeitweise Kurzarbeit", "Ausschluss geeigneter Profile", "Keine Bewertung des kulturellen Fits"],
+      "artifacts": [],
+      "evidence": "Im Projektsteckbrief (Ausgangslage & Problemstellung) beschrieben; Kunde anonymisiert."
+    },
+    "analysis": {
+      "summary": "Prozess, Markt, Zielgruppe und Kandidatenprofile analysiert und die Ursachen auf eine fehlerhafte Bewertungs- und Entscheidungslogik zurückgeführt.",
+      "inputs": ["Analyse Recruiting-Prozess & Stellenbeschreibung", "Lohnband-Analyse", "Arbeitsmarkt- & Zielgruppenanalyse", "Kandidatenvergleich", "Interviews HR-Verantwortliche"],
+      "outputs": ["Ursachenbild (Kriterien, Zielgruppe, Lohnband, Automatisierung, Kultur-Fit)", "Soll-Konzept Assessment-Framework"],
+      "artifacts": ["Empirische Studie Arbeitgeberattraktivität (Arbeitsmarkt- & Zielgruppenanalyse)", "Kandidatenvergleich", "HRM-Gewinnungsprozess"],
+      "evidence": "Die empirische Arbeitsmarkt- und Zielgruppenstudie liegt als 24-seitige Datenanalyse öffentlich vor; erhobene Informationen, Ursachen und Methoden sind belegt."
+    },
+    "optimization": {
+      "summary": "Mehrstufiges Talent-Assessment-Framework mit OCEAN-Modell, Bewertungsmatrix und strukturiertem Interviewleitfaden entwickelt und als Entscheidungsmodell eingeführt.",
+      "inputs": ["Analyseergebnisse & Soll-Konzept", "OCEAN-Persönlichkeitsmodell", "Maslow-basiertes Motivationsmodell"],
+      "outputs": ["Mehrstufiges Assessment-Framework", "Bewertungsmatrix (20+ Kriterien)", "Strukturierter Interviewleitfaden", "Eingeführtes Entscheidungsmodell"],
+      "artifacts": ["HRM-Gewinnungs-Präsentation (Prozess, OCEAN, Maslow, Kandidatenvergleich)", "Bewertungsmatrix", "Interviewleitfaden"],
+      "evidence": "Die Management-Präsentation liegt öffentlich als PDF vor und zeigt Prozess, OCEAN-Kulturanalyse, Maslow-Motivationsmodell und Kandidatenvergleich; Bewertungsmatrix und Interviewleitfaden sind angewandt, aber noch nicht eigenständig veröffentlicht."
+    },
+    "digitalization": {
+      "summary": "Strukturierte, objektivierbare Bewertungslogik als Grundlage künftiger Digitalisierung; ein kontinuierliches Recruiting-Dashboard ist als nächster Schritt empfohlen, aber noch nicht umgesetzt.",
+      "inputs": ["Bewertungsmatrix", "OCEAN-Profile", "Standardisierte Entscheidungskriterien"],
+      "outputs": ["Wiederverwendbares, strukturiertes Bewertungsraster", "Vorbereitung eines datengestützten Recruiting-Dashboards"],
+      "artifacts": [],
+      "evidence": "Die Standardisierung der Kriterien ist umgesetzt; ein digitales Recruiting-Dashboard ist als Empfehlung benannt, nicht gebaut."
+    },
+    "future": {
+      "summary": "Strukturierte, potenzial- und kulturorientierte Entscheidungsarchitektur, übertragbar auf weitere Schlüsselpositionen, mit systematischer Erfolgsmessung nach Einstellung.",
+      "inputs": ["Eingeführtes Assessment-Framework", "Wiederverwendbare Bewertungsmatrix", "Übertragbares Modell"],
+      "outputs": ["Übertragung auf weitere Rollen", "Systematische Erfolgsmessung nach Einstellung", "Kontinuierliches Recruiting-Dashboard"],
+      "artifacts": [],
+      "evidence": "Die Wiederverwendbarkeit des Frameworks ist angelegt; die langfristige Erfolgsmessung ist als offener Schritt benannt."
+    }
+  },
+
+  "artifacts": [
+    {
+      "type": "document",
+      "title": "Arbeitgeberattraktivität der jungen Generation: empirische Arbeitsmarkt- & Zielgruppenanalyse",
+      "caption": "Empirische Datenanalyse zu Einflussfaktoren, Wahrnehmung und Entscheidungsverhalten bei der Arbeitgeberwahl (24 Seiten): Ausgangslage und Hypothesen, Untersuchungsaufbau, Auswertung, kritische Würdigung und Handlungsempfehlungen zur Arbeitgeberpositionierung. Trägt die analytische Beleglast für die zu enge Zielgruppe und die Lohn-/Attraktivitätspositionierung.",
+      "src": "projects/artifacts/themis/arbeitgeberattraktivitaet-studie.pdf",
+      "pending": false
+    },
+    {
+      "type": "presentation",
+      "title": "HRM-Gewinnung: Management-Präsentation",
+      "caption": "Präsentation des Gewinnungs- und Entscheidungsmodells: Arbeitsmarkt, Maslow-basiertes Motivationsmodell, der mehrstufige HRM-Gewinnungsprozess (Ausschreibung → OCEAN-Kulturanalyse → Evaluation → anonymisierte Vorstellung → Einstellung) und der Kandidatenvergleich nach Erfahrung, Potenzial, Lohnband und Verbleibrisiko.",
+      "src": "projects/artifacts/themis/hrm-gewinnung-praesentation.pdf",
+      "pending": false
+    },
+    {
+      "type": "checklist",
+      "title": "Bewertungsmatrix",
+      "caption": "Mehrdimensionale Assessment-Matrix mit 20+ Kriterien: fachliche Qualifikation, Potenzial, Lernfähigkeit, OCEAN-Profil, Kultur-Fit, Entwicklungsperspektive und Teamkompatibilität. Im Gewinnungsprozess angewendet; eigenständiges Dokument noch nicht veröffentlicht.",
+      "pending": true
+    },
+    {
+      "type": "sop",
+      "title": "Interviewleitfaden",
+      "caption": "Strukturierter Leitfaden für ein standardisiertes, vergleichbares und nachvollziehbares Interview (mindestens zwei Gespräche je Kandidat). Eigenständiges Dokument noch nicht veröffentlicht.",
+      "pending": true
+    }
+  ],
+
+  "deliverables": [
+    "Mehrstufiges Talent-Assessment-Framework als neues Entscheidungsmodell",
+    "Bewertungsmatrix mit 20+ objektivierbaren Kriterien (von zuvor 5–7)",
+    "Integration des OCEAN-Persönlichkeitsmodells in die Kandidatenbewertung",
+    "Maslow-basiertes Motivationsmodell zur Zielgruppeneinordnung",
+    "Strukturierter Interviewleitfaden für vergleichbare Gespräche",
+    "Dokumentierter HRM-Gewinnungsprozess mit neu definierter Zielgruppe",
+    "Arbeitsmarkt- und Zielgruppenanalyse sowie Kandidatenvergleich",
+    "Management-Präsentation und eingeführtes Entscheidungsmodell"
+  ],
+
+  "impact": "Wirkung über mehrere Dimensionen: Vakanzdauer und Time-to-Hire, Bewertungsqualität, Transparenz, Skalierbarkeit und Fehlbesetzungsrisiko. Die Bewertungstiefe stieg von 5–7 auf 20+ Kriterien, der Strukturierungsgrad von 2 auf 5 (von 5); berücksichtigt werden neu Potenzial, Lernfähigkeit, OCEAN-Profil, Kultur-Fit und Entwicklungsperspektive statt allein Qualifikation, Zertifikate und Berufserfahrung. Die zeitlichen und wirtschaftlichen Kennzahlen sind als geschätzte / rekonstruierte Metriken ausgewiesen, nicht als auditierte Messung: angestrebte Vakanzdauer < 60 statt > 180 Tage (Time-to-Hire-Reduktion ~65 %), Kosten einer Fehlbesetzung CHF 40'000–80'000, potenzielle Reduktion des Fehlbesetzungsrisikos 30–50 % und eine geschätzte Einsparung von CHF 15'000–40'000 pro Besetzung. Die Stelle wurde nach Projektabschluss besetzt, nicht über die ursprünglich vorgestellten Kandidaten, sondern über die neu aufgesetzte Entscheidungslogik.",
+
+  "lessons": [
+    "Fachliche Qualifikation allein ist selten ausschlaggebend; Potenzial wird systematisch unterschätzt.",
+    "Automatisierte Vorselektion filtert wertvolle Kandidaten heraus, wenn sie auf Formalkriterien statt auf Eignung optimiert ist.",
+    "Kultureller Fit ist ein entscheidender Erfolgsfaktor und muss strukturiert bewertet werden, nicht dem Bauchgefühl überlassen.",
+    "Eine zu eng gefasste Zielgruppenansprache verursacht oft grössere Probleme als ein realer Kandidatenmangel.",
+    "Strukturierte Entscheidungsfindung macht Auswahl objektivierbar, vergleichbar und nachvollziehbar und damit auf weitere Rollen übertragbar.",
+    "Rückblickend: frühere datengestützte Analyse des Bewerbermarktes, erweiterte psychometrische Verfahren und systematische Erfolgsmessung nach der Einstellung."
+  ],
+
+  "evidence": "Zwei selbst erstellte Primärbelege liegen öffentlich als PDF vor und tragen die Beweislast: die empirische Studie „Arbeitgeberattraktivität der jungen Generation\" (24-seitige Datenanalyse mit Hypothesen, Auswertung, kritischer Würdigung und Handlungsempfehlungen) als Arbeitsmarkt- und Zielgruppenbeleg sowie die HRM-Gewinnungs-Präsentation, die den mehrstufigen Prozess, die OCEAN-Kulturanalyse, das Maslow-Motivationsmodell und den Kandidatenvergleich dokumentiert. Sie belegen Methodik, Assessment-Design und Entscheidungslogik durchgängig; das Projekt ist nicht spekulativ. Bewertungsmatrix und Interviewleitfaden sind im Prozess angewandt, aber als eigenständige Dokumente noch nicht veröffentlicht. Die ausgewiesenen Kennzahlen sind bewusst als geschätzte / rekonstruierte Metriken markiert; der Kunde ist anonymisiert. Nächster Dokumentationsschritt: systematische Erfolgsmessung nach Einstellung und der Aufbau eines kontinuierlichen Recruiting-Dashboards.",
+
+  "related": ["hermes"]
+}

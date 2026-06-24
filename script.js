@@ -149,7 +149,7 @@
     {
       tag: "Phase 01 · Ausgangslage",
       title: "Before State",
-      text: "Die Realität ehrlich aufnehmen — der tatsächliche Arbeitsfluss mit Hand-offs, Wartezeiten und Workarounds, nicht das Organigramm.",
+      text: "Die Realität ehrlich aufnehmen: der tatsächliche Arbeitsfluss mit Hand-offs, Wartezeiten und Workarounds, nicht das Organigramm.",
       inputs: ["Realer Arbeitsfluss", "Bestehende Tools & Tabellen", "Beobachtungen vor Ort"],
       outputs: ["Dokumentierte Ausgangslage", "Erste Symptome benannt"],
       artifacts: ["IST-Prozessaufnahme", "Foto-/Screenshot-Inventar"],
@@ -169,7 +169,7 @@
     {
       tag: "Phase 03 · Zielbild",
       title: "Optimierung",
-      text: "Den Prozess zuerst auf dem Papier richtig machen — entfernen, vereinfachen, standardisieren, bevor Technik ins Spiel kommt.",
+      text: "Den Prozess zuerst auf dem Papier richtig machen: entfernen, vereinfachen, standardisieren, bevor Technik ins Spiel kommt.",
       inputs: ["Analyse-Ergebnisse", "Fachexpertise", "Standards & Vorgaben"],
       outputs: ["Robuster SOLL-Prozess", "Klare Übergaben & Rollen"],
       artifacts: ["SOLL-Prozessdiagramm", "Prozessstandard / SOP"],
@@ -179,8 +179,8 @@
     {
       tag: "Phase 04 · Realisierung",
       title: "Digitalisierung",
-      text: "Technik schafft Hebel: Automatisierung, Integration und KI auf einem Prozess, der bereits auf dem Papier funktioniert — mit Guardrails.",
-      inputs: ["SOLL-Prozess", "Systemlandschaft", "Guardrails & Prüfpunkte"],
+      text: "Technik schafft Hebel: Automatisierung, Integration und KI auf einem Prozess, der bereits auf dem Papier funktioniert, mit klaren Leitplanken.",
+      inputs: ["SOLL-Prozess", "Systemlandschaft", "Leitplanken & Prüfpunkte"],
       outputs: ["Automatisierte Schritte", "Integrierte Datenflüsse"],
       artifacts: ["Workflow-Konzept", "Dashboard-/Datenfluss-Skizze"],
       evidence: "Belegt durch lauffähige Umsetzung bzw. Pilot.",
@@ -189,7 +189,7 @@
     {
       tag: "Phase 05 · Steuerung",
       title: "Future State",
-      text: "Ein gesteuertes, gemessenes Zielbild — mit Kennzahlen und Verantwortung, um nach Go-live weiter zu verbessern.",
+      text: "Ein gesteuertes, gemessenes Zielbild mit Kennzahlen und Verantwortung, um nach Go-live weiter zu verbessern.",
       inputs: ["Live-Kennzahlen", "Verantwortlichkeiten", "Verbesserungsrhythmus"],
       outputs: ["Gesteuerter Betrieb", "Vorher-/Nachher-Messung"],
       artifacts: ["Kennzahlen-Cockpit", "Wirkungsmessung"],

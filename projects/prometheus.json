@@ -3,11 +3,11 @@
   "name": "Prometheus",
   "status": "real",
   "category": "Personalentwicklung / Operational Excellence",
-  "summary": "Modulares Operational-Excellence-Workshop-Framework, das operative Teams im Kanal-/Rohrservice in Sicherheit, Standardisierung und Dokumentationsqualität befähigt — als Pilot in Kägiswil durchgeführt, quantitativ evaluiert (Ø 4.6/5, n=5) und mit Rollout- und Kompetenzmodell für ein unternehmensweites Schulungssystem hinterlegt.",
+  "summary": "Modulares Operational-Excellence-Workshop-Framework, das operative Teams im Kanal-/Rohrservice in Sicherheit, Standardisierung und Dokumentationsqualität befähigt. Als Pilot in Kägiswil durchgeführt, quantitativ evaluiert (Ø 4.6/5, n=5) und mit Rollout- und Kompetenzmodell für ein unternehmensweites Schulungssystem hinterlegt.",
 
   "meta": {
     "role": "Projektleiter, Workshop-Architekt, Ausbilder & Moderator",
-    "industry": "Industrie / Technischer Service (Kanal-/Rohrservice) — ITS Kanal Service",
+    "industry": "Industrie / Technischer Service (Kanal-/Rohrservice), ITS Kanal Service",
     "period": "2025 · Pilotworkshop Kägiswil durchgeführt (06/2025), dokumentiert 08.06.2025",
     "type": "Personalentwicklung / Operational Excellence / Organisationsentwicklung / Wissensmanagement",
     "implementationStatus": "Pilot durchgeführt · Evaluiert · Rollout-Konzept & Management-Empfehlung vorgelegt",
@@ -31,7 +31,7 @@
     "verified": 5,
     "estimated": 3,
     "hypotheses": 2,
-    "note": "Die Wirkung wurde erhoben, nicht behauptet: eine anonyme Teilnehmerumfrage über sechs Dimensionen (Ø 4.6/5, Spitzenwerte bei Praxisrelevanz und Theorie-Praxis-Balance mit je 4.8), eine Erfüllungsgrad-Bewertung sämtlicher Zielsetzungen und unmittelbar im Feld beobachtete Verhaltensänderungen — konsequenteres PSA-Tragen, korrekt aufgestellte und gegenseitig kontrollierte Signalisation sowie vollständige Projektbenennung und Nextcloud-Ablage. Die mittelfristige kulturelle Transfer-Wirkung ist geschätzt; ihre Indikatoren (Rückgang der '0-Meter'-Tage, PSA-Audit, Skillpaper-Aufbau) sind definiert, terminiert und in Erhebung. Hypothetisch bleibt die Übertragbarkeit des Formats auf weitere Standorte, die der Rollout bestätigen muss."
+    "note": "Die Wirkung wurde erhoben: eine anonyme Teilnehmerumfrage über sechs Dimensionen (Ø 4.6/5, Spitzenwerte bei Praxisrelevanz und Theorie-Praxis-Balance mit je 4.8), eine Erfüllungsgrad-Bewertung sämtlicher Zielsetzungen und unmittelbar im Feld beobachtete Verhaltensänderungen: konsequenteres PSA-Tragen, korrekt aufgestellte und gegenseitig kontrollierte Signalisation sowie vollständige Projektbenennung und Nextcloud-Ablage. Die mittelfristige kulturelle Transfer-Wirkung ist geschätzt; ihre Indikatoren (Rückgang der '0-Meter'-Tage, PSA-Audit, Skillpaper-Aufbau) sind definiert, terminiert und in Erhebung. Hypothetisch bleibt die Übertragbarkeit des Formats auf weitere Standorte, die der Rollout bestätigen muss."
   },
 
   "maturity": {
@@ -43,15 +43,15 @@
     "governance":      { "current": 4, "target": 4 }
   },
 
-  "context": "Im Juni 2025 zeigte sich am Pilotstandort Kägiswil (ITS Kanal Service) ein konkreter Auslöser: Das Projekt GEP Wölhusen/Weihusen lag signifikant hinter dem offerierten Zeitplan. Die Ursachen waren weniger technischer Natur als strukturell — komplexe Leitungsverläufe in dicht besiedeltem Gebiet, gemeldete Verkehrsführungsprobleme, fehlende proaktive Kommunikation bei Problemen und ein Effizienzverlust bis hin zu ganzen Schichten ohne dokumentierte Leistung (0 gefilmte Meter). Zugleich bestanden uneinheitliche Arbeitsweisen, fehlende Standards, Sicherheits- und Dokumentationsmängel sowie unterschiedliche Kompetenzniveaus innerhalb der Teams.",
+  "context": "Im Juni 2025 zeigte sich am Pilotstandort Kägiswil (ITS Kanal Service) ein konkreter Auslöser: Das Projekt GEP Wölhusen/Weihusen lag signifikant hinter dem offerierten Zeitplan. Die Ursachen waren weniger technischer Natur als strukturell: komplexe Leitungsverläufe in dicht besiedeltem Gebiet, gemeldete Verkehrsführungsprobleme, fehlende proaktive Kommunikation bei Problemen und ein Effizienzverlust bis hin zu ganzen Schichten ohne dokumentierte Leistung (0 gefilmte Meter). Zugleich bestanden uneinheitliche Arbeitsweisen, fehlende Standards, Sicherheits- und Dokumentationsmängel sowie unterschiedliche Kompetenzniveaus innerhalb der Teams.",
 
-  "problem": "Ein Vergleichseinsatz machte den eigentlichen Kern sichtbar: Ein TV-Team aus Boswil filmte auf derselben, zuvor als 'zu komplex oder aufwendig' deklarierten Strecke rund 250 Leitungsmeter an einem einzigen Tag — ohne unterstützenden Verkehrsdienst —, während dieselbe Strecke zuvor tagelang unbearbeitet blieb. Damit lag der Kontrast offen: Nicht die Rahmenbedingungen waren entscheidend, sondern Mindset und operative Disziplin im Feld. Adressiert werden mussten daher fehlende Standardisierung, Unsicherheiten in Sicherheit und Signalisation, unzureichende Dokumentation, fehlende Weiterbildungsstrukturen, unterschiedliche Leistungsniveaus und eine geringe Veränderungsbereitschaft im eingespielten, teils betriebsblinden Team.",
+  "problem": "Ein Vergleichseinsatz machte den eigentlichen Kern sichtbar: Ein TV-Team aus Boswil filmte auf derselben, zuvor als 'zu komplex oder aufwendig' deklarierten Strecke rund 250 Leitungsmeter an einem einzigen Tag (ohne unterstützenden Verkehrsdienst), während dieselbe Strecke zuvor tagelang unbearbeitet blieb. Damit lag der Kontrast offen: Entscheidend waren nicht die Rahmenbedingungen, sondern Mindset und operative Disziplin im Feld. Adressiert werden mussten daher fehlende Standardisierung, Unsicherheiten in Sicherheit und Signalisation, unzureichende Dokumentation, fehlende Weiterbildungsstrukturen, unterschiedliche Leistungsniveaus und eine geringe Veränderungsbereitschaft im eingespielten, teils betriebsblinden Team.",
 
   "analysis": "Über Feldbeobachtungen, Stakeholdergespräche, Ursachen-, Kompetenz-, Zielgruppen- und Gap-Analyse wurden die Defizite verdichtet. Als Ursachen identifiziert: fehlende Standards, fehlende Weiterbildung, unklare Rollenbilder (Was muss ein Operateur können? Was ein Facharbeiter?), gewohnheitsbedingte Arbeitsmuster, geringe Transparenz und mangelnde Prozesssicherheit. Daraus wurden operative und strategische Lern- und Wirkungsziele sowie eine Zielgruppenprofilierung (Operateure / Facharbeiter mit unterschiedlichen Lern- und Wirkungsschwerpunkten) abgeleitet. Bereits in der Analyse wurden mit minimalem Aufwand beobachtbare Wirkungsindikatoren definiert, die zugleich als KPI-Grundlage für einen späteren Rollout dienen.",
 
   "approach": {
     "methodology": ["Feldbeobachtung", "Stakeholdergespräche", "Ursachenanalyse", "Kompetenzanalyse", "Zielgruppenanalyse", "Gap-Analyse", "Modulares Workshop-Design", "Pilotierung", "Anonyme Evaluationsumfrage"],
-    "implementation": "Entwicklung eines modularen, eintägigen Workshop-Frameworks aus vier Modulen — (1) Health, Safety & Verhalten im Strassenraum, (2) Praxisanwendung inkl. Unfallsimulation, (3) Projektbenennung & Nummerierung, (4) Codierung & Datentransfer (Nextcloud). Jedes Modul folgte dem didaktischen Dreischritt Instruktion → Anwendung → Reflexion/Transfer. Durchgeführt am realen Arbeitsort Kägiswil mit 5 Mitarbeitenden, getragen von benannten internen Fachpersonen (Gesamtleitung/Moderation Dominic Haldi; Kanal-TV-Input Daniel Hegi; Codierung & Datentransfer Benedikt Samson; H&S/Sicherheitsexperte Adrian Zeindler; Learning & Development Heidy Haas). Abschluss mit strukturierter Nachbesprechung und einer anonymen Umfrage in der Folgewoche."
+    "implementation": "Entwicklung eines modularen, eintägigen Workshop-Frameworks aus vier Modulen: (1) Health, Safety & Verhalten im Strassenraum, (2) Praxisanwendung inkl. Unfallsimulation, (3) Projektbenennung & Nummerierung, (4) Codierung & Datentransfer (Nextcloud). Jedes Modul folgte dem didaktischen Dreischritt Instruktion → Anwendung → Reflexion/Transfer. Durchgeführt am realen Arbeitsort Kägiswil mit 5 Mitarbeitenden, getragen von benannten internen Fachpersonen (Gesamtleitung/Moderation Dominic Haldi; Kanal-TV-Input Daniel Hegi; Codierung & Datentransfer Benedikt Samson; H&S/Sicherheitsexperte Adrian Zeindler; Learning & Development Heidy Haas). Abschluss mit strukturierter Nachbesprechung und einer anonymen Umfrage in der Folgewoche."
   },
 
   "transformation": {
@@ -63,7 +63,7 @@
       "evidence": "In der Workshop-Dokumentation (Kap. 2 Ausgangslage & Problemstellung) beschrieben; der GEP-Verzug und der Boswil-Vergleichseinsatz sind dort als Auslöser dokumentiert."
     },
     "analysis": {
-      "summary": "Boswil-Vergleichseinsatz (ca. 250 Leitungsmeter an einem Tag) legt Mindset/Disziplin statt Rahmenbedingungen als Ursache offen; Ableitung von Ziel- und Indikatorensystem.",
+      "summary": "Der Boswil-Vergleichseinsatz (ca. 250 Leitungsmeter an einem Tag) legt Mindset/Disziplin statt Rahmenbedingungen als Ursache offen; daraus abgeleitet ein Ziel- und Indikatorensystem.",
       "inputs": ["Feldbeobachtung & Stakeholdergespräche", "Ursachen-, Kompetenz- & Gap-Analyse", "Zielgruppenanalyse (Operateure / Facharbeiter)"],
       "outputs": ["Operatives & strategisches Zielsystem", "Zielgruppenprofilierung", "Definierte Wirkungs-/KPI-Indikatoren"],
       "artifacts": ["Zielsystem", "Zielgruppenanalyse", "Wirkungsindikatoren-Modell"],
@@ -109,13 +109,13 @@
     {
       "type": "presentation",
       "title": "Foliensätze (Schulungsunterlagen)",
-      "caption": "Im Anhang (Kap. 9.1) referenzierte Foliensätze der vier Module — als eigenständiges Artefakt noch nicht separat hochgeladen.",
+      "caption": "Im Anhang (Kap. 9.1) referenzierte Foliensätze der vier Module, als eigenständiges Artefakt noch nicht separat hochgeladen.",
       "pending": true
     },
     {
       "type": "document",
       "title": "Skillpaper & Bildungsnachweis (Kompetenzmodell)",
-      "caption": "Instrument zur Standortbestimmung und Nachvollziehbarkeit von Lernfortschritten als Schnittstelle zur Personalentwicklung — in Konzeption, Umsetzung erfolgt schrittweise nach dem Workshop.",
+      "caption": "Instrument zur Standortbestimmung und Nachvollziehbarkeit von Lernfortschritten als Schnittstelle zur Personalentwicklung. In Konzeption, Umsetzung erfolgt schrittweise nach dem Workshop.",
       "pending": true
     }
   ],
@@ -132,18 +132,18 @@
     "Management-Empfehlung: Verstetigung, Investitionsbedarf und Risiken bei Unterlassung"
   ],
 
-  "impact": "Wirkung über mehrere Dimensionen — Handlungssicherheit, Sicherheit/PSA, Standardisierung, Dokumentationsqualität und Kompetenzentwicklung. Gemessen (verifiziert): anonyme Teilnehmerumfrage (n=5) mit Ø 4.6/5 über sechs Dimensionen (Praxisrelevanz und Theorie-Praxis-Balance je 4.8 als Spitzenwerte), eine Erfüllungsgrad-Bewertung der Zielsetzungen ('Hoch' bzw. 'Mittel bis hoch') und während der Durchführung beobachtete Verhaltensänderungen. Erwartet (mit definiertem Messzeitpunkt, noch nicht erhoben): Rückgang dokumentierter '0-Meter'-Tage (nach 2–3 Monaten), Steigerung normgerecht ausgestatteter Fahrzeuge über ein PSA-Audit (nach 1–2 Monaten), systematischer Skillpaper-Aufbau (nach 3–6 Monaten) und Rückgang von Routine-Rückfragen an die Einsatzleitung. Die Messlogik ist als Indikatorenmodell hinterlegt, das zugleich als KPI-Grundlage für Rollout-Workshops an weiteren Standorten dient.",
+  "impact": "Wirkung über mehrere Dimensionen: Handlungssicherheit, Sicherheit/PSA, Standardisierung, Dokumentationsqualität und Kompetenzentwicklung. Gemessen (verifiziert): anonyme Teilnehmerumfrage (n=5) mit Ø 4.6/5 über sechs Dimensionen (Praxisrelevanz und Theorie-Praxis-Balance je 4.8 als Spitzenwerte), eine Erfüllungsgrad-Bewertung der Zielsetzungen ('Hoch' bzw. 'Mittel bis hoch') und während der Durchführung beobachtete Verhaltensänderungen. Erwartet (mit definiertem Messzeitpunkt, noch nicht erhoben): Rückgang dokumentierter '0-Meter'-Tage (nach 2–3 Monaten), Steigerung normgerecht ausgestatteter Fahrzeuge über ein PSA-Audit (nach 1–2 Monaten), systematischer Skillpaper-Aufbau (nach 3–6 Monaten) und Rückgang von Routine-Rückfragen an die Einsatzleitung. Die Messlogik ist als Indikatorenmodell hinterlegt, das zugleich als KPI-Grundlage für Rollout-Workshops an weiteren Standorten dient.",
 
   "lessons": [
     "Praxis schlägt Theorie: Die simulierte Unfallsituation zeigte, dass erlebte Erfahrung deutlich stärker wirkt als rein vermitteltes Wissen.",
-    "Verhalten verändert sich durch Erleben — der Workshop wirkte verhaltensverändernd, nicht nur informativ.",
+    "Verhalten verändert sich durch Erleben: Der Workshop wirkte verhaltensverändernd, nicht nur informativ.",
     "Didaktische Taktung ist Erfolgsfaktor: 3 von 5 Rückmeldungen kritisierten zu lange Theorieblöcke (v. a. nachmittags). Theorie kurz, aktivierend und mit interaktiven Sequenzen halten.",
     "Das Format wirkt auch bei skeptischen, eingespielten Teams: Trotz anfänglicher Zurückhaltung waren Lerneffekt und Akzeptanz hoch.",
     "Schulung macht Realitätslücken sichtbar: Die teils unvollständige PSA wurde von den Teilnehmenden selbst zum Thema gemacht und konnte direkt weitergeleitet werden.",
     "Teaminteraktion bricht Silos auf: Der Austausch zwischen Mitarbeitenden und Führung sowie das Sehen anderer Arbeitsweisen erzeugte informelles Benchmarking und Selbstreflexion.",
-    "Weiterbildung wirkt kulturell: Sie wurde als Wertschätzung wahrgenommen ('auch fürs Hirn') — Sicherheit entsteht als Grundhaltung, nicht als Zusatzaufgabe.",
+    "Weiterbildung wirkt kulturell: Sie wurde als Wertschätzung wahrgenommen ('auch fürs Hirn'). Sicherheit entsteht als Grundhaltung, nicht als Zusatzaufgabe.",
     "Rückblickend: die definierten Wirkungsindikatoren nach 1–6 Monaten konsequent weiterverfolgen, um die Nachhaltigkeit des Transfers über die Zeit zu belegen."
   ],
 
-  "related": ["hermes", "operativen-prozess-stabilisieren", "datenbasierte-steuerung"]
+  "related": ["hermes", "athena"]
 }

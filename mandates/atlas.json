@@ -4,7 +4,7 @@
   "type": "mandate",
   "status": "real",
   "category": "Transformationsmandat · CIO",
-  "summary": "Aufbau einer skalierbaren Unternehmensarchitektur für ein wachsendes Vertriebs- und Logistikunternehmen — fünf Workstreams von der digitalen Betriebsplattform über Automatisierung und Vertriebsarchitektur bis zu Datenintelligenz und Führungsstruktur.",
+  "summary": "Aufbau einer skalierbaren Unternehmensarchitektur für ein wachsendes Vertriebs- und Logistikunternehmen: fünf Workstreams von der digitalen Betriebsplattform über Automatisierung und Vertriebsarchitektur bis zu Datenintelligenz und Führungsstruktur.",
   "executiveSummary": "Als extern mandatierter Leiter Zentrale Dienste (CIO) baute ich für ein wachsendes Vertriebs- und Logistikunternehmen der Lebensmittelbranche innerhalb von sechs Monaten eine tragfähige Unternehmensarchitektur auf. Nach dem Ausfall zentraler Führungspersonen fehlten durchgängige Prozesse, eine integrierte Systemlandschaft und eine belastbare Datenbasis. Über fünf Workstreams entstanden eine integrierte digitale Betriebsplattform mit ERP, CRM und Automatisierungs-Layer, eine datengestützte Vertriebs- und Wachstumsarchitektur sowie eine neue Führungs- und Governance-Struktur. Das Mandat überführte einen personenabhängigen, manuellen Betrieb in eine standardisierte, skalierbare Organisation.",
 
   "meta": {
@@ -23,7 +23,7 @@
   "context": "Das Unternehmen befand sich in einer kritischen Wachstums- und Restrukturierungsphase. Kurz zuvor waren zentrale Führungspersonen ausgefallen, wodurch erhebliche organisatorische, operative und digitale Defizite entstanden. Es existierten keine durchgängigen Unternehmensprozesse, keine integrierte Systemlandschaft und keine belastbare Datenbasis für operative oder strategische Entscheidungen. Zahlreiche Abläufe basierten auf manueller Arbeit, Personenwissen und nicht standardisierten Prozessen.",
 
   "scope": {
-    "summary": "Der Auftrag umfasste den Aufbau einer skalierbaren Unternehmensarchitektur zur Stabilisierung und Weiterentwicklung des Unternehmens — über alle zentralen Funktionsbereiche hinweg.",
+    "summary": "Der Auftrag umfasste den Aufbau einer skalierbaren Unternehmensarchitektur zur Stabilisierung und Weiterentwicklung des Unternehmens über alle zentralen Funktionsbereiche hinweg.",
     "objectives": [
       "Digitalisierung",
       "IT-Infrastruktur",
@@ -46,7 +46,7 @@
     ]
   },
 
-  "analysis": "Untersucht wurden Vertrieb, Marketing, Kunden- und Lieferantenmanagement, Logistik, Finanzprozesse, Datenmanagement, IT-Systeme und die Organisationsstruktur. Die Analyse legte strukturelle Defizite offen, die Wachstum und Steuerbarkeit gleichermassen begrenzten — weniger einzelne Tools als das Fehlen einer gemeinsamen System-, Prozess- und Datenbasis.",
+  "analysis": "Untersucht wurden Vertrieb, Marketing, Kunden- und Lieferantenmanagement, Logistik, Finanzprozesse, Datenmanagement, IT-Systeme und die Organisationsstruktur. Die Analyse legte strukturelle Defizite offen, die Wachstum und Steuerbarkeit begrenzten. Das Kernproblem war nicht die einzelne Software, sondern das Fehlen einer gemeinsamen System-, Prozess- und Datenbasis.",
   "coreProblems": [
     "Fehlende Systemlandschaft",
     "Fehlende Standards",
@@ -115,12 +115,12 @@
   },
 
   "processImpact": {
-    "summary": "Über 15 Geschäftsprozesse wurden neu aufgebaut oder standardisiert — von Vertrieb und Marketing über Kunden- und Lieferantenmanagement bis zu Logistik und Finanzprozessen.",
+    "summary": "Über 15 Geschäftsprozesse wurden neu aufgebaut oder standardisiert: von Vertrieb und Marketing über Kunden- und Lieferantenmanagement bis zu Logistik und Finanzprozessen.",
     "processes": ["Vertriebsprozesse", "Marketingprozesse", "Kundenverwaltung", "Lead Management", "Logistik & Routing", "Finanzprozesse"]
   },
 
   "dataAnalytics": {
-    "summary": "Aufbau einer belastbaren Datenarchitektur als Grundlage datenbasierter Entscheidungen — von Markt- und Geodaten bis zur Business-Case-Modellierung.",
+    "summary": "Aufbau einer belastbaren Datenarchitektur als Grundlage datenbasierter Entscheidungen, von Markt- und Geodaten bis zur Business-Case-Modellierung.",
     "items": ["Marktanalysen", "Geodatenanalysen", "Zielgruppenanalysen", "Potenzialanalysen", "Business Case Modellierung"]
   },
 
@@ -152,7 +152,7 @@
     "verified": 3,
     "estimated": 3,
     "hypotheses": 1,
-    "note": "Verifiziert ist die Tätigkeit selbst — über eine Tätigkeitsbestätigung des Auftraggebers — sowie der nachweislich aufgebaute System- und Prozessbestand (ERP, CRM, Integrationen, Führungsstruktur). Geschätzt ist die operative Wirkung auf Transparenz und Effizienz, die plausibel, aber nicht systematisch vorher/nachher gemessen wurde. Als Hypothese geführt bleibt die langfristige Skalierbarkeit der Architektur, da das Unternehmen aus übergeordneten finanziellen Gründen nicht fortbestand."
+    "note": "Verifiziert ist die Tätigkeit selbst, belegt durch eine Tätigkeitsbestätigung des Auftraggebers, sowie der nachweislich aufgebaute System- und Prozessbestand (ERP, CRM, Integrationen, Führungsstruktur). Geschätzt ist die operative Wirkung auf Transparenz und Effizienz, die plausibel, aber nicht systematisch vorher/nachher gemessen wurde. Als Hypothese geführt bleibt die langfristige Skalierbarkeit der Architektur, da das Unternehmen aus übergeordneten finanziellen Gründen nicht fortbestand."
   },
 
   "maturity": {
@@ -185,7 +185,7 @@
 
   "evidence": "Belegt durch Tätigkeitsbestätigung und Stellenbeschreibung des Auftraggebers; weitere Artefakte (Systemlandschaft, Prozess- und Organisationsdokumentation) werden anonymisiert nachgereicht.",
 
-  "relatedProjects": ["datenbasierte-steuerung", "holding-struktur", "neue-erloesfelder"],
+  "relatedProjects": ["hephaistos", "athena"],
 
   "artifacts": [
     {
