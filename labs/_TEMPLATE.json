@@ -82,7 +82,7 @@
   ],
 
   "documentation": [
-    { "type": "pdf", "title": "Architektur-Dossier", "src": "labs/artifacts/mein-lab/dossier.pdf", "pending": true }
+    { "type": "pdf", "title": "Architektur-Dossier", "caption": "Beschreibung des Dokuments.", "onRequest": true }
   ],
 
   "lessons": ["Erkenntnis 1", "Erkenntnis 2"],

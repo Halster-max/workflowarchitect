@@ -210,9 +210,21 @@
 
   function evidenceCompleteness(p) {
     const arts = p.artifacts || [];
-    if (!arts.length) return { uploaded: 0, total: 0, pct: 0 };
-    const uploaded = arts.filter((a) => !a.pending && has(a.src)).length;
-    return { uploaded, total: arts.length, pct: Math.round((uploaded / arts.length) * 100) };
+    if (!arts.length) return { uploaded: 0, onRequest: 0, pending: 0, available: 0, total: 0, pct: 0 };
+    const uploaded  = arts.filter((a) => !a.pending && !a.onRequest && has(a.src)).length;
+    const onRequest = arts.filter((a) => a.onRequest).length;
+    const total     = arts.length;
+    const available = uploaded + onRequest; // exists: either public or shared on request
+    return { uploaded, onRequest, pending: total - available, available, total, pct: Math.round((available / total) * 100) };
+  }
+
+  /* Honest one-line breakdown of an evidence set: public · on request · in preparation. */
+  function evidenceSummary(ev) {
+    const parts = [];
+    if (ev.uploaded)  parts.push(`${num(ev.uploaded)} öffentlich`);
+    if (ev.onRequest) parts.push(`${num(ev.onRequest)} auf Anfrage`);
+    if (ev.pending)   parts.push(`${num(ev.pending)} in Vorbereitung`);
+    return parts.join(" · ");
   }
 
   function maturityAvgCurrent(p) {
@@ -493,6 +505,14 @@
     const cfg = artifactCfg(a.type);
     const cap = has(a.caption) ? `<figcaption class="art__cap">${esc(a.caption)}</figcaption>` : "";
 
+    if (a.onRequest) {
+      return `
+        <figure class="art art--request">
+          <div class="art__ph art__ph--request">${svg(cfg.icon)}<span class="art__badge art__badge--request">Auf Anfrage</span></div>
+          <figcaption class="art__cap"><span class="art__type">${esc(cfg.label)}</span>${esc(a.title || "")}${has(a.caption) ? ": " + esc(a.caption) : ""}<span class="art__note">Originaldokument auf Anfrage erhältlich.</span></figcaption>
+        </figure>`;
+    }
+
     if (a.pending || !has(a.src)) {
       return `
         <figure class="art art--pending">
@@ -528,7 +548,7 @@
     return `
       <div class="cm-block">
         <h4>Evidenz &amp; Artefakte</h4>
-        <p class="art-grid__meta">${num(ev.uploaded)} von ${num(ev.total)} Artefakten hochgeladen · Rest in Vorbereitung</p>
+        <p class="art-grid__meta">${num(ev.total)} Artefakte · ${evidenceSummary(ev)}</p>
         <div class="art-grid">${list.map(renderArtifact).join("")}</div>
       </div>`;
   }
@@ -583,7 +603,7 @@
       `<div class="pdash__cell"><span class="pdash__k">Artefakte</span><span class="pdash__v">${num(artCount)}</span></div>`,
       mat != null ? `<div class="pdash__cell"><span class="pdash__k">Prozessreife (Ø)</span><span class="pdash__v">${mat.toFixed(1)} <small>/ 5</small></span>${bar((mat / 5) * 100)}</div>` : "",
       meter("Dokumentations-Vollständigkeit", doc.pct, `${doc.done}/${doc.total}`),
-      meter("Evidenz-Vollständigkeit", ev.pct, `${ev.uploaded}/${ev.total}`),
+      meter("Evidenz-Vollständigkeit", ev.pct, `${ev.available}/${ev.total}`),
     ].filter(Boolean).join("");
 
     return `<div class="pdash">${cells}</div>`;
@@ -1408,7 +1428,7 @@
     return `
       <div class="cm-block">
         <h4>${esc(title)}</h4>
-        <p class="art-grid__meta">${num(ev.uploaded)} von ${num(ev.total)} verfügbar${ev.uploaded < ev.total ? " · Rest in Vorbereitung" : ""}</p>
+        <p class="art-grid__meta">${num(ev.total)} ${title === "Screenshots" ? "Screenshots" : "Artefakte"} · ${evidenceSummary(ev)}</p>
         <div class="art-grid">${list.map(renderArtifact).join("")}</div>
       </div>`;
   }

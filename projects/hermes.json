@@ -67,14 +67,14 @@
       "inputs": ["Einzelgespräche Pflege & Sicherheit", "Analyse Dienstabdeckung", "Analyse Mitarbeiterzufriedenheit", "Beratung Personalpsychologie"],
       "outputs": ["Ursachenbild (Kommunikation, Beteiligung, Arbeitsbedingungen)", "Motivationsmodell", "Engagementmodell"],
       "artifacts": ["Motivationsmodell", "Engagementmodell"],
-      "evidence": "Beide Modelle liegen als PDF vor."
+      "evidence": "Beide Modelle liegen als Originaldokument vor (auf Anfrage erhältlich)."
     },
     "optimization": {
       "summary": "Entwicklung eines neuen Beteiligungs- und Verbesserungsprozesses und Abstimmung mit der Geschäftsleitung.",
       "inputs": ["Analyseergebnisse", "Motivations- und Engagementmodell"],
       "outputs": ["Neuer Verbesserungsprozess", "Management-Freigabe", "Feedback-Kultur"],
       "artifacts": ["Verbesserungsprozess (Prozessdiagramm)", "Management-Präsentation"],
-      "evidence": "Prozessdiagramm liegt als PDF vor; Management-Präsentation im Steckbrief genannt, nicht hochgeladen."
+      "evidence": "Prozessdiagramm liegt als Originaldokument vor (auf Anfrage erhältlich); Management-Präsentation im Steckbrief genannt, in Vorbereitung."
     },
     "digitalization": {
       "summary": "Kein Schwerpunkt: Digitalisierung war laut Steckbrief nicht Projektziel.",
@@ -97,22 +97,19 @@
       "type": "pdf",
       "title": "Verbesserungsprozess (Prozess-/Flussdiagramm)",
       "caption": "Iterativer Beteiligungs- und Verbesserungsprozess: von Vision/Input über Vorbereitung, Sprint, Retrospektive und Team-Tests bis zur Umsetzung beim Kunden, inkl. Prozess-Parkplatz für offene Punkte.",
-      "src": "projects/artifacts/hermes/verbesserungsprozess.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "pdf",
       "title": "Motivationsmodell",
       "caption": "Treiber und Hindernisse der Mitarbeitermotivation im Arbeitsumfeld: Mitarbeiterentwicklung, passende Ressourcen, geeignete Ziele/konfliktfreie Rollen, Arbeitsplatzsicherheit und soziale Aspekte.",
-      "src": "projects/artifacts/hermes/motivationsmodell.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "pdf",
       "title": "Engagementmodell",
       "caption": "Bedürfnis-Pyramide (Überleben bis Verwirklichung) gekoppelt an Engagement-Stufen (Dienst nach Vorschrift bis sehr engagiert) und an Retrospektive/Feedback-Mechanik mit Resultatbezug.",
-      "src": "projects/artifacts/hermes/engagementmodell.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "presentation",
@@ -140,7 +137,7 @@
     "Rückblickend: frühere Einbindung aller Stakeholder und eine systematische Vorher-Nachher-Messung über Kennzahlen."
   ],
 
-  "evidence": "Drei selbst erstellte Kern-Artefakte (Verbesserungsprozess, Motivations- und Engagementmodell) liegen als PDF vor und tragen die analytische und prozessuale Beleglast. Die Management-Präsentation ist genannt, aber nicht hochgeladen. Strukturelle Ergebnisse wie das 24/7-Modell und die volle Dienstabdeckung sind institutionell sichtbar; die Bindungs- und Zufriedenheitswirkung ist konsistent berichtet, aber nicht quantitativ gemessen. Nächster Dokumentationsschritt: die Kennzahlen (ungedeckte Dienste, Anstellungsdauer und Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen.",
+  "evidence": "Drei selbst erstellte Kern-Artefakte (Verbesserungsprozess, Motivations- und Engagementmodell) liegen als Originaldokument vor (auf Anfrage erhältlich) und tragen die analytische und prozessuale Beleglast. Die Management-Präsentation ist genannt, aber in Vorbereitung. Strukturelle Ergebnisse wie das 24/7-Modell und die volle Dienstabdeckung sind institutionell sichtbar; die Bindungs- und Zufriedenheitswirkung ist konsistent berichtet, aber nicht quantitativ gemessen. Nächster Dokumentationsschritt: die Kennzahlen (ungedeckte Dienste, Anstellungsdauer und Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen.",
 
   "related": ["prometheus", "themis"]
 }

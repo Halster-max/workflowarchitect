@@ -74,7 +74,7 @@
       "inputs": ["Analyseergebnisse", "Soll-Ziele (Transparenz, klare Verantwortlichkeiten, Fehlerreduktion)"],
       "outputs": ["Flowchart Ticketüberwachung", "Flowchart Export-Lieferschein", "Standardisierte Soll-Prozesse", "Reduzierte Komplexität durch Vereinfachung"],
       "artifacts": ["Flussdiagramm Ticketüberwachung", "Flussdiagramm Export-Lieferschein"],
-      "evidence": "Beide Flowcharts liegen als PDF vor und machen die Soll-Abläufe nachvollziehbar und übergebbar."
+      "evidence": "Beide Flowcharts liegen als Originaldokument vor (auf Anfrage erhältlich) und machen die Soll-Abläufe nachvollziehbar und übergebbar."
     },
     "digitalization": {
       "summary": "Verankerung digitaler Standards und Governance im Ablauf: Excel-gestützte Ticket-Nachverfolgung, CRM-Dokumentation (Screenshot + PDF), Namenskonventionen, Ablagestruktur, Verrechnung über Penta und definierter Eskalationspfad ins Ticket-Management.",
@@ -97,15 +97,13 @@
       "type": "pdf",
       "title": "Flussdiagramm Ticketüberwachung (Ticket Kontrolle)",
       "caption": "Mehrpfadige Kontrolllogik der Service-Ticketverfolgung: vom geplanten Einsatz (Outlook) über die Excel-Erfassung (TicketKontrolleDHaldi.xlsx) und SMT-Prüfung, verzweigt nach Auftragsart (IBN vs. SRS/ERS/GAR) mit den Entscheidungspunkten 'Rapport vorhanden?', 'Dokumente vorhanden?' und 'Folgeeinsatz/Anliegen nicht behoben?', Nachforderung/Nachtragung, Verrechnung (Penta) und Eskalation ins Ticket-Management bei Unklarheiten.",
-      "src": "projects/artifacts/hephaistos/ticket-kontrolle.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "pdf",
       "title": "Flussdiagramm Export-Lieferscheinprozess (Hand Lieferschein)",
       "caption": "Linearer Soll-Ablauf der Lieferscheinerstellung: Vorlage aus der Datenbank (Netzlaufwerk) bearbeiten, unter standardisierter Namenskonvention (SNR_Firma_JJJJTTMM-x) speichern, im CRM per Screenshot und PDF dokumentieren und versenden, inklusive Cut-off-Regel (Abgabe vor 12:00 für Versand am selben Tag).",
-      "src": "projects/artifacts/hephaistos/lieferschein-prozess.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "document",
@@ -135,7 +133,7 @@
     "Rückblickend: frühere Stakeholder-Einbindung, systematische Erhebung von Prozesskennzahlen und durchgängige Nutzung standardisierter BPMN-Notation."
   ],
 
-  "evidence": "Zwei selbst erstellte Kern-Artefakte, das Flowchart Ticketüberwachung und das Flowchart Export-Lieferschein, liegen als PDF vor und tragen die Beleglast. Nutzung im Tagesgeschäft und laufender KVP sind belegt, die Wirkungs-KPIs real erhoben. Nächster Dokumentationsschritt: die Arbeitsanweisungen und die zugrunde liegende Messdokumentation hochladen, um die verifizierten Werte auch artefaktseitig zu hinterlegen.",
+  "evidence": "Zwei selbst erstellte Kern-Artefakte, das Flowchart Ticketüberwachung und das Flowchart Export-Lieferschein, liegen als Originaldokument vor (auf Anfrage erhältlich) und tragen die Beleglast. Nutzung im Tagesgeschäft und laufender KVP sind belegt, die Wirkungs-KPIs real erhoben. Öffentlich sichtbar sind die Artefaktbeschreibungen; die Originaldokumente werden diskret nur auf Anfrage geteilt.",
 
   "related": ["athena", "prometheus"]
 }

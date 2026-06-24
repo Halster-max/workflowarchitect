@@ -67,14 +67,14 @@
       "inputs": ["Analyse Recruiting-Prozess & Stellenbeschreibung", "Lohnband-Analyse", "Arbeitsmarkt- & Zielgruppenanalyse", "Kandidatenvergleich", "Interviews HR-Verantwortliche"],
       "outputs": ["Ursachenbild (Kriterien, Zielgruppe, Lohnband, Automatisierung, Kultur-Fit)", "Soll-Konzept Assessment-Framework"],
       "artifacts": ["Empirische Studie Arbeitgeberattraktivität (Arbeitsmarkt- & Zielgruppenanalyse)", "Kandidatenvergleich", "HRM-Gewinnungsprozess"],
-      "evidence": "Die empirische Arbeitsmarkt- und Zielgruppenstudie liegt als 24-seitige Datenanalyse öffentlich vor; erhobene Informationen, Ursachen und Methoden sind belegt."
+      "evidence": "Die empirische Arbeitsmarkt- und Zielgruppenstudie liegt als 24-seitige Datenanalyse vor (Originaldokument auf Anfrage erhältlich); erhobene Informationen, Ursachen und Methoden sind belegt."
     },
     "optimization": {
       "summary": "Mehrstufiges Talent-Assessment-Framework mit OCEAN-Modell, Bewertungsmatrix und strukturiertem Interviewleitfaden entwickelt und als Entscheidungsmodell eingeführt.",
       "inputs": ["Analyseergebnisse & Soll-Konzept", "OCEAN-Persönlichkeitsmodell", "Maslow-basiertes Motivationsmodell"],
       "outputs": ["Mehrstufiges Assessment-Framework", "Bewertungsmatrix (20+ Kriterien)", "Strukturierter Interviewleitfaden", "Eingeführtes Entscheidungsmodell"],
       "artifacts": ["HRM-Gewinnungs-Präsentation (Prozess, OCEAN, Maslow, Kandidatenvergleich)", "Bewertungsmatrix", "Interviewleitfaden"],
-      "evidence": "Die Management-Präsentation liegt öffentlich als PDF vor und zeigt Prozess, OCEAN-Kulturanalyse, Maslow-Motivationsmodell und Kandidatenvergleich; Bewertungsmatrix und Interviewleitfaden sind angewandt, aber noch nicht eigenständig veröffentlicht."
+      "evidence": "Die Management-Präsentation liegt als Originaldokument vor (auf Anfrage erhältlich) und zeigt Prozess, OCEAN-Kulturanalyse, Maslow-Motivationsmodell und Kandidatenvergleich; Bewertungsmatrix und Interviewleitfaden sind angewandt, aber als eigenständiges Dokument in Vorbereitung."
     },
     "digitalization": {
       "summary": "Strukturierte, objektivierbare Bewertungslogik als Grundlage künftiger Digitalisierung; ein kontinuierliches Recruiting-Dashboard ist als nächster Schritt empfohlen, aber noch nicht umgesetzt.",
@@ -97,15 +97,13 @@
       "type": "document",
       "title": "Arbeitgeberattraktivität der jungen Generation: empirische Arbeitsmarkt- & Zielgruppenanalyse",
       "caption": "Empirische Datenanalyse zu Einflussfaktoren, Wahrnehmung und Entscheidungsverhalten bei der Arbeitgeberwahl (24 Seiten): Ausgangslage und Hypothesen, Untersuchungsaufbau, Auswertung, kritische Würdigung und Handlungsempfehlungen zur Arbeitgeberpositionierung. Trägt die analytische Beleglast für die zu enge Zielgruppe und die Lohn-/Attraktivitätspositionierung.",
-      "src": "projects/artifacts/themis/arbeitgeberattraktivitaet-studie.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "presentation",
       "title": "HRM-Gewinnung: Management-Präsentation",
       "caption": "Präsentation des Gewinnungs- und Entscheidungsmodells: Arbeitsmarkt, Maslow-basiertes Motivationsmodell, der mehrstufige HRM-Gewinnungsprozess (Ausschreibung → OCEAN-Kulturanalyse → Evaluation → anonymisierte Vorstellung → Einstellung) und der Kandidatenvergleich nach Erfahrung, Potenzial, Lohnband und Verbleibrisiko.",
-      "src": "projects/artifacts/themis/hrm-gewinnung-praesentation.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "checklist",
@@ -143,7 +141,7 @@
     "Rückblickend: frühere datengestützte Analyse des Bewerbermarktes, erweiterte psychometrische Verfahren und systematische Erfolgsmessung nach der Einstellung."
   ],
 
-  "evidence": "Zwei selbst erstellte Primärbelege liegen öffentlich als PDF vor und tragen die Beweislast: die empirische Studie „Arbeitgeberattraktivität der jungen Generation\" (24-seitige Datenanalyse mit Hypothesen, Auswertung, kritischer Würdigung und Handlungsempfehlungen) als Arbeitsmarkt- und Zielgruppenbeleg sowie die HRM-Gewinnungs-Präsentation, die den mehrstufigen Prozess, die OCEAN-Kulturanalyse, das Maslow-Motivationsmodell und den Kandidatenvergleich dokumentiert. Sie belegen Methodik, Assessment-Design und Entscheidungslogik durchgängig; das Projekt ist nicht spekulativ. Bewertungsmatrix und Interviewleitfaden sind im Prozess angewandt, aber als eigenständige Dokumente noch nicht veröffentlicht. Die ausgewiesenen Kennzahlen sind bewusst als geschätzte / rekonstruierte Metriken markiert; der Kunde ist anonymisiert. Nächster Dokumentationsschritt: systematische Erfolgsmessung nach Einstellung und der Aufbau eines kontinuierlichen Recruiting-Dashboards.",
+  "evidence": "Zwei selbst erstellte Primärbelege liegen als Originaldokument vor (auf Anfrage erhältlich) und tragen die Beweislast: die empirische Studie „Arbeitgeberattraktivität der jungen Generation\" (24-seitige Datenanalyse mit Hypothesen, Auswertung, kritischer Würdigung und Handlungsempfehlungen) als Arbeitsmarkt- und Zielgruppenbeleg sowie die HRM-Gewinnungs-Präsentation, die den mehrstufigen Prozess, die OCEAN-Kulturanalyse, das Maslow-Motivationsmodell und den Kandidatenvergleich dokumentiert. Sie belegen Methodik, Assessment-Design und Entscheidungslogik durchgängig; das Projekt ist nicht spekulativ. Bewertungsmatrix und Interviewleitfaden sind im Prozess angewandt, aber als eigenständige Dokumente noch nicht veröffentlicht. Die ausgewiesenen Kennzahlen sind bewusst als geschätzte / rekonstruierte Metriken markiert; der Kunde ist anonymisiert. Nächster Dokumentationsschritt: systematische Erfolgsmessung nach Einstellung und der Aufbau eines kontinuierlichen Recruiting-Dashboards.",
 
   "related": ["hermes"]
 }

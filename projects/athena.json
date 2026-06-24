@@ -74,7 +74,7 @@
       "inputs": ["Lernziele & Zielgruppenprofile", "ERP-Kernprozesse (Service, Lager, Einkauf, Fakturierung)", "Instructional Design"],
       "outputs": ["3-stufiges Ausbildungskonzept", "Prozess- & Verrechnungsanleitungen", "Schritt-für-Schritt-Dokumentationen", "Standardisierte Arbeitsweise"],
       "artifacts": ["Schulungskonzept ERP-System", "Prozessanleitungen", "Verrechnungsanleitungen (Rechnung & Gutschrift)"],
-      "evidence": "Unterlagen sind erstellt und beschrieben; im Portfolio als Artefakte registriert (Upload in Vorbereitung)."
+      "evidence": "Unterlagen sind erstellt und beschrieben; im Portfolio als Artefakte mit Beschreibung registriert. Originaldokumente auf Anfrage erhältlich."
     },
     "digitalization": {
       "summary": "ERP-gestützte, digital dokumentierte Wissensbasis mit Screenshots und Ablaufdiagrammen; Lernmodule als wiederverwendbares System statt mündlicher Weitergabe.",
@@ -97,22 +97,19 @@
       "type": "document",
       "title": "Schulungskonzept ERP-System",
       "caption": "Modulares, dreistufiges Ausbildungskonzept: Zielgruppen, Lernziele und Aufbau der aufeinander aufbauenden Module.",
-      "src": "projects/artifacts/athena/schulungskonzept.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "sop",
       "title": "Verrechnungsanleitung: Rechnungserstellung",
       "caption": "Schritt-für-Schritt-Anleitung zur korrekten Rechnungsstellung im ERP-System.",
-      "src": "projects/artifacts/athena/verrechnung-rechnung.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "sop",
       "title": "Verrechnungsanleitung: Gutschriften",
       "caption": "Schritt-für-Schritt-Anleitung zur Erstellung von Gutschriften.",
-      "src": "projects/artifacts/athena/verrechnung-gutschrift.pdf",
-      "pending": false
+      "onRequest": true
     }
   ],
 
@@ -137,7 +134,7 @@
     "Rückblickend: früher mit mehreren Testpersonen pilotieren, eine digitale Lernplattform einbinden und von Beginn an systematisch über Kennzahlen und Lerntests messen."
   ],
 
-  "evidence": "Die Beleglast tragen die selbst erstellten Kern-Artefakte (Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots und Prozessgrafiken) sowie die dokumentierte produktive Einführung, die gemessene Wirkung und die Schulungsevaluation. Öffentlich einsehbar sind aus NDA-Gründen drei freigegebene Primärbelege als PDF: das Schulungskonzept und die Verrechnungsanleitungen für Rechnungsstellung und Gutschriften. Die weiteren Unterlagen existieren und sind in den Facts & Figures gezählt, dürfen aber aufgrund der Vertraulichkeitsvereinbarung nicht veröffentlicht werden.",
+  "evidence": "Die Beleglast tragen die selbst erstellten Kern-Artefakte (Schulungskonzept, drei Ausbildungsmodule, Prozess- und Verrechnungsanleitungen, 15+ Schritt-für-Schritt-Dokumentationen, 50+ ERP-Screenshots und Prozessgrafiken) sowie die dokumentierte produktive Einführung, die gemessene Wirkung und die Schulungsevaluation. Öffentlich sichtbar sind die Artefaktbeschreibungen; die Originaldokumente werden aus NDA-Gründen nur auf Anfrage geteilt. Drei freigegebene Primärbelege liegen dafür bereit: das Schulungskonzept und die Verrechnungsanleitungen für Rechnungsstellung und Gutschriften. Die weiteren Unterlagen existieren und sind in den Facts & Figures gezählt, unterliegen aber der Vertraulichkeitsvereinbarung.",
 
   "related": ["prometheus", "hephaistos"]
 }

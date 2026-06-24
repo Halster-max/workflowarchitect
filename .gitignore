@@ -4,10 +4,23 @@
 # Local prompt / scratch notes — not part of the portfolio
 /Prompt.txt
 
-# Standalone documentation packages — kept local-only (the website reads projects/, not this).
+# Raw source / working folders — kept local-only (the website reads projects/, mandates/,
+# labs/, NOT these). They hold original documents and must never enter the public repo.
 # Leading slash anchors to the ROOT folder so it never matches projects/artifacts/<slug>/.
 /hermes/
 /prometheus/
+/AEGIS-SYSTEM/
+/Athena/
+/Atlas/
+/Hephaistos/
+/Themis/
+
+# Original documents are shared only on request — never in the public repository.
+# Hard rule for the whole portfolio: no PDF is ever tracked.
+*.pdf
+
+# Internal artifact upload notes — kept local-only.
+/projects/artifacts/athena/README.md
 
 # OS / editor noise
 Thumbs.db

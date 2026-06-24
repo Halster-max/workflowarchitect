@@ -71,7 +71,8 @@
     {
       "type": "pdf",
       "title": "Beispiel-Dokument",
-      "pending": true
+      "caption": "Beschreibung des Dokuments. Original auf Anfrage, nicht im Repo.",
+      "onRequest": true
     }
   ],
 

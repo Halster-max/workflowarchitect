@@ -192,8 +192,7 @@
       "type": "pdf",
       "title": "Tätigkeitsbestätigung",
       "caption": "Bestätigung der Mandatstätigkeit als Leiter Zentrale Dienste (CIO) durch den Auftraggeber.",
-      "src": "mandates/artifacts/atlas/beevisio-taetigkeitsbestaetigung.pdf",
-      "pending": false
+      "onRequest": true
     },
     { "type": "document", "title": "Stellenbeschreibung", "caption": "Rollen- und Aufgabenbeschreibung des Mandats.", "pending": true },
     { "type": "diagram", "title": "ERP-Systemlandschaft", "caption": "Integrierte Systemlandschaft (Dolibarr, CRM, Bexio, Google Workspace, WordPress).", "pending": true },

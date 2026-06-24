@@ -97,8 +97,7 @@
       "type": "pdf",
       "title": "Workshop-Dokumentation (23 Seiten)",
       "caption": "Vollständige Primärdokumentation: Management Summary, Ausgangslage & Problemstellung, Zielsystem & Zielgruppen, modularer Konzeptaufbau, Rollenmatrix, Durchführungs- und Beteiligungsanalyse, anonyme Evaluationsumfrage (6 Skalen + Freitext), Erfüllungsgrad der Zielsetzungen, mittel-/langfristiges Wirkungsindikatoren-Modell, Replikations-/Rollout-Konzept und Empfehlungen an die Geschäftsleitung.",
-      "src": "projects/artifacts/prometheus/workshop-dokumentation.pdf",
-      "pending": false
+      "onRequest": true
     },
     {
       "type": "image",

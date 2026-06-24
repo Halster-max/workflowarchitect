@@ -70,6 +70,6 @@
   "relatedProjects": [],
 
   "artifacts": [
-    { "type": "pdf", "title": "", "caption": "", "src": "", "pending": true }
+    { "type": "pdf", "title": "", "caption": "", "onRequest": true }
   ]
 }

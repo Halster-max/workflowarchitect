@@ -144,8 +144,9 @@ Leere Phasen werden ausgeblendet.
 | `type` | Einer von: `image`, `screenshot`, `diagram`, `bpmn`, `dashboard`, `orgchart`, `presentation`, `pdf`, `document`, `checklist`, `sop`, `workshop`. Bestimmt Icon und Darstellung. |
 | `title` | Anzeigename des Artefakts. |
 | `caption` | Optionale Bildunterschrift. |
-| `src` | Pfad zur Datei (relativ zur Website-Wurzel). Bildtypen werden eingebettet, Dokumenttypen als Öffnen-Kachel verlinkt. |
-| `pending` | `true` = angekündigt, aber noch nicht hochgeladen → „In Vorbereitung"-Kachel statt totem Link. |
+| `src` | Pfad zu einer **öffentlich unbedenklichen** Datei (relativ zur Website-Wurzel). Nur für sichere Assets wie eigene Screenshots/Diagramme — Bildtypen werden eingebettet. **Keine vertraulichen Dokumente, keine PDFs** (`*.pdf` ist repo-weit git-ignoriert). |
+| `onRequest` | `true` = Beschreibung öffentlich, Originaldokument **nur auf Anfrage** → „Auf Anfrage"-Kachel („Originaldokument auf Anfrage erhältlich."). Standard für Dokumente; kein `src`, kein Dateipfad im Repo. |
+| `pending` | `true` = angekündigt, aber noch nicht fertig → „In Vorbereitung"-Kachel statt totem Link. |
 
 **Darstellung nach Typ:**
 - `image`, `screenshot`, `diagram`, `bpmn`, `dashboard`, `orgchart` → als **Bild** eingebettet (wenn `src` gesetzt).
