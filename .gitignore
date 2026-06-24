@@ -22,6 +22,9 @@
 # Internal artifact upload notes — kept local-only.
 /projects/artifacts/athena/README.md
 
+# Root README — kept local-only, never tracked or published.
+/README.md
+
 # OS / editor noise
 Thumbs.db
 .DS_Store
