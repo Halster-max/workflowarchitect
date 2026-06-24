@@ -74,7 +74,7 @@
       "inputs": ["Analyseergebnisse & Zielsystem", "Interne Fachpersonen (Rollenmatrix)", "Reale Übungsumgebung, Fahrzeuge, PSA, Verkehrsmaterial"],
       "outputs": ["Durchgeführter Pilotworkshop (1 Tag)", "Fixierte Standards (Signalisation, PSA, Projektbenennung, Codierung)", "Geschulte Mitarbeitende", "Simuliertes Unfallszenario als Wirkungsverstärker"],
       "artifacts": ["Workshop-Konzept & Modulbeschreibungen", "Foliensätze", "Fotodokumentation der Durchführung"],
-      "evidence": "Dokumentiert in Kap. 4–5 (Konzept, Tagesstruktur 07:30–16:30, Durchführungsanalyse) inkl. Fotodokumentation; Bildrechte werden noch eingeholt."
+      "evidence": "Dokumentiert in Kap. 4–5 (Konzept, Tagesstruktur 07:30–16:30, Durchführungsanalyse) inkl. Fotodokumentation; Originalaufnahmen auf Anfrage unter Wahrung der Persönlichkeitsrechte der Mitarbeitenden."
     },
     "digitalization": {
       "summary": "Standardisierung der Daten- und Ablagestruktur über Nextcloud; Konzept für ein digitales Schulungshandbuch / E-Learning-Vorbereitungsmodul als optionale Investition.",
@@ -102,20 +102,20 @@
     {
       "type": "image",
       "title": "Fotodokumentation der Durchführung",
-      "caption": "Feldaufnahmen aus dem Pilotworkshop (Theorieteil, korrekte Verkehrssignalisation, Kontrollgang, Instruktion nach Unfallszenario). In der Dokumentation enthalten; separate Freigabe steht aus, da die Bildrechte der Mitarbeitenden noch eingeholt werden.",
-      "pending": true
+      "caption": "Feldaufnahmen aus dem Pilotworkshop (Theorieteil, korrekte Verkehrssignalisation, Kontrollgang, Instruktion nach Unfallszenario). In der Dokumentation enthalten; Originalaufnahmen auf Anfrage erhältlich, unter Wahrung der Persönlichkeitsrechte der Mitarbeitenden.",
+      "onRequest": true
     },
     {
       "type": "presentation",
       "title": "Foliensätze (Schulungsunterlagen)",
-      "caption": "Im Anhang (Kap. 9.1) referenzierte Foliensätze der vier Module, als eigenständiges Artefakt noch nicht separat hochgeladen.",
-      "pending": true
+      "caption": "Im Anhang (Kap. 9.1) referenzierte Foliensätze der vier Module; als eigenständiges Artefakt auf Anfrage erhältlich.",
+      "onRequest": true
     },
     {
       "type": "document",
       "title": "Skillpaper & Bildungsnachweis (Kompetenzmodell)",
-      "caption": "Instrument zur Standortbestimmung und Nachvollziehbarkeit von Lernfortschritten als Schnittstelle zur Personalentwicklung. In Konzeption, Umsetzung erfolgt schrittweise nach dem Workshop.",
-      "pending": true
+      "caption": "Instrument zur Standortbestimmung und Nachvollziehbarkeit von Lernfortschritten als Schnittstelle zur Personalentwicklung. Als Konzept dokumentiert und auf Anfrage erhältlich; Ausrollung erfolgt schrittweise nach dem Workshop.",
+      "onRequest": true
     }
   ],
 

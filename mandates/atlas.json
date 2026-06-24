@@ -183,7 +183,7 @@
 
   "closing": "Trotz erfolgreichem Aufbau zentraler Geschäfts- und Managementstrukturen konnte das Unternehmen seine wirtschaftlichen Herausforderungen nicht nachhaltig lösen. Die entwickelte Architektur bildete die Grundlage für einen deutlich professionelleren und skalierbareren Betrieb, konnte jedoch die übergeordneten finanziellen Rahmenbedingungen des Unternehmens nicht kompensieren. Das Mandat gilt deshalb als erfolgreiche Transformation auf System- und Prozessebene, unabhängig vom späteren Unternehmensverlauf.",
 
-  "evidence": "Belegt durch Tätigkeitsbestätigung und Stellenbeschreibung des Auftraggebers; weitere Artefakte (Systemlandschaft, Prozess- und Organisationsdokumentation) werden anonymisiert nachgereicht.",
+  "evidence": "Belegt durch Tätigkeitsbestätigung und Stellenbeschreibung des Auftraggebers; weitere Artefakte (Systemlandschaft, Prozess- und Organisationsdokumentation) liegen vor und sind anonymisiert auf Anfrage erhältlich.",
 
   "relatedProjects": ["hephaistos", "athena"],
 
@@ -194,13 +194,13 @@
       "caption": "Bestätigung der Mandatstätigkeit als Leiter Zentrale Dienste (CIO) durch den Auftraggeber.",
       "onRequest": true
     },
-    { "type": "document", "title": "Stellenbeschreibung", "caption": "Rollen- und Aufgabenbeschreibung des Mandats.", "pending": true },
-    { "type": "diagram", "title": "ERP-Systemlandschaft", "caption": "Integrierte Systemlandschaft (Dolibarr, CRM, Bexio, Google Workspace, WordPress).", "pending": true },
-    { "type": "screenshot", "title": "CRM-System", "caption": "Custom CRM mit Sales Pipeline und Lead Management.", "pending": true },
-    { "type": "diagram", "title": "API-Integrationen", "caption": "Integrations- und Automatisierungs-Layer.", "pending": true },
-    { "type": "document", "title": "Marketingprozesse", "pending": true },
-    { "type": "document", "title": "Vertriebsprozesse", "pending": true },
-    { "type": "presentation", "title": "Schulungsunterlagen", "pending": true },
-    { "type": "orgchart", "title": "Organisationsstruktur", "caption": "Hub-Manager-Struktur und Rollenmodell.", "pending": true }
+    { "type": "document", "title": "Stellenbeschreibung", "caption": "Rollen- und Aufgabenbeschreibung des Mandats.", "onRequest": true },
+    { "type": "diagram", "title": "ERP-Systemlandschaft", "caption": "Integrierte Systemlandschaft (Dolibarr, CRM, Bexio, Google Workspace, WordPress).", "onRequest": true },
+    { "type": "screenshot", "title": "CRM-System", "caption": "Custom CRM mit Sales Pipeline und Lead Management.", "onRequest": true },
+    { "type": "diagram", "title": "API-Integrationen", "caption": "Integrations- und Automatisierungs-Layer.", "onRequest": true },
+    { "type": "document", "title": "Marketingprozesse", "onRequest": true },
+    { "type": "document", "title": "Vertriebsprozesse", "onRequest": true },
+    { "type": "presentation", "title": "Schulungsunterlagen", "onRequest": true },
+    { "type": "orgchart", "title": "Organisationsstruktur", "caption": "Hub-Manager-Struktur und Rollenmodell.", "onRequest": true }
   ]
 }

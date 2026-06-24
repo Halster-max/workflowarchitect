@@ -74,7 +74,7 @@
       "inputs": ["Analyseergebnisse", "Motivations- und Engagementmodell"],
       "outputs": ["Neuer Verbesserungsprozess", "Management-Freigabe", "Feedback-Kultur"],
       "artifacts": ["Verbesserungsprozess (Prozessdiagramm)", "Management-Präsentation"],
-      "evidence": "Prozessdiagramm liegt als Originaldokument vor (auf Anfrage erhältlich); Management-Präsentation im Steckbrief genannt, in Vorbereitung."
+      "evidence": "Prozessdiagramm liegt als Originaldokument vor (auf Anfrage erhältlich); Management-Präsentation im Steckbrief genannt und ebenfalls auf Anfrage erhältlich."
     },
     "digitalization": {
       "summary": "Kein Schwerpunkt: Digitalisierung war laut Steckbrief nicht Projektziel.",
@@ -115,7 +115,7 @@
       "type": "presentation",
       "title": "Management-Präsentation (Geschäftsleitung)",
       "caption": "Präsentation der Lösung zur Abstimmung und Freigabe durch die Geschäftsleitung.",
-      "pending": true
+      "onRequest": true
     }
   ],
 
@@ -137,7 +137,7 @@
     "Rückblickend: frühere Einbindung aller Stakeholder und eine systematische Vorher-Nachher-Messung über Kennzahlen."
   ],
 
-  "evidence": "Drei selbst erstellte Kern-Artefakte (Verbesserungsprozess, Motivations- und Engagementmodell) liegen als Originaldokument vor (auf Anfrage erhältlich) und tragen die analytische und prozessuale Beleglast. Die Management-Präsentation ist genannt, aber in Vorbereitung. Strukturelle Ergebnisse wie das 24/7-Modell und die volle Dienstabdeckung sind institutionell sichtbar; die Bindungs- und Zufriedenheitswirkung ist konsistent berichtet, aber nicht quantitativ gemessen. Nächster Dokumentationsschritt: die Kennzahlen (ungedeckte Dienste, Anstellungsdauer und Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen.",
+  "evidence": "Drei selbst erstellte Kern-Artefakte (Verbesserungsprozess, Motivations- und Engagementmodell) liegen als Originaldokument vor (auf Anfrage erhältlich) und tragen die analytische und prozessuale Beleglast. Die Management-Präsentation ist genannt und auf Anfrage erhältlich. Strukturelle Ergebnisse wie das 24/7-Modell und die volle Dienstabdeckung sind institutionell sichtbar; die Bindungs- und Zufriedenheitswirkung ist konsistent berichtet, aber nicht quantitativ gemessen. Nächster Dokumentationsschritt: die Kennzahlen (ungedeckte Dienste, Anstellungsdauer und Fluktuation, Zufriedenheit, Schulungsaufwand) nacherheben und die Management-Präsentation ergänzen.",
 
   "related": ["prometheus", "themis"]
 }

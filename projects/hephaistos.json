@@ -109,7 +109,7 @@
       "type": "document",
       "title": "Arbeitsanweisungen & Prozessdokumentation",
       "caption": "Begleitende Arbeitsanweisungen und Prozessdokumentationen zu den standardisierten Abläufen (im Steckbrief benannt).",
-      "pending": true
+      "onRequest": true
     }
   ],
 
