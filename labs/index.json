@@ -1,0 +1,6 @@
+{
+  "_comment": "LABS REGISTRY — the single list the website reads to discover labs. A lab is a self-initiated R&D / architecture initiative (not a client project, not a commercial product). To add a lab: create labs/<slug>.json and add its slug to the array below. Order here = order in the Labs section. The project library (projects/index.json) and mandate library (mandates/index.json) are separate and untouched.",
+  "order": [
+    "aegis"
+  ]
+}

@@ -917,6 +917,28 @@ h1, h2, h3, h4 { line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; }
 .sys-col { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem 1.1rem; }
 .sys-col__l { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
 
+/* ---------------------------------------------------------------------------
+   LABS tier — third content type (additive; reuses .case/.stat/.pdash/.mat/
+   .tphase/.sys-col/.ws__state from the project & mandate tiers)
+---------------------------------------------------------------------------- */
+.lab-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 34%, transparent); padding: 0.28rem 0.7rem; border-radius: 999px; }
+.case--lab { border-left: 3px solid var(--accent-2); }
+.case--lab .case__title { font-size: 1.35rem; }
+.mat--lab { margin-top: 1.5rem; }
+
+/* Definition list (research areas, architecture layers) */
+.def-list { display: grid; gap: 0.7rem; margin-top: 0.4rem; }
+.def { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem 1.1rem; }
+.def__t { display: block; font-weight: 700; color: var(--text); font-size: 0.98rem; }
+.def__d { display: block; margin-top: 0.3rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+/* Capability grid */
+.cap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.8rem; margin-top: 0.4rem; }
+.cap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem 1.1rem; }
+.cap__head { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-bottom: 0.4rem; }
+.cap__name { font-weight: 700; font-size: 0.95rem; }
+.cap__desc { color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; }
+
 @media (max-width: 480px) {
   .ws__bar { flex-wrap: wrap; gap: 0.6rem; }
   .ws__name { flex-basis: 100%; order: 3; }

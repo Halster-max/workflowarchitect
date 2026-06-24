@@ -42,6 +42,7 @@
 
       <ul class="nav__menu" id="navMenu">
         <li hidden><a href="#mandates" data-nav data-navkey="mandate">Mandate</a></li>
+        <li hidden><a href="#labs" data-nav data-navkey="lab">Labs</a></li>
         <li><a href="#dashboard" data-nav>Dashboard</a></li>
         <li><a href="#work" data-nav>Projekte</a></li>
         <li><a href="#figures" data-nav>Facts &amp; Figures</a></li>
@@ -141,6 +142,35 @@
 
         <div class="cases reveal" id="mandateGrid">
           <!-- mandate cards injected by projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         1c) LABS — third content type: self-initiated R&D / architecture
+              initiatives (not client projects, not commercial products).
+              Cards + aggregate computed from the lab library by projects.js.
+              Hidden if no labs exist.
+    ===================================================================== -->
+    <section class="section" id="labs" hidden>
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Labs</span>
+          <h2 class="section__title">Architektur- &amp; Engineering-Initiativen</h2>
+          <p class="section__intro">
+            Eigeninitiierte Forschungs- und Entwicklungsarbeit — keine Kundenprojekte, keine
+            kommerziellen Produkte. Labs erkunden Systeme, Architekturen und Datenmodelle in der
+            Tiefe. Jedes Lab öffnet ein vollständiges Dossier mit eigenem Engineering-Dashboard,
+            Tech-Stack, Experimenten und Reife-Bewertung.
+          </p>
+        </header>
+
+        <div class="stats reveal" id="labAggregate" aria-live="polite">
+          <!-- aggregate lab widgets injected by projects.js -->
+        </div>
+
+        <div class="cases reveal" id="labGrid">
+          <!-- lab cards injected by projects.js -->
         </div>
       </div>
     </section>

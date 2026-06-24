@@ -156,6 +156,10 @@
   let MANDATES = [];
   const BY_MANDATE = new Map();
 
+  /* ---- Lab state (third tier — never mixed into PROJECTS or MANDATES) ----- */
+  let LABS = [];
+  const BY_LAB = new Map();
+
   const grid = $("#caseGrid");
   const homeView = $("#homeView");
   const projectView = $("#projectView");
@@ -1118,7 +1122,391 @@
   }
 
   /* ==========================================================================
+     ████  LABS — third content type: self-initiated R&D / architecture
+           initiatives (not client projects, not commercial products). Own
+           registry, array and route (#/lab/<slug>). Mirrors the mandate tier,
+           reuses every helper above; projects and mandates stay untouched.
+           Degrades silently if labs/index.json is absent.
+  ========================================================================== */
+
+  /* ---- Lab status: reuse project status, relabel for the lab tier --------- */
+  const LAB_STATUS_LABEL = {
+    real: "Lauffähig", anonymized: "Anonymisiert",
+    concept: "Forschung", "in-progress": "Aktive Entwicklung",
+  };
+  const lStatusOf = (l) => {
+    const base = statusOf(l);
+    return { ...base, label: LAB_STATUS_LABEL[l.status] || base.label };
+  };
+
+  /* ---- Lab maturity dimensions (engineering-oriented, own key set) -------- */
+  const LAB_MATURITY_DIMS = [
+    ["architecture",  "Architektur"],
+    ["dataModel",     "Datenmodell"],
+    ["integration",   "Integration"],
+    ["automation",    "Automatisierung"],
+    ["documentation", "Dokumentation"],
+    ["quality",       "Qualität"],
+  ];
+  const hasLabMaturity = (l) =>
+    !!l.maturity && LAB_MATURITY_DIMS.some(([k]) => l.maturity[k] && (l.maturity[k].current > 0 || l.maturity[k].target > 0));
+  function labMaturityAvg(l) {
+    if (!hasLabMaturity(l)) return null;
+    const curs = LAB_MATURITY_DIMS.map(([k]) => l.maturity[k] && l.maturity[k].current).filter((v) => typeof v === "number");
+    return curs.length ? avg(curs) : null;
+  }
+
+  /* ---- Aggregate lab-portfolio widgets (computed over LABS) --------------- */
+  const sumLMet = (ls, key) => ls.reduce((n, l) => n + (l.metrics && typeof l.metrics[key] === "number" ? l.metrics[key] : 0), 0);
+  const LAB_AGG = [
+    { icon: "chip",    label: "Labs dokumentiert", compute: (ls) => ls.length },
+    { icon: "layers",  label: "Business-Domänen",  compute: (ls) => sumLMet(ls, "businessDomains") },
+    { icon: "folder",  label: "Module",            compute: (ls) => sumLMet(ls, "modules") },
+    { icon: "diagram", label: "Datenmodelle",      compute: (ls) => sumLMet(ls, "dataModels") },
+    { icon: "steps",   label: "Lines of Code",     compute: (ls) => sumLMet(ls, "linesOfCode") },
+    { icon: "globe",   label: "Integrationen",     compute: (ls) => sumLMet(ls, "integrations") },
+  ];
+
+  const roadmapDone = (l) => (l.roadmap || []).filter((r) => r.state === "completed").length;
+
+  /* ==========================================================================
+     LOAD — labs registry → all lab files (guarded: missing = no-op)
+  ========================================================================== */
+  async function loadLabs() {
+    try {
+      const idx = await fetch("labs/index.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null));
+      if (!idx) return;
+      const order = Array.isArray(idx.order) ? idx.order : [];
+      const loaded = await Promise.all(
+        order.map((slug) =>
+          fetch(`labs/${slug}.json`, { cache: "no-cache" })
+            .then((r) => (r.ok ? r.json() : null))
+            .catch(() => null)
+        )
+      );
+      LABS = loaded.filter(Boolean);
+      BY_LAB.clear();
+      LABS.forEach((l) => BY_LAB.set(l.slug, l));
+    } catch (e) {
+      /* No lab registry yet → lab surfaces simply don't render. */
+    }
+  }
+
+  /* ==========================================================================
+     HOME — Labs section: aggregate stat row + lab card grid
+  ========================================================================== */
+  function renderLabsSection() {
+    const sec = $("#labs");
+    const navItem = document.querySelector('[data-navkey="lab"]');
+    if (!sec) return;
+    if (!LABS.length) {
+      sec.hidden = true;
+      if (navItem && navItem.parentElement) navItem.parentElement.hidden = true;
+      return;
+    }
+    sec.hidden = false;
+    if (navItem && navItem.parentElement) navItem.parentElement.hidden = false;
+
+    const agg = $("#labAggregate");
+    if (agg) {
+      agg.innerHTML = LAB_AGG
+        .map((w) => ({ w, value: w.compute(LABS) }))
+        .filter((x) => x.value > 0)
+        .map(({ w, value }) => `
+          <article class="stat">
+            <span class="stat__icon">${svg(w.icon)}</span>
+            <span class="stat__value" data-count="${value}">${num(value)}</span>
+            <span class="stat__label">${esc(w.label)}</span>
+          </article>`).join("");
+      countUp($$(".stat__value", agg));
+    }
+
+    const host = $("#labGrid");
+    if (host) host.innerHTML = LABS.map((l, i) => renderLabCard(l, i)).join("");
+  }
+
+  function renderLabCard(l, i) {
+    const s = lStatusOf(l);
+    const rm = l.roadmap || [];
+    const done = roadmapDone(l);
+    const pct = rm.length ? Math.round((done / rm.length) * 100) : 0;
+    const met = l.metrics || {};
+    return `
+      <a class="case case--lab" href="#/lab/${esc(l.slug)}" data-status="${s.filter}" aria-label="${esc(l.name)} – Lab öffnen">
+        <div class="case__top">
+          <span class="case__status ${s.cls}">${esc(s.label)}</span>
+          <span class="case__index">${String(i + 1).padStart(2, "0")}</span>
+        </div>
+        <span class="case__domain">${esc(l.category || "Lab")}</span>
+        <h3 class="case__title">${esc(l.name)}</h3>
+        ${has(l.meta && l.meta.subtitle) ? `<p class="case__sub">${esc(l.meta.subtitle)}</p>` : ""}
+        <p class="case__summary">${esc(l.summary || "")}</p>
+        ${rm.length ? `
+          <div class="case__doc">
+            <div class="case__doc-head"><span>Roadmap</span><span>${done}/${rm.length}</span></div>
+            ${bar(pct)}
+          </div>` : ""}
+        <div class="case__foot">
+          ${met.businessDomains ? `<span class="case__foot-item">${svg("layers")}${num(met.businessDomains)} Domänen</span>` : ""}
+          ${met.modules ? `<span class="case__foot-item">${svg("folder")}${num(met.modules)} Module</span>` : ""}
+        </div>
+        <span class="case__open">Lab öffnen</span>
+      </a>`;
+  }
+
+  /* ==========================================================================
+     LAB DASHBOARD (dossier header) — every metric from data or derived
+  ========================================================================== */
+  function renderLabDashboard(l) {
+    const m = l.metrics || {};
+    const cards = [];
+    const push = (icon, label, value) => { if (typeof value === "number" && value > 0) cards.push({ icon, label, value: num(value) }); };
+    push("layers",  "Business-Domänen",      m.businessDomains);
+    push("folder",  "Backend-Module",        m.modules);
+    push("steps",   "Sub-Features",          m.subFeatures);
+    push("chip",    "REST-Ressourcen",       m.restAreas);
+    push("diagram", "Datenbank-Tabellen",    m.dataModels);
+    push("gauge",   "DB-Migrationen",        m.migrations);
+    push("globe",   "Externe Integrationen", m.integrations);
+    push("file",    "Quellcode-Dateien",     m.sourceFiles);
+    push("chart",   "Lines of Code",         m.linesOfCode);
+    push("layers",  "Shared Libraries",      m.sharedPackages);
+    push("sop",     "Engineering-Dokumente", m.documents);
+    if (typeof m.complexity === "number" && m.complexity > 0) cards.push({ icon: "gauge", label: "Komplexität", value: `${m.complexity} / 5` });
+    const mat = labMaturityAvg(l);
+    if (mat != null) cards.push({ icon: "building", label: "Reife (Ø)", value: `${mat.toFixed(1)} / 5` });
+    const ev = evidenceCompleteness({ artifacts: l.artifacts });
+    if (ev.total) cards.push({ icon: "check", label: "Evidenz", value: `${ev.pct} %` });
+    if (!cards.length) return "";
+    return `<div class="stats">${cards.map((c) => `
+      <article class="stat">
+        <span class="stat__icon">${svg(c.icon)}</span>
+        <span class="stat__value">${esc(String(c.value))}</span>
+        <span class="stat__label">${esc(c.label)}</span>
+      </article>`).join("")}</div>`;
+  }
+
+  function renderLabOverview(l) {
+    const meta = l.meta || {};
+    const s = lStatusOf(l);
+    const text = (lab, v) => has(v) ? `<div class="pdash__cell"><span class="pdash__k">${esc(lab)}</span><span class="pdash__v">${esc(v)}</span></div>` : "";
+    const cells = [
+      text("Initiative", meta.initiative),
+      text("Rolle", meta.role),
+      text("Zeitraum", meta.period),
+      text("Entwicklungsstatus", meta.developmentStatus),
+      text("Plattform", meta.platform),
+      text("Lizenzierung", meta.license),
+      `<div class="pdash__cell"><span class="pdash__k">Status</span><span class="pdash__v"><span class="case__status ${s.cls}">${esc(s.label)}</span></span></div>`,
+    ].filter(Boolean).join("");
+    return `<div class="pdash">${cells}</div>`;
+  }
+
+  /* ==========================================================================
+     LAB DETAIL — section builders (each omitted when empty)
+  ========================================================================== */
+  function renderResearchAreas(l) {
+    const ra = l.researchAreas || [];
+    if (!ra.length) return "";
+    if (typeof ra[0] === "string") return `<div class="cm-list">${chips(ra)}</div>`;
+    return `<div class="def-list">${ra.map((r) => `
+      <div class="def"><span class="def__t">${esc(r.name || "")}</span>${has(r.description) ? `<span class="def__d">${esc(r.description)}</span>` : ""}</div>`).join("")}</div>`;
+  }
+
+  function renderArchitecture(l) {
+    const a = l.architecture || {};
+    const layers = (a.layers || []).filter((x) => has(x.name));
+    return [
+      has(a.summary) ? `<p>${esc(a.summary)}</p>` : "",
+      has(a.principles) ? `<div class="tphase__sub"><span class="tphase__sub-l">Prinzipien</span><div class="cm-list">${chips(a.principles)}</div></div>` : "",
+      layers.length ? `<div class="def-list">${layers.map((x) => `
+        <div class="def"><span class="def__t">${esc(x.name)}</span>${has(x.description) ? `<span class="def__d">${esc(x.description)}</span>` : ""}</div>`).join("")}</div>` : "",
+    ].join("");
+  }
+
+  function renderStack(l) {
+    const st = l.stack || {};
+    const groups = [
+      ["Sprachen", st.languages],
+      ["Frameworks", st.frameworks],
+      ["Daten & State", st.data],
+      ["Infrastruktur", st.infrastructure],
+      ["Tooling", st.tools],
+    ];
+    const cols = groups.filter(([, arr]) => has(arr))
+      .map(([label, arr]) => `<div class="sys-col"><span class="sys-col__l">${esc(label)}</span><div class="cm-list">${chips(arr)}</div></div>`).join("");
+    return cols ? `<div class="sys-land">${cols}</div>` : "";
+  }
+
+  function renderCapabilities(l) {
+    const cap = l.capabilities || [];
+    if (!cap.length) return "";
+    if (typeof cap[0] === "string") return `<ul class="pv__bullets">${cap.map((c) => `<li>${esc(c)}</li>`).join("")}</ul>`;
+    return `<div class="cap-grid">${cap.map((c) => {
+      const stl = WS_STATE_LABEL[c.state];
+      return `<div class="cap">
+        <div class="cap__head">
+          <span class="cap__name">${esc(c.name || "")}</span>
+          ${stl ? `<span class="ws__state ws__state--${esc(c.state)}">${esc(stl)}</span>` : ""}
+        </div>
+        ${has(c.description) ? `<p class="cap__desc">${esc(c.description)}</p>` : ""}
+      </div>`;
+    }).join("")}</div>`;
+  }
+
+  function renderExperiments(l) {
+    const ex = l.experiments || [];
+    if (!ex.length) return "";
+    return `<ol class="tchain">${ex.map((e, i) => {
+      const stl = WS_STATE_LABEL[e.state] || "";
+      return `<li class="tphase">
+        <span class="tphase__step">${String(i + 1).padStart(2, "0")}</span>
+        <div class="tphase__body">
+          <h5 class="tphase__title">${esc(e.title || "")}${stl ? ` <span class="ws__state ws__state--${esc(e.state)}">${esc(stl)}</span>` : ""}</h5>
+          ${has(e.hypothesis) ? `<div class="tphase__sub"><span class="tphase__sub-l">Hypothese</span><p class="tphase__sum">${esc(e.hypothesis)}</p></div>` : ""}
+          ${has(e.result) ? `<div class="tphase__sub"><span class="tphase__sub-l">Ergebnis</span><p class="tphase__sum">${esc(e.result)}</p></div>` : ""}
+          ${has(e.evidence) ? `<p class="tphase__ev"><span>Evidenz</span> ${esc(e.evidence)}</p>` : ""}
+        </div>
+      </li>`;
+    }).join("")}</ol>`;
+  }
+
+  function renderRoadmap(l) {
+    const rm = l.roadmap || [];
+    if (!rm.length) return "";
+    return `<ol class="tchain">${rm.map((r, i) => {
+      const stl = WS_STATE_LABEL[r.state] || "";
+      return `<li class="tphase">
+        <span class="tphase__step">${esc(r.phase || String(i + 1).padStart(2, "0"))}</span>
+        <div class="tphase__body">
+          <h5 class="tphase__title">${esc(r.title || "")}${stl ? ` <span class="ws__state ws__state--${esc(r.state)}">${esc(stl)}</span>` : ""}</h5>
+          ${has(r.items) ? `<div class="cm-list">${chips(r.items)}</div>` : ""}
+        </div>
+      </li>`;
+    }).join("")}</ol>`;
+  }
+
+  function renderLabMaturity(l) {
+    if (!hasLabMaturity(l)) return "";
+    const dims = LAB_MATURITY_DIMS.map(([key, label]) => ({
+      key, label,
+      current: (l.maturity[key] && l.maturity[key].current) || 0,
+      target: (l.maturity[key] && l.maturity[key].target) || 0,
+    }));
+    const bars = dims.map((d) => `
+      <div class="mat-row">
+        <div class="mat-row__head"><span class="mat-row__name">${esc(d.label)}</span><span class="mat-row__num">${d.current} <span>/ ${d.target}</span></span></div>
+        <span class="mat-bar"><span class="mat-bar__cur" style="width:${(d.current / 5) * 100}%"></span><span class="mat-bar__tar" style="left:${(d.target / 5) * 100}%"></span></span>
+      </div>`).join("");
+    return `<div class="mat mat--project mat--lab"><div class="mat-radar">${radarSVG(dims)}${radarLegend()}</div><div class="mat-bars">${bars}</div></div>`;
+  }
+
+  /* ---- Artifact group with a custom heading (screenshots / documents) ----- */
+  function renderArtifactGroup(title, list) {
+    if (!has(list)) return "";
+    const ev = evidenceCompleteness({ artifacts: list });
+    return `
+      <div class="cm-block">
+        <h4>${esc(title)}</h4>
+        <p class="art-grid__meta">${num(ev.uploaded)} von ${num(ev.total)} verfügbar${ev.uploaded < ev.total ? " · Rest in Vorbereitung" : ""}</p>
+        <div class="art-grid">${list.map(renderArtifact).join("")}</div>
+      </div>`;
+  }
+
+  /* ---- Related mandates (labs may reference the mandate tier) ------------- */
+  function renderRelatedMandates(slugs) {
+    const rel = (slugs || []).map((s) => BY_MANDATE.get(s)).filter(Boolean);
+    if (!rel.length) return "";
+    return `
+      <div class="cm-block">
+        <h4>Verwandte Mandate</h4>
+        <div class="pv__related">
+          ${rel.map((m) => {
+            const s = mStatusOf(m);
+            return `<a class="pv__rel" href="#/mandat/${esc(m.slug)}">
+              <span class="case__status ${s.cls}">${esc(s.label)}</span>
+              <span class="pv__rel-name">${esc(m.name)}</span>
+              <span class="pv__rel-arrow" aria-hidden="true">→</span>
+            </a>`;
+          }).join("")}
+        </div>
+      </div>`;
+  }
+
+  function renderLabDetail(l) {
+    const s = lStatusOf(l);
+    const secs = [];
+    const add = (id, label, html) => { if (has(html)) secs.push({ id, label, html, raw: false }); };
+    const addRaw = (id, label, html) => { if (has(html)) secs.push({ id, label, html, raw: true }); };
+
+    add("vision", "Vision", has(l.vision) ? `<p>${esc(l.vision)}</p>` : "");
+    add("zweck", "Zweck", has(l.purpose) ? `<p>${esc(l.purpose)}</p>` : "");
+    add("forschung", "Forschungsfelder", renderResearchAreas(l));
+    add("architektur", "Architektur", renderArchitecture(l));
+    add("stack", "Technologie-Stack", renderStack(l));
+    add("capabilities", "Capabilities", renderCapabilities(l));
+    add("experimente", "Experimente", renderExperiments(l));
+    addRaw("screenshots", "Screenshots", renderArtifactGroup("Screenshots", l.artifacts));
+    add("reife", "Architektur-Reife", renderLabMaturity(l));
+    add("lessons", "Lessons Learned", has(l.lessons) ? `<ul class="pv__bullets">${(l.lessons || []).map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "");
+    add("roadmap", "Roadmap", renderRoadmap(l));
+    addRaw("doku", "Dokumentation", renderArtifactGroup("Dokumentation", l.documentation));
+    addRaw("projekte", "Verwandte Projekte", renderRelated(l.relatedProjects));
+    addRaw("mandate", "Verwandte Mandate", renderRelatedMandates(l.relatedMandates));
+
+    const toc = secs.length
+      ? `<nav class="toc" aria-label="Lab-Inhalt">${secs.map((x) => `<button class="toc__link" type="button" data-target="l-${x.id}">${esc(x.label)}</button>`).join("")}</nav>`
+      : "";
+    const body = secs.map((x) => x.raw
+      ? `<div class="mblock" id="l-${x.id}">${x.html}</div>`
+      : `<section class="cm-block mblock" id="l-${x.id}"><h4>${esc(x.label)}</h4>${x.html}</section>`).join("");
+
+    projectView.innerHTML = `
+      <div class="container pv__inner pv__inner--mandate">
+        <a class="pv__back" href="#/">← Zurück zur Wissensbasis</a>
+
+        <header class="pv__head">
+          <div class="pv__badges">
+            <span class="lab-tag">Lab</span>
+            <span class="case__status ${s.cls}">${esc(s.label)}</span>
+            ${has(l.category) ? `<span class="pv__cat">${esc(l.category)}</span>` : ""}
+          </div>
+          <h1 class="pv__title">${esc(l.name)}</h1>
+          ${has(l.meta && l.meta.subtitle) ? `<p class="pv__subtitle">${esc(l.meta.subtitle)}</p>` : ""}
+          ${has(l.executiveSummary) ? `<p class="pv__summary">${esc(l.executiveSummary)}</p>`
+            : (has(l.summary) ? `<p class="pv__summary">${esc(l.summary)}</p>` : "")}
+          ${renderLabDashboard(l)}
+          ${renderLabOverview(l)}
+          ${has(l.meta && l.meta.tracked) ? `
+            <div class="pv__tracked">
+              <span class="cm-tracked-lab">Schwerpunkte:</span>
+              ${chips(l.meta.tracked)}
+            </div>` : ""}
+        </header>
+
+        <div class="pv__body pv__body--mandate">
+          ${toc}
+          ${body}
+        </div>
+      </div>`;
+  }
+
+  function showLab(slug) {
+    const l = BY_LAB.get(slug);
+    if (!l) { location.hash = "#/"; return; }
+    renderLabDetail(l);
+    if (homeView) homeView.hidden = true;
+    projectView.hidden = false;
+    document.title = `${l.name} — Lab — Dominic Haldi`;
+    window.scrollTo({ top: 0, behavior: "auto" });
+    wireToc();
+    const h = $(".pv__title", projectView);
+    if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
+  }
+
+  /* ==========================================================================
      ROUTER — #/ = home · #/projekt/<slug> = project · #/mandat/<slug> = mandate
+              · #/lab/<slug> = lab
   ========================================================================== */
   function showHome() {
     if (projectView) { projectView.hidden = true; projectView.innerHTML = ""; }
@@ -1153,6 +1541,8 @@
   }
 
   function route() {
+    const lm = location.hash.match(/^#\/lab\/(.+)$/);
+    if (lm) { showLab(decodeURIComponent(lm[1])); return; }
     const mm = location.hash.match(/^#\/mandat\/(.+)$/);
     if (mm) { showMandate(decodeURIComponent(mm[1])); return; }
     const m = location.hash.match(/^#\/projekt\/(.+)$/);
@@ -1187,8 +1577,10 @@
         renderGrid();
       })
       .then(() => loadMandates())
+      .then(() => { renderMandatesSection(); })
+      .then(() => loadLabs())
       .then(() => {
-        renderMandatesSection();
+        renderLabsSection();
         route();
       })
       .catch(fail);

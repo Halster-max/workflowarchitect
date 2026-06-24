@@ -1,0 +1,92 @@
+{
+  "slug": "mein-lab",
+  "name": "Titel der Initiative",
+  "type": "lab",
+  "status": "in-progress",
+  "category": "Architecture Lab · Enterprise Systems",
+  "summary": "Ein bis zwei Sätze für die Lab-Karte.",
+  "executiveSummary": "Optionaler längerer Aufmacher für den Dossier-Kopf.",
+
+  "meta": {
+    "subtitle": "Optionaler Untertitel",
+    "initiative": "Eigeninitiative · kein Kundenprojekt",
+    "role": "Deine Rolle",
+    "period": "Zeitraum oder Status-Hinweis",
+    "developmentStatus": "z. B. Forschung · Aktive Entwicklung · Lauffähig",
+    "platform": "z. B. Web · Desktop · API",
+    "license": "z. B. intern · nicht kommerziell",
+    "tracked": ["Schwerpunkt 1", "Schwerpunkt 2"]
+  },
+
+  "vision": "Langfristige Vision der Initiative.",
+  "purpose": "Zweck — warum diese Initiative existiert (Lernen, Forschung, Architektur).",
+
+  "researchAreas": [
+    { "name": "Forschungsfeld", "description": "Worum es in diesem Feld geht." }
+  ],
+
+  "architecture": {
+    "summary": "Architektur-Überblick in ein bis zwei Sätzen.",
+    "principles": ["Prinzip 1", "Prinzip 2"],
+    "layers": [
+      { "name": "Schicht / Paket", "description": "Verantwortung dieser Schicht." }
+    ]
+  },
+
+  "stack": {
+    "languages": [],
+    "frameworks": [],
+    "data": [],
+    "infrastructure": [],
+    "tools": []
+  },
+
+  "capabilities": [
+    { "name": "Fähigkeit", "state": "in-progress", "description": "Was sie leistet." }
+  ],
+
+  "experiments": [
+    { "title": "Experiment-Name", "hypothesis": "Annahme.", "state": "completed", "result": "Beobachtung.", "evidence": "Belegstand." }
+  ],
+
+  "metrics": {
+    "businessDomains": 0,
+    "modules": 0,
+    "subFeatures": 0,
+    "restAreas": 0,
+    "dataModels": 0,
+    "migrations": 0,
+    "integrations": 0,
+    "sourceFiles": 0,
+    "linesOfCode": 0,
+    "sharedPackages": 0,
+    "documents": 0,
+    "complexity": 0
+  },
+
+  "maturity": {
+    "architecture":  { "current": 0, "target": 0 },
+    "dataModel":     { "current": 0, "target": 0 },
+    "integration":   { "current": 0, "target": 0 },
+    "automation":    { "current": 0, "target": 0 },
+    "documentation": { "current": 0, "target": 0 },
+    "quality":       { "current": 0, "target": 0 }
+  },
+
+  "roadmap": [
+    { "phase": "Phase 1", "title": "Meilenstein", "state": "planned", "items": ["Vorhaben A", "Vorhaben B"] }
+  ],
+
+  "artifacts": [
+    { "type": "screenshot", "title": "Screenshot-Titel", "caption": "Optionale Bildunterschrift.", "src": "labs/artifacts/mein-lab/screenshot.jpg", "pending": false }
+  ],
+
+  "documentation": [
+    { "type": "pdf", "title": "Architektur-Dossier", "src": "labs/artifacts/mein-lab/dossier.pdf", "pending": true }
+  ],
+
+  "lessons": ["Erkenntnis 1", "Erkenntnis 2"],
+
+  "relatedProjects": ["slug-eines-projekts"],
+  "relatedMandates": ["slug-eines-mandats"]
+}

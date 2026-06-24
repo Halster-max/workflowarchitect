@@ -1,0 +1,137 @@
+{
+  "slug": "aegis",
+  "name": "AEGIS",
+  "type": "lab",
+  "status": "in-progress",
+  "category": "Architecture Lab · Enterprise Systems",
+  "summary": "Eine mandantenfähige Enterprise-Business-Plattform der Klasse HubSpot-trifft-SAP — CRM, ERP, DMS, HR, IT, Operations, Forecasting und ein No-Code-Process-Designer in einem System.",
+  "executiveSummary": "AEGIS ist eine einzige, mandantenfähige SaaS, die den gesamten Betrieb eines Unternehmens abbildet: Vertrieb (CRM), Finanzen & Logistik (ERP mit doppelter Buchhaltung), Dokumente (DMS), HR & Lohn, IT-Asset-Management, Fuhrpark & Immobilien, Marketing-Automation, Forecasting und einen visuellen No-Code-Process-Designer. Ausgeliefert als Web- und plattformübergreifende Desktop-App, mit einer vollständig dokumentierten REST-API darunter — gebaut für den Schweizer/DACH-Markt (Deutsch-first, MWST, CHF, Schweizer Kontenrahmen), aber auf Lokalisierung darüber hinaus ausgelegt.",
+
+  "meta": {
+    "subtitle": "Enterprise Business Platform — HubSpot trifft SAP",
+    "initiative": "Eigeninitiative · kein Kundenprojekt",
+    "role": "Architekt & Full-Stack-Entwickler",
+    "period": "laufende Initiative",
+    "developmentStatus": "Aktive Entwicklung",
+    "platform": "Web · Desktop (Electron) · REST-API",
+    "license": "intern · nicht kommerziell",
+    "tracked": ["ERP", "CRM", "DMS", "Workflow-Engine", "Enterprise-Datenmodell"]
+  },
+
+  "vision": "Eine einzige, mandantenfähige Plattform, die einen kompletten Mittelstandsbetrieb trägt — von der ersten Kundeninteraktion bis zur doppelten Buchhaltung — und dabei die Architekturtiefe kommerzieller ERP-Produkte erreicht statt der einer typischen Portfolio-CRUD-App. Zwölf Abteilungen teilen eine Datenbank, ein Login und ein Berechtigungssystem.",
+  "purpose": "AEGIS ist eine Eigeninitiative mit dem Ziel, zu lernen, zu forschen und Architektur zu entwickeln — nicht zu kommerzialisieren. Es ist der Ort, an dem Enterprise-Muster (Multi-Tenancy, hierarchisches RBAC, doppelte Buchhaltung, event-getriebene Workflows, unveränderliche Ledger) am realen Maßstab erprobt werden.",
+
+  "researchAreas": [
+    { "name": "ERP-Architektur", "description": "Doppelte Buchhaltung, Kontenrahmen, Kosten-/Profit-Center, Perioden-Lockdown, automatische Buchungen aus Rechnungen, Zahlungen, Lohn und Lagerbewegungen." },
+    { "name": "CRM-Architektur", "description": "Kontakte, Unternehmen und Deals mit visueller Pipeline, Lead-Scoring, dynamischer Segmentierung und Service-Desk mit SLA-Tracking." },
+    { "name": "DMS-Architektur", "description": "Versionierte Dateiablage, hierarchische Ordner und mehrstufige Freigabe-Workflows; andere Module verlinken statt zu duplizieren." },
+    { "name": "Workflow- & Prozess-Systeme", "description": "Visueller No-Code-Designer: Events → Bedingungen → Aktionen → Schleifen, der auf Ereignisse aus jedem Modul reagiert." },
+    { "name": "Business Intelligence & Forecasting", "description": "Umsatz-, Pipeline-, Cashflow- und Ressourcen-Forecasts mit Szenarioplanung und modulübergreifenden KPI-Dashboards." },
+    { "name": "Enterprise-Datenmodelle", "description": "103 Tabellen über 10+ Domänen: hierarchische Entitäten, tägliche FX-Raten, benutzerdefinierte Felder, unveränderliche Stock-/Journal-Ledger." },
+    { "name": "Governance & RBAC", "description": "Hierarchisches Berechtigungssystem (module.submodule.resource.action.scope) mit konfigurierbarem Warn-vs-Enforce-Modus und MFA-Policies." },
+    { "name": "Multi-Tenant-SaaS-Architektur", "description": "Jede Tabelle ist organisationsbezogen; Soft-Delete und Audit-Logging als durchgängige Querschnittsmuster." }
+  ],
+
+  "architecture": {
+    "summary": "Ein full-stack TypeScript-Monorepo (pnpm + Turborepo), in dem Web, API und Desktop dieselben Typen teilen — ein Modell einmal definiert, überall verwendet. Das eliminiert eine ganze Klasse von Frontend/Backend-Drift-Bugs.",
+    "principles": [
+      "End-to-end TypeScript (geteilte Typen)",
+      "Multi-Tenancy (jede Tabelle org-scoped)",
+      "Modulare Domänen-Architektur",
+      "Event-getriebene Prozesse",
+      "Soft-Delete & Audit überall",
+      "Permission-aware Rendering (UI respektiert RBAC)"
+    ],
+    "layers": [
+      { "name": "apps/web", "description": "Next.js 16 Web-App (App Router, React 19), Tailwind v4 über einem Radix-UI-Designsystem." },
+      { "name": "apps/api", "description": "NestJS 11 REST-API, 45 Feature-Module, Prisma 7 über PostgreSQL 16, Swagger/OpenAPI unter /api/docs." },
+      { "name": "apps/desktop", "description": "Electron 41 Shell (electron-vite + electron-builder) mit nativen Installern für Windows, macOS und Linux samt Auto-Update." },
+      { "name": "packages/", "description": "Fünf interne Pakete: geteilte Typen, UI-Kit, Utils, i18n und Config (~6k LOC)." },
+      { "name": "database/", "description": "Eine Prisma-Schema-Datei mit 103 Modellen und 18 versionierten Migrationen." },
+      { "name": "infrastructure/", "description": "Docker Compose (Postgres/Redis/MinIO) sowie Kubernetes- und Terraform-Baselines." }
+    ]
+  },
+
+  "stack": {
+    "languages": ["TypeScript"],
+    "frameworks": ["Next.js 16", "React 19", "NestJS 11", "Electron 41", "Tailwind CSS v4", "Radix UI"],
+    "data": ["PostgreSQL 16", "Prisma 7", "Neon", "TanStack Query", "Zustand", "Zod v4", "React Hook Form", "TanStack Table", "Recharts"],
+    "infrastructure": ["Docker", "Kubernetes", "Terraform", "GitHub Actions", "Redis", "MinIO"],
+    "tools": ["pnpm", "Turborepo", "electron-vite", "electron-builder", "Swagger / OpenAPI"]
+  },
+
+  "capabilities": [
+    { "name": "CRM — Vertrieb & Kundenmanagement", "state": "completed", "description": "Kontakte, Unternehmen, Deals mit Kanban-Pipeline, Lead-Scoring, dynamischer Segmentierung, Service-Desk mit SLA/NPS, Custom Fields und 360°-Kundenakte." },
+    { "name": "ERP — Operations & Finanzen", "state": "completed", "description": "Doppelte Buchhaltung, MWST-Reporting, Mehrwährung, Quote→Rechnung→Gutschrift→Zahlung, Procurement, Multi-Warehouse-Inventar, Produktion (BOM)." },
+    { "name": "DMS — Dokumentenmanagement", "state": "completed", "description": "Versionierung, hierarchische Ordner und mehrstufige Freigabe-Workflows." },
+    { "name": "HR — People & Payroll", "state": "completed", "description": "Stammdaten, Zeiterfassung, Batch-Lohnläufe mit Freigaben, Abwesenheiten und ein vollständiger Recruiting-/ATS-Funnel." },
+    { "name": "IT — Asset- & Access-Management", "state": "completed", "description": "Hardware-Inventar, Lizenz-Compliance, Systemkonten und eine visuelle RBAC-Matrix mit MFA und Security-Audit-Log." },
+    { "name": "Operations — Fuhrpark & Immobilien", "state": "completed", "description": "Fahrzeugflotte (Zuweisung, Wartung, Versicherung, MFK) und Immobilienverwaltung mit Mietverträgen." },
+    { "name": "Forecasting", "state": "in-progress", "description": "Umsatz-, Pipeline-, Cashflow-, Projekt- und Ressourcen-Forecasts mit optimistisch/realistisch/pessimistisch-Szenarien." },
+    { "name": "Analytics", "state": "in-progress", "description": "Modulübergreifende KPI-Dashboards." },
+    { "name": "Projects", "state": "completed", "description": "Budget vs. Ist, Task-Boards, verknüpfte Dokumente und Prozesse." },
+    { "name": "Cockpit", "state": "completed", "description": "Personalisierbares Drag-and-drop-Dashboard mit 15+ Widget-Typen und rollenbasierten Templates." },
+    { "name": "Process Designer", "state": "in-progress", "description": "Visueller No-Code-Workflow-Designer, der auf Events aus jedem Modul reagiert (\"Deal gewonnen → E-Mail → Task\")." },
+    { "name": "Settings", "state": "completed", "description": "Pro-Organisation zuschaltbare Module und Konfiguration über eine zentrale Module-Registry." }
+  ],
+
+  "experiments": [
+    { "title": "Doppelte Buchhaltung in Produktqualität", "hypothesis": "Eine Eigeninitiative kann echte GL-Buchhaltung mit Perioden-Lockdown statt einer simplen Rechnungsliste umsetzen.", "state": "completed", "result": "Kontenrahmen, Journal, Kosten-/Profit-Center und automatische Buchungen aus Rechnungen, Zahlungen, Lohn und Lagerbewegungen — mit Wechsel zwischen Offenposten- und doppelter Buchhaltung ohne Datenverlust.", "evidence": "Belegt durch die Finanz-Einstellungen (Screenshot) und 103 Datenmodelle inkl. unveränderlichem Journal-Ledger." },
+    { "title": "End-to-end Typsicherheit im Monorepo", "hypothesis": "Geteilte TypeScript-Typen über Web, API und Desktop eliminieren Frontend/Backend-Drift.", "state": "completed", "result": "Ein Modell einmal in Prisma/Shared-Packages definiert, überall verwendet — Drift-Bugs entfallen strukturell.", "evidence": "Belegt durch 947 TS-Dateien in einem pnpm/Turborepo mit fünf internen Shared-Packages." },
+    { "title": "Hierarchisches RBAC mit sicherem Rollout", "hypothesis": "Ein fünfstufiges Permission-Schema lässt sich produktiv einführen, ohne Nutzer auszusperren.", "state": "completed", "result": "module.submodule.resource.action.scope mit konfigurierbarem Warn-vs-Enforce-Modus und Permission-aware Rendering in der UI.", "evidence": "Belegt durch die Module-Registry (Screenshot) mit Permissions/Actions/Events je Modul." },
+    { "title": "Event-getriebener No-Code-Process-Designer", "hypothesis": "Geschäftsprozesse lassen sich visuell modellieren und an reale Modul-Events koppeln.", "state": "in-progress", "result": "Designer mit Start/Ende/Modul-Schritt/Entscheidung/Aufgabe; Demo-Prozesse wie \"Sales to Cash\" reagieren auf Events aus ERP, DMS und Analytics.", "evidence": "Belegt durch den Process Designer (Screenshot) mit Modul-Verknüpfung." }
+  ],
+
+  "metrics": {
+    "businessDomains": 12,
+    "modules": 45,
+    "subFeatures": 60,
+    "restAreas": 80,
+    "dataModels": 103,
+    "migrations": 18,
+    "integrations": 5,
+    "sourceFiles": 947,
+    "linesOfCode": 59000,
+    "sharedPackages": 5,
+    "documents": 13,
+    "complexity": 5
+  },
+
+  "maturity": {
+    "architecture":  { "current": 4, "target": 5 },
+    "dataModel":     { "current": 4, "target": 5 },
+    "integration":   { "current": 3, "target": 5 },
+    "automation":    { "current": 4, "target": 5 },
+    "documentation": { "current": 4, "target": 5 },
+    "quality":       { "current": 3, "target": 5 }
+  },
+
+  "roadmap": [
+    { "phase": "Phase 1", "title": "Fundament — Monorepo, Auth, Multi-Tenancy", "state": "completed", "items": ["TypeScript-Monorepo", "JWT + RBAC", "Audit-Logging", "Org-Scoping"] },
+    { "phase": "Phase 2", "title": "Kern-Module — CRM & ERP", "state": "completed", "items": ["CRM-Pipeline & Lead-Scoring", "Doppelte Buchhaltung", "Inventar & Procurement"] },
+    { "phase": "Phase 3", "title": "Betriebs-Module — DMS, HR, IT, Operations", "state": "completed", "items": ["DMS mit Freigaben", "Payroll & ATS", "Asset-Management", "Fuhrpark & Immobilien"] },
+    { "phase": "Phase 4", "title": "Intelligence-Layer — Forecasting, Analytics, Process Designer", "state": "in-progress", "items": ["Szenario-Forecasts", "KPI-Dashboards", "No-Code-Workflows"] },
+    { "phase": "Phase 5", "title": "Externe Integrationen produktiv", "state": "planned", "items": ["SAP", "Datev", "Abacus", "Stripe", "Shopify"] },
+    { "phase": "Phase 6", "title": "Lokalisierung über DACH hinaus", "state": "planned", "items": ["Weitere Steuerregime", "Zusätzliche Sprachen", "Länder-Kontenrahmen"] }
+  ],
+
+  "artifacts": [
+    { "type": "screenshot", "title": "Cockpit — personalisierbares Dashboard", "caption": "Drag-and-drop-Widgets, rollenbasierte Templates, modulübergreifende KPIs.", "src": "labs/artifacts/aegis/cockpit-dashboard.jpg", "pending": false },
+    { "type": "screenshot", "title": "Widget-Bibliothek des Cockpits", "caption": "15+ Widget-Typen; es erscheinen nur Widgets aus aktivierten Modulen.", "src": "labs/artifacts/aegis/cockpit-widgets.jpg", "pending": false },
+    { "type": "screenshot", "title": "CRM — Kontakte", "caption": "Enterprise-CRM mit Lifecycle, Lead-Status, Custom Fields sowie Import/Export.", "src": "labs/artifacts/aegis/crm-contacts.jpg", "pending": false },
+    { "type": "screenshot", "title": "Modulverwaltung — zentrale Registry", "caption": "Submodule, Permissions, Widgets, Actions und Events je Modul, pro Organisation zuschaltbar.", "src": "labs/artifacts/aegis/module-registry.jpg", "pending": false },
+    { "type": "screenshot", "title": "ERP — Finanzeinstellungen", "caption": "Wechsel einfache ↔ doppelte Buchhaltung, CHF-Basis, MWST 8.1 %, Kontenrahmen Schweiz KMU.", "src": "labs/artifacts/aegis/finance-settings.jpg", "pending": false },
+    { "type": "screenshot", "title": "Process Designer", "caption": "Visueller No-Code-Workflow-Editor: Start → Module → Entscheidungen → Aktionen.", "src": "labs/artifacts/aegis/process-designer.jpg", "pending": false }
+  ],
+
+  "lessons": [
+    "Geteilte Typen über das gesamte Monorepo sind der größte Hebel gegen Bugs — Frontend/Backend-Drift verschwindet als Fehlerklasse, nicht nur als Symptom.",
+    "Echte doppelte Buchhaltung zwingt zu sauberer Modellierung: unveränderliche Ledger, Perioden-Lockdown und automatische Buchungen lassen sich nicht nachträglich aufsetzen.",
+    "Multi-Tenancy und Audit-Logging gehören ab der ersten Tabelle ins Schema — nachträglich org-scoping einzuziehen wäre eine Migration durch 103 Modelle.",
+    "Ein Warn-vs-Enforce-Modus für RBAC macht ein hartes Berechtigungssystem überhaupt erst sicher ausrollbar.",
+    "Eine zentrale Module-Registry, die Submodule, Permissions, Widgets und Events bündelt, hält ein 12-Domänen-System konfigurierbar statt starr."
+  ],
+
+  "relatedProjects": [],
+  "relatedMandates": []
+}
